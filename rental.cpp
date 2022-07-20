@@ -139,6 +139,7 @@ class dirt : public rent{
 					cout<<"\nYear : 2019";
 					cout<<"\nMax power = 31.9 hp";
 					cout<<"\nMax torque = 29.8 nm";
+                    cout<<"\nBike no = 1";
 					cout<<"\nWell conditioned with insurance.";
 					cout<<"\n\nPer day rent is : Rs 2200";
 					calcuRent1();	
@@ -151,6 +152,7 @@ class dirt : public rent{
 					cout<<"\nYear : 2018";
 					cout<<"\nMax power = 25.83 ps";
 					cout<<"\nMax torque = 22.5 nm";
+                    cout<<"\nBike no = 2";
 					cout<<"\nWell conditioned with insurance.";
 					cout<<"\n\nPer day rent is : Rs 2100";
 					calcuRent1();
@@ -163,6 +165,7 @@ class dirt : public rent{
 					cout<<"\nYear : 2020";
 					cout<<"\nMax power = 12.5 ps";
 					cout<<"\nMax torque = 13.1 nm";
+                    cout<<"\nBike no = 3";
 					cout<<"\nWell conditioned with insurance.";
 					cout<<"\n\nPer day rent is : Rs 1800";
 					calcuRent1();
@@ -175,6 +178,7 @@ class dirt : public rent{
                     cout<<"\nYear : 2018";
                     cout<<"\nMax power = 12.14 hp";
                     cout<<"\nMax torque = 12.5 nm";
+                    cout<<"\nBike no = 4";
                     cout<<"\nWell conditioned with insurance.";
                     cout<<"\n\nPer day rent is : Rs 1500";
                     calcuRent1();
@@ -187,6 +191,7 @@ class dirt : public rent{
                     cout<<"\nYear : 2020";
                     cout<<"\nMax power = 17.8 bhp";
                     cout<<"\nMax torque = 16.44 nm";
+                    cout<<"\nBike no = 5";
                     cout<<"\nWell conditioned with insurance.";
                     cout<<"\n\nPer day rent is : Rs 1700";
                     calcuRent1();
@@ -199,6 +204,7 @@ class dirt : public rent{
                     cout<<"\nYear : 2021";
                     cout<<"\nMax power = 20 bhp";
                     cout<<"\nMax torque = 17 nm";
+                    cout<<"\nBike no = 6";
                     cout<<"\nWell conditioned with insurance.";
                     cout<<"\n\nPer day rent is : Rs 1400";
                     calcuRent1();
@@ -227,7 +233,7 @@ class dirt : public rent{
         cout << "\t\t	| Invoice No. :"<<"------------------|"<<setw(10)<<"#Cnb81353"<<" |"<<endl;
         cout << "\t\t	| Customer Name:"<<"-----------------|"<<setw(10)<<customer_name<<" |"<<endl;
         cout << "\t\t	| Customer Age:"<<"------------------|"<<setw(10)<<customer_age<<" |"<<endl;
-        cout << "\t\t	| Bike name :"<<"--------------------|"<<setw(10)<<ch1<<" |"<<endl;
+        cout << "\t\t	| Bike No :"<<"----------------------|"<<setw(10)<<ch1<<" |"<<endl;
         cout << "\t\t	| Number of days :"<<"---------------|"<<setw(10)<<rentDay<<" |"<<endl;
         cout << "\t\t	| Your Advance Amount is :"<<"-------|"<<setw(10)<<advanceAmt<<" |"<<endl;
         cout << "\t\t	 ________________________________________________________"<<endl;
@@ -270,6 +276,7 @@ class standard : public rent{
 					cout<<"\nYear : 2018";
 					cout<<"\nMax power = 20.4 ps";
 					cout<<"\nMax torque = 27 nm";
+                    cout<<"\nBike no = 1";
 					cout<<"\nWell conditioned with insurance.";
 					cout<<"\n\nPer day rent is : Rs 2000";
 					calcuRent2();
@@ -281,6 +288,7 @@ class standard : public rent{
 					cout<<"\nYear : 2020";
 					cout<<"\nMax power = 26.51 ps";
 					cout<<"\nMax torque = 28 nm";
+                    cout<<"\nBike no = 2";
 					cout<<"\nWell conditioned with insurance.";
 					cout<<"\n\nPer day rent is : Rs 2200";
 					calcuRent2();
@@ -293,6 +301,7 @@ class standard : public rent{
 					cout<<"\nYear : 2020";
 					cout<<"\nMax power = 24.4 ps";
 					cout<<"\nMax torque = 18.5 nm";
+                    cout<<"\nBike no = 3";
 					cout<<"\nWell conditioned with insurance.";
 					cout<<"\n\nPer day rent is : 1800";
 					calcuRent2();
@@ -305,6 +314,7 @@ class standard : public rent{
                     cout<<"\nYear : 2017";
                     cout<<"\nMax power = 17.26 bhp";
                     cout<<"\nMax torque = 16.1 nm";
+                    cout<<"\nBike no = 4";
                     cout<<"\nWell conditioned with insurance.";
                     cout<<"\n\nPer day rent is : 1500";
                     calcuRent2();
@@ -317,6 +327,7 @@ class standard : public rent{
                     cout<<"\nYear : 2022";
                     cout<<"\nMax power = 20.2 ps";
                     cout<<"\nMax torque = 16.8 nm";
+                    cout<<"\nBike no = 5";
                     cout<<"\nWell conditioned with insurance.";
                     cout<<"\n\nPer day rent is : 1700";
                     calcuRent2();
@@ -329,6 +340,7 @@ class standard : public rent{
                     cout<<"\nYear : 2018";
                     cout<<"\nMax power = 13.1 ps";
                     cout<<"\nMax torque = 12.8 nm";
+                    cout<<"\nBike no = 6";
                     cout<<"\nWell conditioned with insurance.";
                     cout<<"\n\nPer day rent is : 1400";
                     calcuRent2();
@@ -357,7 +369,7 @@ class standard : public rent{
         cout << "\t\t	| Invoice No. :"<<"------------------|"<<setw(10)<<"#Cnb81353"<<" |"<<endl;
         cout << "\t\t	| Customer Name:"<<"-----------------|"<<setw(10)<<customer_name<<" |"<<endl;
         cout << "\t\t	| Customer Age:"<<"------------------|"<<setw(10)<<customer_age<<" |"<<endl;
-        cout << "\t\t	| Bike name :"<<"--------------------|"<<setw(10)<<ch2<<" |"<<endl;
+        cout << "\t\t	| Bike No :"<<"----------------------|"<<setw(10)<<ch2<<" |"<<endl;
         cout << "\t\t	| Number of days :"<<"---------------|"<<setw(10)<<rentDay<<" |"<<endl;
         cout << "\t\t	| Your Advance Amount is :"<<"-------|"<<setw(10)<<advanceAmt<<" |"<<endl;
         cout << "\t\t	 ________________________________________________________"<<endl;
