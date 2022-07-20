@@ -424,6 +424,7 @@ int main()
     	cout<<"\nEnter the citizenship no :";
     	cin>>d1.citizenship_no;
     	fflush(stdin);
+        cout<<"\n\n\nLOADING................";
     	sleep(3);
         d1.get_bike1();
     }
@@ -451,6 +452,7 @@ int main()
     	cout<<"\nEnter the citizenship no :";
    	 	cin>>s1.citizenship_no;
     	fflush(stdin);
+        cout<<"\n\n\nLOADING................";
     	sleep(3);
         s1.get_bike2();
     }
