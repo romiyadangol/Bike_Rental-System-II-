@@ -25,7 +25,6 @@ class rent : public bike{
     void calcuRent1()
     {
     	cout<<"\n\n****************************************************************";
-    	cout<<"\n\nRent calculation for Dirt Bike.........................."<<endl;
     	sleep(3);
         cout<<"\n\nEnter the advance amount for the rental :";
         cin>>advanceAmt;
@@ -69,7 +68,6 @@ class rent : public bike{
     void calcuRent2()
     {
     	cout<<"\n\n****************************************************************";
-    	cout<<"\n\nRent calculation for Standard Bike.........................."<<endl;
     	sleep(3);
         cout<<"\n\nEnter the advance amount for the rental :";
         cin>>advanceAmt;
@@ -112,7 +110,7 @@ class rent : public bike{
     }
 };
 class dirt : public rent{
-    public: 
+    public:
     void get_bike1()
     {
     	system("cls");
@@ -143,9 +141,10 @@ class dirt : public rent{
 					cout<<"\nWell conditioned with insurance.";
                     cout<<"\nDeposit amount = Rs 100,000";
 					cout<<"\n\nPer day rent is : Rs 2200";
+					cout<<"\n\nTotal rent is :"<<2200*rentDay;
 					calcuRent1();	
                     warning1();
-                    display1();						
+                    					
 				break ; 
             case 2:
             		
@@ -158,9 +157,10 @@ class dirt : public rent{
 					cout<<"\nWell conditioned with insurance.";
                     cout<<"\nDeposit amount = Rs 100,000";
 					cout<<"\n\nPer day rent is : Rs 2100";
+					cout<<"\n\nTotal rent is :"<<2100*rentDay;
 					calcuRent1();
                     warning1();
-                    display1();
+                    
                 break;
             case 3:   
             		
@@ -173,9 +173,10 @@ class dirt : public rent{
 					cout<<"\nWell conditioned with insurance.";
                     cout<<"\nDeposit amount = Rs 100,000";
 					cout<<"\n\nPer day rent is : Rs 1800";
+					cout<<"\n\nTotal rent is :"<<1800*rentDay;
 					calcuRent1();
                     warning1();
-                    display1();
+                    
                 break;
             case 4:
             		
@@ -188,9 +189,10 @@ class dirt : public rent{
                     cout<<"\nWell conditioned with insurance.";
                     cout<<"\nDeposit amount = Rs 100,000";
                     cout<<"\n\nPer day rent is : Rs 1500";
+                    cout<<"\n\nTotal rent is :"<<1500*rentDay;
                     calcuRent1();
                     warning1();
-                    display1();
+                    
                 break;
             case 5:
             		
@@ -203,9 +205,10 @@ class dirt : public rent{
                     cout<<"\nWell conditioned with insurance.";
                     cout<<"\nDeposit amount = Rs 100,000";
                     cout<<"\n\nPer day rent is : Rs 1700";
+                    cout<<"\n\nTotal rent is :"<<1700*rentDay;
                     calcuRent1();
                     warning1();
-                    display1();
+                    
                 break;
             case 6:
             		
@@ -218,9 +221,10 @@ class dirt : public rent{
                     cout<<"\nWell conditioned with insurance.";
                     cout<<"\nDeposit amount = Rs 100,000";
                     cout<<"\n\nPer day rent is : Rs 1400";
+                    cout<<"\n\nTotal rent is :"<<1400*rentDay;
                     calcuRent1();
                     warning1();
-                    display1();
+                   
                 break;
             default :
             	
@@ -232,31 +236,33 @@ class dirt : public rent{
     }
     void warning1()
     {
-        system("cls");
+    	system("cls");
         cout<<"Providing WARNING............";
         sleep(1);
         system("cls");
         cout<<"******RULES AND REGULATIONS******";
         sleep(2);
-        system("cls");
-        cout << "\n\t\t                    BIKE RENTAL  - Rules and Regulation                  "<<endl;
+        cout << "\n\n\t\t                    BIKE RENTAL  - Rules and Regulation                  "<<endl;
         cout << "\t\t	///////////////////////////////////////////////////////////"<<endl;
+        cout << "\t\t	| \t\t    !!!RISK BY YOUR OWN!!!                |"<<endl;
+        cout << "\t\t	 _________________________________________________________"<<endl;
+        cout << "\n";
         cout << "\t\t	| MINIMUM RENT TIME IS 3 HRS                              |"<<endl;
-        cout << "\t\t	| \t\t!!!RISK BY YOUR OWN!!!                              |"<<endl;
         cout << "\t\t	| INCASE ACCIDENT , ALL COSTING IS PAID BY DRIVER         |"<<endl;
         cout << "\t\t	| PREPARE HARDCOPY DOCUMENT OF THE ITEM AS BELOW          |"<<endl;
         cout << "\t\t	| DOCUMENT IS NECESSARY WHILE TAKING CHARGE OF BIKE       |"<<endl;
-        cout << "\t\t	| \t\t\tORIGINAL LICENCE                                  |"<<endl;
-        cout << "\t\t	| \t\t\tCOPY OF LICENCE                                   |"<<endl;
-        cout << "\t\t	| \t\t\tCOPY OF CITIZENSHIP                               |"<<endl;
-        cout << "\t\t	| \t\t\tDEPOSIT BASED ON(BIKE TYPE)                       |"<<endl;
+        cout << "\t\t	| \t\tORIGINAL LICENCE                          |"<<endl;
+        cout << "\t\t	| \t\tCOPY OF LICENCE                           |"<<endl;
+        cout << "\t\t	| \t\tCOPY OF CITIZENSHIP                       |"<<endl;
+        cout << "\t\t	| \t\tDEPOSIT BASED ON(BIKE TYPE)               |"<<endl;
         cout << "\t\t	 _________________________________________________________"<<endl;
         cout <<"\n";
-        cout << "\t\t	| \t\t!!!Safe drive!!!                                   |"<<endl;
+        cout << "\t\t	| \t\t      !!!Safe drive!!!                    |"<<endl;
         cout << "\t\t	 _________________________________________________________"<<endl;
         cout <<" "<<endl;
         cout << "\t\t	///////////////////////////////////////////////////////////"<<endl;
-        sleep(5);
+        sleep(12);
+        display1();
     }
     void display1()
     {
@@ -291,6 +297,7 @@ class dirt : public rent{
 };
 class standard : public rent{
     public:
+    
     void get_bike2()
     {
     	system("cls");
@@ -320,9 +327,10 @@ class standard : public rent{
 					cout<<"\nWell conditioned with insurance.";
                     cout<<"\nDeposit amount = Rs 100,000";
 					cout<<"\n\nPer day rent is : Rs 2000";
+					cout<<"\n\nTotal rent is :"<<2000*rentDay;
 					calcuRent2();
                     warning2();
-                    display2();
+                    
 				break ; 
             case 2:
 					cout<<"\nYou have sucessfully chosen a bike :";
@@ -334,9 +342,10 @@ class standard : public rent{
 					cout<<"\nWell conditioned with insurance.";
                     cout<<"\nDeposit amount = Rs 100,000";
 					cout<<"\n\nPer day rent is : Rs 2200";
+					cout<<"\n\nTotal rent is :"<<2200*rentDay;
 					calcuRent2();
                     warning2();
-                    display2();
+                    
                 break;
             case 3:  
 					
@@ -349,9 +358,10 @@ class standard : public rent{
 					cout<<"\nWell conditioned with insurance.";
                     cout<<"\nDeposit amount = Rs 100,000";
 					cout<<"\n\nPer day rent is : 1800";
+					cout<<"\n\nTotal rent is :"<<1800*rentDay;
 					calcuRent2();
                     warning2();
-                    display2();
+                    
                 break;
             case 4:
             		
@@ -364,9 +374,10 @@ class standard : public rent{
                     cout<<"\nWell conditioned with insurance.";
                     cout<<"\nDeposit amount = Rs 100,000";
                     cout<<"\n\nPer day rent is : 1500";
+                    cout<<"\n\nTotal rent is :"<<1500*rentDay;
                     calcuRent2();
                     warning2();
-                    display2();
+                    
                 break;
             case 5:
             		
@@ -379,9 +390,10 @@ class standard : public rent{
                     cout<<"\nWell conditioned with insurance.";
                     cout<<"\nDeposit amount = Rs 100,000";
                     cout<<"\n\nPer day rent is : 1700";
+                    cout<<"\n\nTotal rent is :"<<1700*rentDay;
                     calcuRent2();
                     warning2();
-                    display2();
+                    
                 break;
             case 6:
             		
@@ -394,9 +406,10 @@ class standard : public rent{
                     cout<<"\nWell conditioned with insurance.";
                     cout<<"\nDeposit amount = Rs 100,000";
                     cout<<"\n\nPer day rent is : 1400";
+                    cout<<"\n\nTotal rent is :"<<1400*rentDay;
                     calcuRent2();
                     warning2();
-                    display2();
+                    
                 break;
             default :
             	
@@ -407,32 +420,34 @@ class standard : public rent{
         }
     }
     void warning2()
-    {
-        system("cls");
-        cout<<"Providing WARNING............";
+    {	
+    	system("cls");
+    	cout<<"Providing WARNING............";
         sleep(1);
         system("cls");
         cout<<"******RULES AND REGULATIONS******";
         sleep(2);
-        system("cls");
-        cout << "\n\t\t                    BIKE RENTAL  - Rules and Regulation                  "<<endl;
+        cout << "\n\n\t\t                    BIKE RENTAL  - Rules and Regulation                  "<<endl;
         cout << "\t\t	///////////////////////////////////////////////////////////"<<endl;
+        cout << "\t\t	| \t\t    !!!RISK BY YOUR OWN!!!                |"<<endl;
+        cout << "\t\t	 _________________________________________________________"<<endl;
+        cout << "\n";
         cout << "\t\t	| MINIMUM RENT TIME IS 3 HRS                              |"<<endl;
-        cout << "\t\t	| \t\t!!!RISK BY YOUR OWN!!!                              |"<<endl;
         cout << "\t\t	| INCASE ACCIDENT , ALL COSTING IS PAID BY DRIVER         |"<<endl;
         cout << "\t\t	| PREPARE HARDCOPY DOCUMENT OF THE ITEM AS BELOW          |"<<endl;
         cout << "\t\t	| DOCUMENT IS NECESSARY WHILE TAKING CHARGE OF BIKE       |"<<endl;
-        cout << "\t\t	| \t\t\tORIGINAL LICENCE                                  |"<<endl;
-        cout << "\t\t	| \t\t\tCOPY OF LICENCE                                   |"<<endl;
-        cout << "\t\t	| \t\t\tCOPY OF CITIZENSHIP                               |"<<endl;
-        cout << "\t\t	| \t\t\tDEPOSIT BASED ON(BIKE TYPE)                       |"<<endl;
+        cout << "\t\t	| \t\tORIGINAL LICENCE                          |"<<endl;
+        cout << "\t\t	| \t\tCOPY OF LICENCE                           |"<<endl;
+        cout << "\t\t	| \t\tCOPY OF CITIZENSHIP                       |"<<endl;
+        cout << "\t\t	| \t\tDEPOSIT BASED ON(BIKE TYPE)               |"<<endl;
         cout << "\t\t	 _________________________________________________________"<<endl;
         cout <<"\n";
-        cout << "\t\t	| \t\t!!!Safe drive!!!                                   |"<<endl;
+        cout << "\t\t	| \t\t      !!!Safe drive!!!                    |"<<endl;
         cout << "\t\t	 _________________________________________________________"<<endl;
         cout <<" "<<endl;
         cout << "\t\t	///////////////////////////////////////////////////////////"<<endl;
-        sleep(5);
+        sleep(12);
+        display2();
     }
     void display2()
     {
@@ -492,7 +507,8 @@ int main()
     	cout<<"\nCollecting personal details...............";
     	sleep(1);
     	system("cls");
-    	cout<<"\nEnter your name :";
+    	cout<<"******PERSONAL DETAILS******";
+    	cout<<"\n\nEnter your name :";
     	cin>>d1.customer_name;
     	fflush(stdin);
     	cout<<"\nEnter your age :";
@@ -520,7 +536,8 @@ int main()
     	cout<<"\nCollecting personal details...............";
     	sleep(1);
     	system("cls");
-    	cout<<"\nEnter your name :";
+    	cout<<"******PERSONAL DETAILS******";
+    	cout<<"\n\nEnter your name :";
     	cin>>s1.customer_name;
     	fflush(stdin);
     	cout<<"\nEnter your age :";
