@@ -2,11 +2,12 @@
 #include<conio.h>
 #include<stdio.h>
 #include<fstream>
+#include<unistd.h>
 using namespace std;
 class bbike
 {
 	public:
-		int ch,ch1;
+		int ch;
 		void input(); 
 		void add_bikes();
 		void show_bikes();
@@ -28,7 +29,7 @@ class bbike
 	
 	void bbike::add_bikes()
 	{
-		first:
+		label0:
 		system("cls");
 		cout<<"\n\n******Adding new bike to the system****** "<<endl;
 		cout<<"\nChoose which bike you would like to add below........";
@@ -80,21 +81,22 @@ class bbike
 		{
 			cout<<"\n!!!Invalid Input!!!";
 			cout<<"\n!!!Try Again!!!";
-			goto first;
+			sleep(3);
+			goto label0;
 		}
 	}
 	
 	void bbike::show_bikes()
 	{
-		second:
+		label1:
 		system("cls");
 		cout<<"\n******Displaying bike******"<<endl;
 		cout<<"\nChoose which bike list would you like to display........";
 		cout<<"\n\n1.Petrol Bike"<<endl;
 		cout<<"\n2.Electric Bike"<<endl;
 		cout<<"\nEnter your choice :";
-		cin>>ch1;
-		if(ch1 == 1)
+		cin>>ch;
+		if(ch == 1)
 		{	
 			system("cls");
 			fstream file1;
@@ -115,7 +117,7 @@ class bbike
 					file1.close();
 			}
 		}
-		else if (ch1==2)
+		else if (ch==2)
 		{		
 			system("cls");
 			fstream file2;
@@ -139,123 +141,284 @@ class bbike
 		else
 		{
 			cout<<"\n!!!Invalid Choice!!!";
-			goto second;
+			sleep(3);
+			goto label1;
 		}	
 	}
 	void bbike::check_bikes()
 	{
+		label2:
 		system("cls");
-		fstream file;
-		int year,max_power,max_torque,count=0;
-		string name,namee;
-		file.open("D://bike.txt",ios::in);
-		if(!file)
-		cout<<"\n\n File Openning Error...";
-		else
+		cout<<"\n******Checking Bike******";
+		cout<<"\nChoose which bike would you like to check........";
+		cout<<"\n\n1.Petrol Bike"<<endl;
+		cout<<"\n2.Electric Bike"<<endl;
+		cout<<"\nEnter your choice :";
+		cin>>ch;
+		if(ch == 1 )
 		{
-			cout<<"\n\n Bike Name: : ";
-			cin>>namee;
-			file>>name>>year>>max_power>>max_torque;
-			while(!file.eof())
+			system("cls");
+			fstream file1;
+			int year1,max_power1,max_torque1,count1=0;
+			string name1,namee1;
+			file1.open("D://petrolBike.txt",ios::in);
+			if(!file1)
+			cout<<"\n\n File Openning Error...";
+			else
 			{
-				if(namee == name)
+				cout<<"\n\n Bike Name: : ";
+				cin>>namee1;
+				file1>>name1>>year1>>max_power1>>max_torque1;
+				while(!file1.eof())
 				{
-					system("cls");
-					cout<<"\n\n\t\t\tBike Name : "<<name;
-					cout<<"\n\n Year : "<<year;
-					cout<<"\n\n\t\t\tMax_power : "<<max_power;
-					cout<<"\n\n\t\t\tMax_torque : "<<max_torque;
-					count++;
-					break;	
+					if(namee1 == name1)
+					{
+						system("cls");
+						cout<<"\n\n\t\t\tBike Name : "<<name1;
+						cout<<"\n\n\t\t\tYear : "<<year1;
+						cout<<"\n\n\t\t\tMax_power : "<<max_power1;
+						cout<<"\n\n\t\t\tMax_torque : "<<max_torque1;
+						count1++;
+						break;	
+					}
+					file1>>name1>>year1>>max_power1>>max_torque1;
 				}
-				file>>name>>year>>max_power>>max_torque;
+				file1.close();
+				if(count1 == 0)
+				cout<<"\n\n Bike name Not Found...";
 			}
-			file.close();
-			if(count == 0)
-			cout<<"\n\n Bike name Not Found...";
+		}
+		else if( ch ==2)
+		{ 
+			system("cls");
+			fstream file2;
+			int year2,max_power2,range2,count2=0;
+			string name2,namee2;
+			file2.open("D://electricBike.txt",ios::in);
+			if(!file2)
+			cout<<"\n\n File Openning Error...";
+			else
+			{
+				cout<<"\n\n Bike Name: : ";
+				cin>>namee2;
+				file2>>name2>>year2>>range2;
+				while(!file2.eof())
+				{
+					if(namee2 == name2)
+					{
+						system("cls");
+						cout<<"\n\n\t\t\tBike Name : "<<name2;
+						cout<<"\n\n\t\t\tYear : "<<year2;
+						cout<<"\n\n\t\t\tRange : "<<range2;
+						count2++;
+						break;	
+					}
+					file2>>name2>>year2>>range2;
+				}
+				file2.close();
+				if(count2 == 0)
+				cout<<"\n\n Bike name Not Found...";
+			}
+		}
+		else 
+		{
+			cout<<"\n!!!Invalid Input!!!";
+			sleep(2);
+			goto label2;
 		}
 	}
 	
 	void bbike::update_bikes()
 	{
+		label3:
 		system("cls");
-		fstream file,file1;
-		int year,yr,max_power,mp,max_torque,mt,count=0;
-		string name,namee;
-		cout<<"\n\n\t\t\t\tUpdate Bike Record";
-		file1.open("D://bike1.txt",ios::app|ios::out);
-		file.open("D://bike.txt",ios::in);
-		if(!file)
-		cout<<"\n\n File Openning Error...";
-		else
+		cout<<"\n******Updating Bike******"<<endl;
+		cout<<"\nChoose which bike would you like to update........";
+		cout<<"\n\n1.Petrol Bike"<<endl;
+		cout<<"\n2.Electric Bike"<<endl;
+		cout<<"\nEnter your choice :";
+		cin>>ch;
+		if(ch==1)
 		{
-			cout<<"\n\n Bike Name : ";
-			cin>>name;
-			file>>namee>>year>>max_power>>max_torque;
-			while(!file.eof())
+			system("cls");
+			fstream file1,temp1;
+			int year1,yr1,max_power1,mp1,max_torque1,mt1,count1=0;
+			string name1,namee1;
+			cout<<"\n\n\t\t\t\tUpdate Bike Record";
+			temp1.open("D://petrolBike1.txt",ios::app|ios::out);
+			file1.open("D://petrolBike.txt",ios::in);
+			if(!file1)
+			cout<<"\n\n File Openning Error...";
+			else
 			{
-				if(name == namee)
+				cout<<"\n\n Bike Name : ";
+				cin>>name1;
+				file1>>namee1>>year1>>max_power1>>max_torque1;
+				while(!file1.eof())
 				{
-					system("cls");
-					cout<<"\n\n\t\t\t\tUpdate Bikes Record";
-					cout<<"\n\n\t\t\tYear : ";
-					cin>>yr;
-					cout<<"\n\n Max_power: ";
-					cin>>mp;
-					cout<<"\n\n Max_torque: ";
-					cin>>mt;
-					file1<<" "<<name<<" "<<yr<<" "<<mp<<" "<<mt<<"\n";
-					count++;
+					if(name1 == namee1)
+					{
+						system("cls");
+						cout<<"\n\n\t\t\t\tUpdate Bikes Record";
+						cout<<"\n\n\t\t\tYear : ";
+						cin>>yr1;
+						cout<<"\n\n\t\t\tMax_power: ";
+						cin>>mp1;
+						cout<<"\n\n\t\t\tMax_torque: ";
+						cin>>mt1;
+						temp1<<" "<<name1<<" "<<yr1<<" "<<mp1<<" "<<mt1<<"\n";
+						count1++;
+					}
+					else
+					temp1<<" "<<namee1<<" "<<year1<<" "<<max_power1<<" "<<max_torque1<<"\n";
+					file1>>namee1>>year1>>max_power1>>max_torque1;
 				}
-				else
-				file1<<" "<<namee<<" "<<year<<" "<<max_power<<" "<<max_torque<<"\n";
-				file>>namee>>year>>max_power>>max_torque;
+				if(count1 == 0)
+				cout<<"\n\n Bike ID Not Found...";
 			}
-			if(count == 0)
-			cout<<"\n\n Bike ID Not Found...";
+			file1.close();
+			temp1.close();
+			remove("D://petrolBike.txt");
+			rename("D://petrolBike1.txt","D://book.txt");
 		}
-		file.close();
-		file1.close();
-		remove("D://bike.txt");
-		rename("D://bike1.txt","D://book.txt");
+		else if ( ch == 2)
+		{
+			system("cls");
+			fstream file2,temp2;
+			int year2,yr2,range2,r2,count2=0;
+			string name2,namee2;
+			cout<<"\n\n\t\t\t\tUpdate Bike Record";
+			temp2.open("D://electricBike1.txt",ios::app|ios::out);
+			file2.open("D://electricBike.txt",ios::in);
+			if(!file2)
+			cout<<"\n\n File Openning Error...";
+			else
+			{
+				cout<<"\n\n Bike Name : ";
+				cin>>name2;
+				file2>>namee2>>year2>>range2;
+				while(!file2.eof())
+				{
+					if(name2 == namee2)
+					{
+						system("cls");
+						cout<<"\n\n\t\t\t\tUpdate Bikes Record";
+						cout<<"\n\n\t\t\tYear : ";
+						cin>>yr2;
+						cout<<"\n\n\t\t\tRange: ";
+						cin>>r2;
+						temp2<<" "<<name2<<" "<<yr2<<" "<<r2<<"\n";
+						count2++;
+					}
+					else
+					temp2<<" "<<namee2<<" "<<year2<<" "<<range2<<"\n";
+					file2>>namee2>>year2>>range2;
+				}
+				if(count2 == 0)
+				cout<<"\n\n Bike ID Not Found...";
+			}
+			file2.close();
+			temp2.close();
+			remove("D://electricBike.txt");
+			rename("D://electricBike1.txt","D://book.txt");
+		}
+		else 
+		{
+			cout<<"\n!!!Invalid Choice!!!";
+			sleep(2);
+			goto label3;
+		}
 	}
 	
 	void bbike::del_bikes()
 	{
+		label4:
 		system("cls");
-		fstream file,file1;
-		int year,max_power,max_torque,count=0;
-		string name,namee;
-		file1.open("D://bike1.txt",ios::app|ios::out);
-		file.open("D://bike.txt",ios::in);
-		if(!file)
-		cout<<"\n\n File Openning Error...";
+		cout<<"******Delete Bike******"<<endl;
+		cout<<"\nChoose which bike would you like to delete........";
+		cout<<"\n\n1.Petrol Bike"<<endl;
+		cout<<"\n2.Electric Bike"<<endl;
+		cout<<"\nEnter your choice :";
+		cin>>ch;
+		if( ch==1)
+		{
+			fstream file1,temp1;
+			int year1,max_power1,max_torque1,count1=0;
+			string name1,namee1;
+			temp1.open("D://petrolBike1.txt",ios::app|ios::out);
+			file1.open("D://petrolBike.txt",ios::in);
+			if(!file1)
+			cout<<"\n\n File Openning Error...";
+			else
+			{
+				cout<<"\n\n Bike Name : ";
+				cin>>namee1;
+				file1>>namee1>>year1>>max_power1>>max_torque1;
+				while(!file1.eof())
+				{
+					if(name1 == namee1)
+					{
+						system("cls");
+						cout<<"\n\n\t\t\t\tDelete Bike Record";
+						cout<<"\n\n One Bike is Deleted Successfully...";
+						count1++;
+					}
+					else
+					temp1<<" "<<namee1<<" "<<year1<<" "<<max_power1<<" "<<max_torque1<<"\n";
+					file1>>namee1>>year1>>max_power1>>max_torque1;
+				}
+				if(count1 == 0)
+				cout<<"\n\n Bike Name Not Found...";
+			}
+			file1.close();
+			temp1.close();
+			remove("D://petrolBike.txt");
+			rename("D://petrolBike1.txt","D://book.txt");
+			}
+		else if (ch == 2)
+		{
+			system("cls");
+			fstream file2,temp2;
+			int year2,range2,count2=0;
+			string name2,namee2;
+			temp2.open("D://electricBike1.txt",ios::app|ios::out);
+			file2.open("D://electricBike.txt",ios::in);
+			if(!file2)
+			cout<<"\n\n File Openning Error...";
+			else
+			{
+				cout<<"\n\n Bike Name : ";
+				cin>>namee2;
+				file2>>namee2>>year2>>range2;
+				while(!file2.eof())
+				{
+					if(name2 == namee2)
+					{
+						system("cls");
+						cout<<"\n\n\t\t\t\tDelete Bike Record";
+						cout<<"\n\n One Bike is Deleted Successfully...";
+						count2++;
+					}
+					else
+					temp2<<" "<<namee2<<" "<<year2<<" "<<range2<<"\n";
+					file2>>namee2>>year2>>range2;
+				}
+				if(count2 == 0)
+				cout<<"\n\n Bike Name Not Found...";
+			}
+			file2.close();
+			temp2.close();
+			remove("D://petrolBike.txt");
+			rename("D://petrolBike1.txt","D://book.txt");
+	}
 		else
 		{
-			cout<<"\n\n Bike Name : ";
-			cin>>namee;
-			file>>namee>>year>>max_power>>max_torque;
-			while(!file.eof())
-			{
-				if(name == namee)
-				{
-					system("cls");
-					cout<<"\n\n\t\t\t\tDelete Bike Record";
-					cout<<"\n\n One Bike is Deleted Successfully...";
-					count++;
-				}
-				else
-				file1<<" "<<namee<<" "<<year<<" "<<max_power<<" "<<max_torque<<"\n";
-				file>>namee>>year>>max_power>>max_torque;
-			}
-			if(count == 0)
-			cout<<"\n\n Bike Name Not Found...";
+			cout<<"\n!!!Invalid Input!!!";
+			sleep(2);
+			goto label4;
 		}
-		file.close();
-		file1.close();
-		remove("D://bike.txt");
-		rename("D://bike1.txt","D://book.txt");
-	}
+
+}
 main()
 {
 	int choice;
