@@ -137,7 +137,7 @@ class normal : public rent{
         label1:
         sleep(2);
         cout<<"\nThe list of bike we have are :"<<endl;
-        cout<<"1.yamaha XTZ 150"<<endl;
+        cout<<"1.Yamaha XTZ 150"<<endl;
         cout<<"2.Honda XR 150L"<<endl;
         cout<<"3.Hero Xpulse"<<endl;
         cout<<"4.Tracker 250"<<endl;
