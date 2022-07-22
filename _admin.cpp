@@ -6,6 +6,7 @@ using namespace std;
 class bbike
 {
 	public:
+		int ch,ch1;
 		void input(); 
 		void add_bikes();
 		void show_bikes();
@@ -27,46 +28,120 @@ class bbike
 	
 	void bbike::add_bikes()
 	{
+		first:
 		system("cls");
-		fstream file;
-		int year,max_power,max_torque;
-		string name;
-		cout<<"\n Enter Bike name: ";
-		cin>>name;
-		cout<<"\n Enter year: ";	
-		cin>>year;
-		fflush(stdin);
-		cout<<"\n Enter max_power: ";
-		cin>>max_power;
-		cout<<"\n Enter max-torque: ";
-		cin>>max_torque;
-		file.open("D://bike.txt",ios::out|ios::app);
-		file<<" "<<name<<" "<<year<<" "<<max_power<<" "<<max_torque<<"\n";
-		file.close();
+		cout<<"\n\n******Adding new bike to the system****** "<<endl;
+		cout<<"\nChoose which bike you would like to add below........";
+		cout<<"\n\n1.Petrol Bike"<<endl;
+		cout<<"\n2.Electric Bike"<<endl;
+		cout<<"\nEnter your choice :";
+		cin>>ch;
+		if(ch==1)
+		{
+			system("cls");
+			fstream file1;
+			int year1,max_power1,max_torque1;
+			string name1;
+			cout<<"\n******Getting Details for new petrol medium bike******"<<endl;
+			cout<<"\n\n Enter Bike name: ";
+			cin>>name1;
+			fflush(stdin);
+			cout<<"\n Enter year: ";	
+			cin>>year1;
+			fflush(stdin);
+			cout<<"\n Enter max_power: ";
+			cin>>max_power1;
+			cout<<"\n Enter max-torque: ";
+			cin>>max_torque1;
+			file1.open("D://petrolBike.txt",ios::out|ios::app);
+			file1<<" "<<name1<<" "<<year1<<" "<<max_power1<<" "<<max_torque1<<"\n";
+			file1.close();
+		}
+		else if (ch==2)
+		{
+			system("cls");
+			fstream file2;
+			int year2,range2;
+			string name2;
+			cout<<"\n******Getting Details for new electric medium bike******"<<endl;
+			cout<<"\n\n Enter Bike name: ";
+			cin>>name2;
+			fflush(stdin);
+			cout<<"\n Enter year: ";	
+			cin>>year2;
+			fflush(stdin);
+			cout<<"\n Enter range: ";
+			cin>>range2;
+			file2.open("D://electricBike.txt",ios::out|ios::app);
+			file2<<" "<<name2<<" "<<year2<<" "<<range2<<" "<<"\n";
+			file2.close();	
+		}
+		else
+		{
+			cout<<"\n!!!Invalid Input!!!";
+			cout<<"\n!!!Try Again!!!";
+			goto first;
+		}
 	}
 	
 	void bbike::show_bikes()
 	{
+		second:
 		system("cls");
-		fstream file;
-		int year,max_power,max_torque;
-		string name;
-		file.open("D://bike.txt",ios::in);
-		if(!file)
-		cout<<"\n\n File Openning Error...";
+		cout<<"\n******Displaying bike******"<<endl;
+		cout<<"\nChoose which bike list would you like to display........";
+		cout<<"\n\n1.Petrol Bike"<<endl;
+		cout<<"\n2.Electric Bike"<<endl;
+		cout<<"\nEnter your choice :";
+		cin>>ch1;
+		if(ch1 == 1)
+		{	
+			system("cls");
+			fstream file1;
+			int year1,max_power1,max_torque1;
+			string name1;
+			file1.open("D://petrolBike.txt",ios::in);
+			if(!file1)
+			cout<<"\n\n File Openning Error...";
+			else
+			{
+				cout<<"\n\n Bike Name    Year    Max_power    Max_torque\n\n";
+				file1>>name1>>year1>>max_power1>>max_torque1;
+				while(!file1.eof())
+				{
+					cout<<"   "<<name1<<"     "<<year1<<"     "<<max_power1<<"\t\t"<<max_torque1<<"\n\n";
+					file1>>name1>>year1>>max_power1>>max_torque1;
+				}
+					file1.close();
+			}
+		}
+		else if (ch1==2)
+		{		
+			system("cls");
+			fstream file2;
+			int year2,range2;
+			string name2;
+			file2.open("D://electricBike.txt",ios::in);
+			if(!file2)
+			cout<<"\n\n File Openning Error...";
+			else
+			{
+				cout<<"\n\n Bike Name    Year    Range\n\n";
+				file2>>name2>>year2>>range2;
+				while(!file2.eof())
+				{
+					cout<<"   "<<name2<<"     "<<year2<<"     "<<range2<<"\t\t"<<"\n\n";
+					file2>>name2>>year2>>range2;
+				}
+				file2.close();
+			}
+		}
 		else
 		{
-			cout<<"\n\n Bike Name    Year    Max_power    Max_torque\n\n";
-			file>>name>>year>>max_power>>max_torque;
-			while(!file.eof())
-			{
-				cout<<"   "<<name<<"     "<<year<<"     "<<max_power<<"\t\t"<<max_torque<<"\n\n";
-				file>>name>>year>>max_power>>max_torque;
-			}
-			file.close();
-		}
+			cout<<"\n!!!Invalid Choice!!!";
+			goto second;
+		}	
 	}
-	
 	void bbike::check_bikes()
 	{
 		system("cls");
