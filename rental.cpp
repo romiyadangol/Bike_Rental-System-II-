@@ -7,7 +7,7 @@
 #include<unistd.h>
 using namespace std;
 class bike{
-    public:
+    public :
     string customer_name;
     int contact_no;
     int citizenship_no;
@@ -16,7 +16,7 @@ class bike{
     int ch2;
 };
 class rent : public bike{
-    public:
+    public :
     int rentDay;
     int amt;
     int rentFee1;
@@ -381,8 +381,7 @@ class normal : public rent{
     }
 };
 class electric : public rent{
-    public:
-    
+    public :    
     void get_bike2()
     {
     	system("cls");
