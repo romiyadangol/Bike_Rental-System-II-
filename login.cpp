@@ -426,6 +426,7 @@ void bbike::del_bikes()
 int main()
 {
 	int c;
+	
 	cout<<"\n\t\t\t\t\t\t**************************************************************";
 	cout<<"\n\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    WELCOME TO THE SYSTEM\t\t  \xdb\xdb\xdb\xdb";
 	cout<<"\n\t\t\t\t\t\t--------------------------------------------------------------";
@@ -480,6 +481,9 @@ int main()
 void adminlogin()
 {
    system("cls");
+   bbike b;
+   int choice;
+   char x;
    string pass ="";
    char ch;
    cout<<"\n\t\t\t\t\t\t\t\t\xdb|     Admin Login     |\xdb";	
@@ -494,6 +498,39 @@ void adminlogin()
    if(pass == "pass")
    {
       cout << "\n\n\n\t\t\t\t\t\t\t\t\xdb|     Access Granted!     |\xdb\n";
+      label:
+      b.input();
+      cout<<"\n\n\t\t\t\t\t\t\t\xdb|Your Choice :|\xdb";
+	  cin>>choice;
+	  switch(choice)
+	{
+		case 1:
+			do
+			{
+			b.add_bikes();
+			cout<<"\n\n Do You Want to Add another Bike (y,n) : ";
+			cin>>x;
+		    }while(x == 'y');
+			break;
+		case 2:
+			b.show_bikes();
+			break;
+		case 3:
+			b.check_bikes();
+			break;
+		case 4:
+			b.update_bikes();
+			break;
+		case 5:
+			b.del_bikes();
+			break;
+		case 6:
+			exit(0);
+		default:
+			cout<<"\n\n Invalid Value...Please Try Again...";
+	}
+	getch();
+	goto label;
    }
    else
    {
