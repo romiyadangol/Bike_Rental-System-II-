@@ -980,32 +980,32 @@ int main()
 {
 	int c;
 	
-	cout<<"\n\t\t\t\t\t\t**************************************************************";
-	cout<<"\n\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    WELCOME TO THE SYSTEM\t\t  \xdb\xdb\xdb\xdb";
-	cout<<"\n\t\t\t\t\t\t--------------------------------------------------------------";
-	cout<<"\n\t\t\t\t\t\t\xdb|      _________        ___________          ________      |\xdb";
-	cout<<"\n\t\t\t\t\t\t\xdb|     |         |     |    ___    |        /         \\     |\xdb";
-	cout<<"\n\t\t\t\t\t\t\xdb|     |   ___   |     |   |   |   |       |    __    |     |\xdb";
-	cout<<"\n\t\t\t\t\t\t\xdb|     |  |   |  |     |   |   |   |       |   |  |___|     |\xdb";
-	cout<<"\n\t\t\t\t\t\t\xdb|     |  |   |  |     |   |___|   |       |   |_____       |\xdb";
-	cout<<"\n\t\t\t\t\t\t\xdb|     |  |  /  /      |    _______|       |         \\      |\xdb";
-	cout<<"\n\t\t\t\t\t\t\xdb|     |  |  \\  \\      |   | \\   \\          \\______   |     |\xdb";
-	cout<<"\n\t\t\t\t\t\t\xdb|     |  |   |  |     |   |  \\   \\               |   |     |\xdb";
-	cout<<"\n\t\t\t\t\t\t\xdb|     |  |___|  |     |   |   \\   \\        ______/   |     |\xdb";
-	cout<<"\n\t\t\t\t\t\t\xdb|     |         |     |   |    \\   \\      |          |     |\xdb";
-	cout<<"\n\t\t\t\t\t\t\xdb|     |_________|     |___|     \\___\\     |_________/      |\xdb";
-	cout<<"\n\t\t\t\t\t\t--------------------------------------------------------------";
-	cout<<"\n\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    PRESS ANY KEY TO CONTINUE\t\t  \xdb\xdb\xdb\xdb";
-	cout<<"\n\t\t\t\t\t\t**************************************************************";
+	cout<<"\n\t\t\t\t\t\t\t**************************************************************";
+	cout<<"\n\t\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    WELCOME TO THE SYSTEM\t\t  \xdb\xdb\xdb\xdb";
+	cout<<"\n\t\t\t\t\t\t\t--------------------------------------------------------------";
+	cout<<"\n\t\t\t\t\t\t\t\xdb|      _________        ___________          ________      |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t\xdb|     |         |     |    ___    |        /         \\     |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t\xdb|     |   ___   |     |   |   |   |       |    __    |     |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |   |  |     |   |   |   |       |   |  |___|     |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |   |  |     |   |___|   |       |   |_____       |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |  /  /      |    _______|       |         \\      |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |  \\  \\      |   | \\   \\          \\______   |     |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |   |  |     |   |  \\   \\               |   |     |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |___|  |     |   |   \\   \\        ______/   |     |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t\xdb|     |         |     |   |    \\   \\      |          |     |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t\xdb|     |_________|     |___|     \\___\\     |_________/      |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t--------------------------------------------------------------";
+	cout<<"\n\t\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    PRESS ANY KEY TO CONTINUE\t\t  \xdb\xdb\xdb\xdb";
+	cout<<"\n\t\t\t\t\t\t\t**************************************************************";
 	sleep(6);
 	system("cls");                                                      
-	cout<<"\n\t\t\t\t\t\t\t-------------------------------------";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|      Press 1 for ADMIN LOGIN     |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|      Press 2 for REGISTER        |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|      Press 3 for USER LOGIN      |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t-------------------------------------";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|      Enter your choice :         |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t-------------------------------------"<<endl;
+	cout<<"\n\t\t\t\t\t\t\t\t-------------------------------------";
+	cout<<"\n\t\t\t\t\t\t\t\t\xdb|      Press 1 for ADMIN LOGIN     |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t\t\xdb|      Press 2 for REGISTER        |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t\t\xdb|      Press 3 for USER LOGIN      |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t\t-------------------------------------";
+	cout<<"\n\t\t\t\t\t\t\t\t\xdb|      Enter your choice :         |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t\t-------------------------------------"<<endl;
 	cin>>c;
 	cout<<endl;
 	
@@ -1025,7 +1025,7 @@ int main()
 			
 		default:
 			system("cls");
-			cout<<"\t\t\t Please select from the options given above!!! \n"<<endl;
+			cout<<"\t\t\t\t\t\t\t\tPlease select from the options given above!!! \n"<<endl;
 			main();
 	}
 }
@@ -1040,7 +1040,7 @@ void adminlogin()
    string pass ="";
    char ch;
    cout<<"\n\t\t\t\t\t\t\t\t\xdb|     Admin Login     |\xdb";	
-   cout<<"\n\n\t\t\t\t\t\t\t Enter the password:";
+   cout<<"\n\n\t\t\t\t\t\t\tEnter the password:";
    ch = getch();
    while(ch != 13)
    {
@@ -1061,7 +1061,7 @@ void adminlogin()
 			do
 			{
 			b.add_bikes();
-			cout<<"\n\n Do You Want to Add another Bike (y,n) : ";
+			cout<<"\n\n\t\t\t\t\t\t\t\tDo You Want to Add another Bike (y,n) : ";
 			cin>>x;
 		    }while(x == 'y');
 			break;
@@ -1080,14 +1080,14 @@ void adminlogin()
 		case 6:
 			exit(0);
 		default:
-			cout<<"\n\n Invalid Value...Please Try Again...";
+			cout<<"\n\n\t\t\t\t\t\t\t\t\xdbInvalid Value...Please Try Again...\xdb";
 	}
 	getch();
 	goto label;
    }
    else
    {
-      cout << "\n\n\t\t\t\t\t\t\tAccess Aborted...\n\t\t\t\t\t\t\tPlease Try Again\n\n";
+      cout << "\n\n\t\t\t\t\t\t\t\xdbAccess Aborted...\n\t\t\t\t\t\t\tPlease Try Again\n\n\xdb";
       exit (0);
    }
    
@@ -1098,16 +1098,16 @@ void userregister()
 {
 	string ruserID,rpassword,rid,rpass;
 	system("cls");
-	cout<<"\t\t\t Enter the username : ";
+	cout<<"\n\t\t\t\t\t\t\t\t\xdbEnter the username : ";
 	cin>>ruserID;
-	cout<<"\t\t\t Enter the password : ";
+	cout<<"\n\t\t\t\t\t\t\t\t\xdbEnter the password : ";
 	cin>>rpassword;
 	
 	
 	ofstream f1("record.txt",ios::app);
 	f1<<ruserID<<' '<<rpassword<<endl;
 	system("cls");
-	cout<<"\n\t\t\t Registration is succesfull! \n ";
+	cout<<"\n\t\t\t\t\t\t\t\t\xdbRegistration is succesfull!\xdb";
 	
 }
 /******************************************************UserLogin**************************************************/
@@ -1120,7 +1120,7 @@ void userlogin()
     electric e1;
 	string userID,password,id,pass;
 	system("cls");
-	cout<<"\t\t\t Please enter the username and password: ";
+	cout<<"\n\t\t\t\t\t\t\t\t\xdbPlease enter the username and password: ";
 	cout<<"\t\t\t USERNAME : ";
 	cin>>userID;
 	cout<<"\t\t\t PASSWORD : ";
@@ -1139,7 +1139,23 @@ void userlogin()
 	if(count==1)
 	{
 		cout<<userID<<"\n Your LOGIN is succesfull! \n";
-		cout<<"\n\n\n\n\n\n\n.......................Welcome to our system........................";
+		cout<<"\n\t\t\t\t\t\t\t**************************************************************";
+		cout<<"\n\t\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    WELCOME TO THE SYSTEM\t\t  \xdb\xdb\xdb\xdb";
+		cout<<"\n\t\t\t\t\t\t\t--------------------------------------------------------------";
+		cout<<"\n\t\t\t\t\t\t\t\xdb|      _________        ___________          ________      |\xdb";
+		cout<<"\n\t\t\t\t\t\t\t\xdb|     |         |     |    ___    |        /         \\     |\xdb";
+		cout<<"\n\t\t\t\t\t\t\t\xdb|     |   ___   |     |   |   |   |       |    __    |     |\xdb";
+		cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |   |  |     |   |   |   |       |   |  |___|     |\xdb";
+		cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |   |  |     |   |___|   |       |   |_____       |\xdb";
+		cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |  /  /      |    _______|       |         \\      |\xdb";
+		cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |  \\  \\      |   | \\   \\          \\______   |     |\xdb";
+		cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |   |  |     |   |  \\   \\               |   |     |\xdb";
+		cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |___|  |     |   |   \\   \\        ______/   |     |\xdb";
+		cout<<"\n\t\t\t\t\t\t\t\xdb|     |         |     |   |    \\   \\      |          |     |\xdb";
+		cout<<"\n\t\t\t\t\t\t\t\xdb|     |_________|     |___|     \\___\\     |_________/      |\xdb";
+		cout<<"\n\t\t\t\t\t\t\t--------------------------------------------------------------";
+		cout<<"\n\t\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    PRESS ANY KEY TO CONTINUE\t\t  \xdb\xdb\xdb\xdb";
+		cout<<"\n\t\t\t\t\t\t\t**************************************************************";
 		sleep(3);
 		system("cls");
 		up:
