@@ -152,7 +152,7 @@ class normal : public rent{
     	system("cls");
         cout<<"You have chosen normal bike for the rental.....";
         label1:
-        sleep(2);
+        sleep(1);
         cout<<"\nThe list of bike we have are :"<<endl;
         cout<<"1.Yamaha XTZ 150"<<endl;
         cout<<"2.Honda XR 150L"<<endl;
@@ -175,11 +175,11 @@ class normal : public rent{
                     cout<<"\nYou have sucessfully chosen a bike :";
 					cout<<"\nBike name : Yamaha XTZ 150";
 					cout<<"\nYear : 2020";
-					cout<<"\nMax power = 12.5 ps";
-					cout<<"\nMax torque = 13.1 nm";
                     cout<<"\nBike no = 3";
 					cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 100,000";
+					cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 30,000|";
+                    cout<<"\n|**************************|";
 					cout<<"\n\nPer day rent is : Rs 1800";
 					cout<<"\n\nTotal rent is :"<<1800*rentDay;
 					calcuRent1();
@@ -191,11 +191,11 @@ class normal : public rent{
                     cout<<"\nYou have successfully chosen a bike :";
                     cout<<"\nBike name :Honda XR150L";
                     cout<<"\nYear : 2018";
-                    cout<<"\nMax power = 12.14 hp";
-                    cout<<"\nMax torque = 12.5 nm";
                     cout<<"\nBike no = 4";
                     cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 100,000";
+                    cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 30,000|";
+                    cout<<"\n|**************************|";
                     cout<<"\n\nPer day rent is : Rs 1500";
                     cout<<"\n\nTotal rent is :"<<1500*rentDay;
                     calcuRent1();
@@ -207,11 +207,11 @@ class normal : public rent{
                     cout<<"\nYou have successfully chosen a bike :";
                     cout<<"\nBike name : Hero Xpulse";
                     cout<<"\nYear : 2020";
-                    cout<<"\nMax power = 17.8 bhp";
-                    cout<<"\nMax torque = 16.44 nm";
                     cout<<"\nBike no = 5";
                     cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 100,000";
+                    cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 30,000|";
+                    cout<<"\n|**************************|";
                     cout<<"\n\nPer day rent is : Rs 1700";
                     cout<<"\n\nTotal rent is :"<<1700*rentDay;
                     calcuRent1();
@@ -223,11 +223,11 @@ class normal : public rent{
                     cout<<"\nYou have successfully chosen a bike :";
                     cout<<"\nBike name : Tracker 250";
                     cout<<"\nYear : 2021";
-                    cout<<"\nMax power = 20 bhp";
-                    cout<<"\nMax torque = 17 nm";
                     cout<<"\nBike no = 6";
                     cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 100,000";
+                    cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 30,000|";
+                    cout<<"\n|**************************|";
                     cout<<"\n\nPer day rent is : Rs 1400";
                     cout<<"\n\nTotal rent is :"<<1400*rentDay;
                     calcuRent1();
@@ -238,11 +238,11 @@ class normal : public rent{
         	        cout<<"\nYou have sucessfully chosen a bike :";
 					cout<<"\nBike name : Royal Enfield Classic 350";
 					cout<<"\nYear : 2018";
-					cout<<"\nMax power = 20.4 ps";
-					cout<<"\nMax torque = 27 nm";
                     cout<<"\nBike no = 5";
 					cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 100,000";
+                    cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 30,000|";
+                    cout<<"\n|**************************|";
 					cout<<"\n\nPer day rent is : Rs 2000";
 					cout<<"\n\nTotal rent is :"<<2000*rentDay;
 					calcuRent1();
@@ -253,11 +253,11 @@ class normal : public rent{
 					cout<<"\nYou have sucessfully chosen a bike :";
 					cout<<"\nBike name : Jawa Classic";
 					cout<<"\nYear : 2020";
-					cout<<"\nMax power = 26.51 ps";
-					cout<<"\nMax torque = 28 nm";
                     cout<<"\nBike no = 6";
 					cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 100,000";
+                    cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 30,000|";
+                    cout<<"\n|**************************|";
 					cout<<"\n\nPer day rent is : Rs 2200";
 					cout<<"\n\nTotal rent is :"<<2200*rentDay;
 					calcuRent1();
@@ -269,11 +269,11 @@ class normal : public rent{
                     cout<<"\nYou have sucessfully chosen a bike :";
 					cout<<"\nBike name : Pulsar NS 200";
 					cout<<"\nYear : 2020";
-					cout<<"\nMax power = 24.4 ps";
-					cout<<"\nMax torque = 18.5 nm";
                     cout<<"\nBike no = 7";
 					cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 100,000";
+					cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 30,000|";
+                    cout<<"\n|**************************|";
 					cout<<"\n\nPer day rent is : 1800";
 					cout<<"\n\nTotal rent is :"<<1800*rentDay;
 					calcuRent1();
@@ -285,11 +285,11 @@ class normal : public rent{
                     cout<<"\nYou have successfully chosen a bike :";
                     cout<<"\nBike name :Honda Hornet";
                     cout<<"\nYear : 2017";
-                    cout<<"\nMax power = 17.26 bhp";
-                    cout<<"\nMax torque = 16.1 nm";
                     cout<<"\nBike no = 8";
                     cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 100,000";
+                    cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 30,000|";
+                    cout<<"\n|**************************|";
                     cout<<"\n\nPer day rent is : 1500";
                     cout<<"\n\nTotal rent is :"<<1500*rentDay;
                     calcuRent1();
@@ -301,11 +301,11 @@ class normal : public rent{
                     cout<<"\nYou have successfully chosen a bike :";
                     cout<<"\nBike name : Apache RTR 200";
                     cout<<"\nYear : 2022";
-                    cout<<"\nMax power = 20.2 ps";
-                    cout<<"\nMax torque = 16.8 nm";
                     cout<<"\nBike no = 9";
                     cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 100,000";
+                    cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 30,000|";
+                    cout<<"\n|**************************|";
                     cout<<"\n\nPer day rent is : 1700";
                     cout<<"\n\nTotal rent is :"<<1700*rentDay;
                     calcuRent1();
@@ -317,11 +317,11 @@ class normal : public rent{
                     cout<<"\nYou have successfully chosen a bike :";
                     cout<<"\nBike name : Yamaha FZS V2";
                     cout<<"\nYear : 2018";
-                    cout<<"\nMax power = 13.1 ps";
-                    cout<<"\nMax torque = 12.8 nm";
                     cout<<"\nBike no = 10";
                     cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 100,000";
+                    cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 30,000|";
+                    cout<<"\n|**************************|";
                     cout<<"\n\nPer day rent is : 1400";
                     cout<<"\n\nTotal rent is :"<<1400*rentDay;
                     calcuRent1();
@@ -386,7 +386,7 @@ class normal : public rent{
         cout << "\t\t	| Your Advance Amount is :"<<"-------|"<<setw(10)<<advanceAmt<<" |"<<endl;
         cout << "\t\t	 ________________________________________________________"<<endl;
         cout <<"\n";
-        cout << "\t\t	| Total Rental Amount is :"<<"-------|"<<setw(10)<<amt<<" |"<<endl;
+        cout << "\t\t	| Total (Due) Rental Amount is :"<<"-------|"<<setw(10)<<amt<<" |"<<endl;
         cout << "\t\t	 ________________________________________________________"<<endl;
         cout << "\t\t	 # This is a computer generated invoce and it does not"<<endl;
         cout << "\t\t	 require an authorised signture #"<<endl;
@@ -425,7 +425,9 @@ class electric : public rent{
 					cout<<"\nMax range = 110km";
                     cout<<"\nBike no = 1";
 					cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 50,000";
+                    cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 20,000|";
+                    cout<<"\n|**************************|";
 					cout<<"\n\nPer day rent is : Rs 2200";
 					cout<<"\n\nTotal rent is :"<<2200*rentDay;
 					calcuRent2();
@@ -439,7 +441,9 @@ class electric : public rent{
 					cout<<"\nMax range = 80 km";
                     cout<<"\nBike no = 2";
 					cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 50,000";
+                    cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 20,000|";
+                    cout<<"\n|**************************|";
 					cout<<"\n\nPer day rent is : Rs 2000";
 					cout<<"\n\nTotal rent is :"<<2000*rentDay;
 					calcuRent2();
@@ -454,7 +458,9 @@ class electric : public rent{
 					cout<<"\nMax range = 90-130km";
                     cout<<"\nBike no = 3";
 					cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 50,000";
+                    cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 20,000|";
+                    cout<<"\n|**************************|";
 					cout<<"\n\nPer day rent is : 1700";
 					cout<<"\n\nTotal rent is :"<<1700*rentDay;
 					calcuRent2();
@@ -469,7 +475,9 @@ class electric : public rent{
                     cout<<"\nMax range = 75 km";
                     cout<<"\nBike no = 4";
                     cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 50,000";
+                    cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 20,000|";
+                    cout<<"\n|**************************|";
                     cout<<"\n\nPer day rent is : 1500";
                     cout<<"\n\nTotal rent is :"<<1500*rentDay;
                     calcuRent2();
@@ -484,7 +492,9 @@ class electric : public rent{
                     cout<<"\nMax range = 80 km";
                     cout<<"\nBike no = 5";
                     cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 50,000";
+                    cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 20,000|";
+                    cout<<"\n|**************************|";
                     cout<<"\n\nPer day rent is : 1500";
                     cout<<"\n\nTotal rent is :"<<1700*rentDay;
                     calcuRent2();
@@ -499,7 +509,9 @@ class electric : public rent{
                     cout<<"\nMax range = 50 km";
                     cout<<"\nBike no = 6";
                     cout<<"\nWell conditioned with insurance.";
-                    cout<<"\nDeposit amount = Rs 50,000";
+                    cout<<"\n\n|**************************|";
+                    cout<<"\n|Deposit amount = Rs 20,000|";
+                    cout<<"\n|**************************|";
                     cout<<"\n\nPer day rent is : 1500";
                     cout<<"\n\nTotal rent is :"<<1500*rentDay;
                     calcuRent2();
@@ -564,7 +576,7 @@ class electric : public rent{
         cout << "\t\t	| Your Advance Amount is :"<<"-------|"<<setw(10)<<advanceAmt<<" |"<<endl;
         cout << "\t\t	 ________________________________________________________"<<endl;
         cout <<"\n";
-        cout << "\t\t	| Total Rental Amount is :"<<"-------|"<<setw(10)<<amt<<" |"<<endl;
+        cout << "\t\t	| Total (Due) Rental Amount is :"<<"-------|"<<setw(10)<<amt<<" |"<<endl;
         cout << "\t\t	 ________________________________________________________"<<endl;
         cout << "\t\t	 # This is a computer generated invoce and it does not"<<endl;
         cout << "\t\t	 require an authorised signture #"<<endl;
@@ -983,7 +995,7 @@ int main()
 	cout<<"\n\t\t\t\t\t\t\t**************************************************************";
 	cout<<"\n\t\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    WELCOME TO THE SYSTEM\t\t  \xdb\xdb\xdb\xdb";
 	cout<<"\n\t\t\t\t\t\t\t--------------------------------------------------------------";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|      _________        ___________          ________      |\xdb";
+	cout<<"\n\t\t\t\t\t\t\t\xdb|      _________       ___________          ________       |\xdb";
 	cout<<"\n\t\t\t\t\t\t\t\xdb|     |         |     |    ___    |        /         \\     |\xdb";
 	cout<<"\n\t\t\t\t\t\t\t\xdb|     |   ___   |     |   |   |   |       |    __    |     |\xdb";
 	cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |   |  |     |   |   |   |       |   |  |___|     |\xdb";
@@ -1087,7 +1099,7 @@ void adminlogin()
    }
    else
    {
-      cout << "\n\n\t\t\t\t\t\t\t\xdbAccess Aborted...\n\t\t\t\t\t\t\tPlease Try Again\n\n\xdb";
+      cout <<"\n\n\t\t\t\t\t\t\t\xdb Access Aborted...\n\t\t\t\t\t\t\tPlease Try Again\n\n\xdb";
       exit (0);
    }
    
@@ -1098,9 +1110,9 @@ void userregister()
 {
 	string ruserID,rpassword,rid,rpass;
 	system("cls");
-	cout<<"\n\t\t\t\t\t\t\t\t\xdbEnter the username : ";
+	cout<<"\n\t\t\t\t\t\t\t\t\xdb Enter the username : ";
 	cin>>ruserID;
-	cout<<"\n\t\t\t\t\t\t\t\t\xdbEnter the password : ";
+	cout<<"\n\t\t\t\t\t\t\t\t\xdb Enter the password : ";
 	cin>>rpassword;
 	
 	
@@ -1120,10 +1132,10 @@ void userlogin()
     electric e1;
 	string userID,password,id,pass;
 	system("cls");
-	cout<<"\n\t\t\t\t\t\t\t\t\xdbPlease enter the username and password: ";
-	cout<<"\t\t\t USERNAME : ";
+	cout<<"\n\t\t\t\t\t\t\t\t\xdbPlease enter the username and password\xdb";
+	cout<<"\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tUSERNAME : ";
 	cin>>userID;
-	cout<<"\t\t\t PASSWORD : ";
+	cout<<"\n\t\t\t\t\t\t\t\t\t\t\t\t\tPASSWORD : ";
 	cin>>password;
 	
 	ifstream input("record.txt");//to check whether username and pass already exist in our records
@@ -1138,11 +1150,13 @@ void userlogin()
 	input.close();
 	if(count==1)
 	{
-		cout<<userID<<"\n Your LOGIN is succesfull! \n";
+		cout<<userID<<"\n\t\t\t\t\t\tYour LOGIN is succesfull! \n";
+		sleep(1);
+		system("cls");
 		cout<<"\n\t\t\t\t\t\t\t**************************************************************";
 		cout<<"\n\t\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    WELCOME TO THE SYSTEM\t\t  \xdb\xdb\xdb\xdb";
 		cout<<"\n\t\t\t\t\t\t\t--------------------------------------------------------------";
-		cout<<"\n\t\t\t\t\t\t\t\xdb|      _________        ___________          ________      |\xdb";
+		cout<<"\n\t\t\t\t\t\t\t\xdb|      _________       ___________          ________        |\xdb";
 		cout<<"\n\t\t\t\t\t\t\t\xdb|     |         |     |    ___    |        /         \\     |\xdb";
 		cout<<"\n\t\t\t\t\t\t\t\xdb|     |   ___   |     |   |   |   |       |    __    |     |\xdb";
 		cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |   |  |     |   |   |   |       |   |  |___|     |\xdb";
