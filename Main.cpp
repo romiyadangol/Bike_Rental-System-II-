@@ -34,7 +34,7 @@ class bike{
 };
 class rent : public bike{
     public :
-    int rentDay;
+    int rentHr;
     int amt;
     int rentFee1;
     int rentFee2;
@@ -47,57 +47,57 @@ class rent : public bike{
         cin>>advanceAmt;
         if(ch1==1)
         {
-            rentFee1=rentDay*1800;
+            rentFee1=rentHr*1800;
             amt=rentFee1-advanceAmt;
             
         }
         if(ch1==2)
         {
-            rentFee1=rentDay*1500;
+            rentFee1=rentHr*1500;
             amt=rentFee1-advanceAmt;
             
         }
         if(ch1==3)
         {
-            rentFee1=rentDay*1700;
+            rentFee1=rentHr*1700;
             amt=rentFee1-advanceAmt;
             
         }
         if(ch1==4)
         {
-            rentFee1=rentDay*1400;
+            rentFee1=rentHr*1400;
             amt=rentFee1-advanceAmt;
             
         }
         if(ch1==5)
         {
-            rentFee1=rentDay*2000;
+            rentFee1=rentHr*2000;
             amt=rentFee1-advanceAmt;
             
         }
         if(ch1==6)
         {
-            rentFee1=rentDay*2200;
+            rentFee1=rentHr*2200;
             amt=rentFee1-advanceAmt;  
         }
         if(ch1==7)
         {
-        	rentFee1=rentDay*1800;
+        	rentFee1=rentHr*1800;
         	amt=rentFee1-advanceAmt;
 		}
 		if(ch1==8)
 		{
-			rentFee1=rentDay*1500;
+			rentFee1=rentHr*1500;
 			amt=rentFee1-advanceAmt;
 		}
 		if(ch1==9)
 		{
-			rentFee1=rentDay*1700;
+			rentFee1=rentHr*1700;
 			amt=rentFee1-advanceAmt;
 		}
 		if(ch1==10)
 		{
-			rentFee1=rentDay*1400;
+			rentFee1=rentHr*1400;
 			amt=rentFee1-advanceAmt;
 		}
     }
@@ -109,37 +109,37 @@ class rent : public bike{
         cin>>advanceAmt;
         if(ch2==1)
         {
-            rentFee2=rentDay*2200;
+            rentFee2=rentHr*2200;
             amt=rentFee2-advanceAmt;
             
         }
         if(ch2==2)
         {
-            rentFee2=rentDay*2000;
+            rentFee2=rentHr*2000;
             amt=rentFee2-advanceAmt;
             
         }
         if(ch2==3)
         {
-            rentFee2=rentDay*1700;
+            rentFee2=rentHr*1700;
             amt=rentFee2-advanceAmt;
             
         }
         if(ch2==4)
         {
-            rentFee2=rentDay*1500;
+            rentFee2=rentHr*1500;
             amt=rentFee2-advanceAmt;
             
         }
         if(ch2==5)
         {
-            rentFee2=rentDay*1700;
+            rentFee2=rentHr*1700;
             amt=rentFee2-advanceAmt;
             
         }
         if(ch2==6)
         {
-            rentFee2=rentDay*1500;
+            rentFee2=rentHr*1500;
             amt=rentFee2-advanceAmt;
             
         }
@@ -180,7 +180,7 @@ class normal : public rent{
 					cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
-					cout<<"\n\nPer day rent is : Rs 1800";
+					cout<<"\n\nPer hour rent is :Rs 300";
 					cout<<"\n\nTotal rent is :"<<1800*rentDay;
 					calcuRent1();
                     warning1();
