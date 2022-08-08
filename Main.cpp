@@ -5,6 +5,7 @@
 #include<fstream>
 #include<string>
 #include<unistd.h>
+#include<windows.h>
 using namespace std;
 /******************************************************FunctionDeclaration************************************************/
 void adminlogin();
@@ -31,6 +32,24 @@ class bike{
     int customer_age;
     int ch1;
     int ch2;
+    void welcome()
+    {
+    	gotoxy(0,30);
+    	ifstream ifs ("welceome.txt");
+    	string lines ="";
+    	if(ifs)
+    	{
+    		while(ifs.good())
+    		{
+    			string  tempLine;
+    			getline(ifs,tempLine);
+    			tempLine += "\n";
+    			lines +=tempLine;
+			}
+			cout<< lines ;
+		}
+		ifs.close();
+	}
 };
 class rent : public bike{
     public :
@@ -991,7 +1010,8 @@ void bbike::del_bikes()
 int main()
 {
 	int c;
-	
+	bike b1;
+	b1.welcome();
 	cout<<"\n\t\t\t\t\t\t\t**************************************************************";
 	cout<<"\n\t\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    WELCOME TO THE SYSTEM\t\t  \xdb\xdb\xdb\xdb";
 	cout<<"\n\t\t\t\t\t\t\t--------------------------------------------------------------";
