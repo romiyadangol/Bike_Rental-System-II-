@@ -66,57 +66,57 @@ class rent : public bike{
         cin>>advanceAmt;
         if(ch1==1)
         {
-            rentFee1=rentHr*1800;
+            rentFee1=rentHr*300;
             amt=rentFee1-advanceAmt;
             
         }
         if(ch1==2)
         {
-            rentFee1=rentHr*1500;
+            rentFee1=rentHr*300;
             amt=rentFee1-advanceAmt;
             
         }
         if(ch1==3)
         {
-            rentFee1=rentHr*1700;
+            rentFee1=rentHr*300;
             amt=rentFee1-advanceAmt;
             
         }
         if(ch1==4)
         {
-            rentFee1=rentHr*1400;
+            rentFee1=rentHr*300;
             amt=rentFee1-advanceAmt;
             
         }
         if(ch1==5)
         {
-            rentFee1=rentHr*2000;
+            rentFee1=rentHr*300;
             amt=rentFee1-advanceAmt;
             
         }
         if(ch1==6)
         {
-            rentFee1=rentHr*2200;
+            rentFee1=rentHr*300;
             amt=rentFee1-advanceAmt;  
         }
         if(ch1==7)
         {
-        	rentFee1=rentHr*1800;
+        	rentFee1=rentHr*300;
         	amt=rentFee1-advanceAmt;
 		}
 		if(ch1==8)
 		{
-			rentFee1=rentHr*1500;
+			rentFee1=rentHr*300;
 			amt=rentFee1-advanceAmt;
 		}
 		if(ch1==9)
 		{
-			rentFee1=rentHr*1700;
+			rentFee1=rentHr*300;
 			amt=rentFee1-advanceAmt;
 		}
 		if(ch1==10)
 		{
-			rentFee1=rentHr*1400;
+			rentFee1=rentHr*300;
 			amt=rentFee1-advanceAmt;
 		}
     }
@@ -128,37 +128,37 @@ class rent : public bike{
         cin>>advanceAmt;
         if(ch2==1)
         {
-            rentFee2=rentHr*2200;
+            rentFee2=rentHr*200;
             amt=rentFee2-advanceAmt;
             
         }
         if(ch2==2)
         {
-            rentFee2=rentHr*2000;
+            rentFee2=rentHr*200;
             amt=rentFee2-advanceAmt;
             
         }
         if(ch2==3)
         {
-            rentFee2=rentHr*1700;
+            rentFee2=rentHr*200;
             amt=rentFee2-advanceAmt;
             
         }
         if(ch2==4)
         {
-            rentFee2=rentHr*1500;
+            rentFee2=rentHr*200;
             amt=rentFee2-advanceAmt;
             
         }
         if(ch2==5)
         {
-            rentFee2=rentHr*1700;
+            rentFee2=rentHr*200;
             amt=rentFee2-advanceAmt;
             
         }
         if(ch2==6)
         {
-            rentFee2=rentHr*1500;
+            rentFee2=rentHr*200;
             amt=rentFee2-advanceAmt;
             
         }
@@ -200,7 +200,7 @@ class normal : public rent{
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
 					cout<<"\n\nPer hour rent is :Rs 300";
-					cout<<"\n\nTotal rent is :"<<1800*rentDay;
+					cout<<"\n\nTotal rent is :"<<300*rentHr;
 					calcuRent1();
                     warning1();
                     
@@ -215,8 +215,8 @@ class normal : public rent{
                     cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
-                    cout<<"\n\nPer day rent is : Rs 1500";
-                    cout<<"\n\nTotal rent is :"<<1500*rentDay;
+                    cout<<"\n\nPer hour rent is :Rs 300";
+                    cout<<"\n\nTotal rent is :"<<300*rentHr;
                     calcuRent1();
                     warning1();
                     
@@ -231,8 +231,8 @@ class normal : public rent{
                     cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
-                    cout<<"\n\nPer day rent is : Rs 1700";
-                    cout<<"\n\nTotal rent is :"<<1700*rentDay;
+                    cout<<"\n\nPer hour rent is :Rs 300";
+                    cout<<"\n\nTotal rent is :"<<300*rentHr;
                     calcuRent1();
                     warning1();
                     
@@ -247,8 +247,8 @@ class normal : public rent{
                     cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
-                    cout<<"\n\nPer day rent is : Rs 1400";
-                    cout<<"\n\nTotal rent is :"<<1400*rentDay;
+                    cout<<"\n\nPer hour rent is :Rs 300";
+                    cout<<"\n\nTotal rent is :"<<300*rentHr;
                     calcuRent1();
                     warning1();
                    
@@ -262,8 +262,8 @@ class normal : public rent{
                     cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
-					cout<<"\n\nPer day rent is : Rs 2000";
-					cout<<"\n\nTotal rent is :"<<2000*rentDay;
+					cout<<"\n\nPer hour rent is :Rs 300";
+					cout<<"\n\nTotal rent is :"<<300*rentHr;
 					calcuRent1();
                     warning1();
                     
@@ -277,8 +277,8 @@ class normal : public rent{
                     cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
-					cout<<"\n\nPer day rent is : Rs 2200";
-					cout<<"\n\nTotal rent is :"<<2200*rentDay;
+					cout<<"\n\nPer hour rent is :Rs 300";
+					cout<<"\n\nTotal rent is :"<<300*rentHr;
 					calcuRent1();
                     warning1();
                     
@@ -293,8 +293,8 @@ class normal : public rent{
 					cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
-					cout<<"\n\nPer day rent is : 1800";
-					cout<<"\n\nTotal rent is :"<<1800*rentDay;
+					cout<<"\n\nPer hour rent is :Rs 300";
+					cout<<"\n\nTotal rent is :"<<300*rentHr;
 					calcuRent1();
                     warning1();
                     
@@ -309,8 +309,8 @@ class normal : public rent{
                     cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
-                    cout<<"\n\nPer day rent is : 1500";
-                    cout<<"\n\nTotal rent is :"<<1500*rentDay;
+                    cout<<"\n\nPer hour rent is :Rs 300";
+                    cout<<"\n\nTotal rent is :"<<300*rentHr;
                     calcuRent1();
                     warning1();
                     
@@ -325,8 +325,8 @@ class normal : public rent{
                     cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
-                    cout<<"\n\nPer day rent is : 1700";
-                    cout<<"\n\nTotal rent is :"<<1700*rentDay;
+                    cout<<"\n\nPer hour rent is :Rs 300";
+                    cout<<"\n\nTotal rent is :"<<300*rentHr;
                     calcuRent1();
                     warning1();
                     
@@ -341,8 +341,8 @@ class normal : public rent{
                     cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
-                    cout<<"\n\nPer day rent is : 1400";
-                    cout<<"\n\nTotal rent is :"<<1400*rentDay;
+                    cout<<"\n\nPer hour rent is :Rs 300";
+                    cout<<"\n\nTotal rent is :"<<300*rentHr;
                     calcuRent1();
                     warning1();
                     
@@ -401,7 +401,7 @@ class normal : public rent{
         cout << "\t\t	| Customer Name:"<<"-----------------|"<<setw(10)<<customer_name<<" |"<<endl;
         cout << "\t\t	| Customer Age:"<<"------------------|"<<setw(10)<<customer_age<<" |"<<endl;
         cout << "\t\t	| Bike No :"<<"----------------------|"<<setw(10)<<ch1<<" |"<<endl;
-        cout << "\t\t	| Number of days :"<<"---------------|"<<setw(10)<<rentDay<<" |"<<endl;
+        cout << "\t\t	| Number of days :"<<"---------------|"<<setw(10)<<rentHr<<" |"<<endl;
         cout << "\t\t	| Your Advance Amount is :"<<"-------|"<<setw(10)<<advanceAmt<<" |"<<endl;
         cout << "\t\t	 ________________________________________________________"<<endl;
         cout <<"\n";
@@ -447,8 +447,8 @@ class electric : public rent{
                     cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 20,000|";
                     cout<<"\n|**************************|";
-					cout<<"\n\nPer day rent is : Rs 2200";
-					cout<<"\n\nTotal rent is :"<<2200*rentDay;
+					cout<<"\n\nPer hour rent is :Rs 200";
+					cout<<"\n\nTotal rent is :"<<200*rentHr;
 					calcuRent2();
                     warning2();
                     
@@ -463,8 +463,8 @@ class electric : public rent{
                     cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 20,000|";
                     cout<<"\n|**************************|";
-					cout<<"\n\nPer day rent is : Rs 2000";
-					cout<<"\n\nTotal rent is :"<<2000*rentDay;
+					cout<<"\n\nPer hour rent is :Rs 200";
+					cout<<"\n\nTotal rent is :"<<200*rentHr;
 					calcuRent2();
                     warning2();
                     
@@ -480,8 +480,8 @@ class electric : public rent{
                     cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 20,000|";
                     cout<<"\n|**************************|";
-					cout<<"\n\nPer day rent is : 1700";
-					cout<<"\n\nTotal rent is :"<<1700*rentDay;
+					cout<<"\n\nPer hour rent is :Rs 200";
+					cout<<"\n\nTotal rent is :"<<1700*rentHr;
 					calcuRent2();
                     warning2();
                     
@@ -497,8 +497,8 @@ class electric : public rent{
                     cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 20,000|";
                     cout<<"\n|**************************|";
-                    cout<<"\n\nPer day rent is : 1500";
-                    cout<<"\n\nTotal rent is :"<<1500*rentDay;
+                    cout<<"\n\nPer hour rent is :Rs 200";
+                    cout<<"\n\nTotal rent is :"<<200*rentHr;
                     calcuRent2();
                     warning2();
                     
@@ -514,8 +514,8 @@ class electric : public rent{
                     cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 20,000|";
                     cout<<"\n|**************************|";
-                    cout<<"\n\nPer day rent is : 1500";
-                    cout<<"\n\nTotal rent is :"<<1700*rentDay;
+                    cout<<"\n\nPer hour rent is :Rs 200";
+                    cout<<"\n\nTotal rent is :"<<200*rentHr;
                     calcuRent2();
                     warning2();
                     
@@ -531,8 +531,8 @@ class electric : public rent{
                     cout<<"\n\n|**************************|";
                     cout<<"\n|Deposit amount = Rs 20,000|";
                     cout<<"\n|**************************|";
-                    cout<<"\n\nPer day rent is : 1500";
-                    cout<<"\n\nTotal rent is :"<<1500*rentDay;
+                    cout<<"\n\nPer hour rent is :Rs 200";
+                    cout<<"\n\nTotal rent is :"<<200*rentHr;
                     calcuRent2();
                     warning2();
                     
@@ -591,7 +591,7 @@ class electric : public rent{
         cout << "\t\t	| Customer Name:"<<"-----------------|"<<setw(10)<<customer_name<<" |"<<endl;
         cout << "\t\t	| Customer Age:"<<"------------------|"<<setw(10)<<customer_age<<" |"<<endl;
         cout << "\t\t	| Bike No :"<<"----------------------|"<<setw(10)<<ch2<<" |"<<endl;
-        cout << "\t\t	| Number of days :"<<"---------------|"<<setw(10)<<rentDay<<" |"<<endl;
+        cout << "\t\t	| Number of days :"<<"---------------|"<<setw(10)<<rentHr<<" |"<<endl;
         cout << "\t\t	| Your Advance Amount is :"<<"-------|"<<setw(10)<<advanceAmt<<" |"<<endl;
         cout << "\t\t	 ________________________________________________________"<<endl;
         cout <<"\n";
@@ -1148,6 +1148,9 @@ void userlogin()
 	int count;
 	int num;
     int choice;
+    int option;
+    int day;
+    int d;
     normal n1;
     electric e1;
 	string userID,password,id,pass;
@@ -1159,7 +1162,7 @@ void userlogin()
 	cin>>password;
 	
 	ifstream input("record.txt");//to check whether username and pass already exist in our records
-	while(input>>id>>pass)//
+	while(input>>id>>pass)
 	{
 		if(id==userID && pass==password)
 		{
@@ -1204,8 +1207,28 @@ void userlogin()
 			//cout<<"\nEnter how many vehicle you want to take in rent :";
 			//cin>>num;
 			//fflush(stdin);
-			cout<<"\nEnter for how many days you want to rent the vehicle:";
-			cin>>n1.rentDay;
+			op:
+			cout<<"\n\n**********BIKE RENTAL OPTION**********";
+			cout<<"\nPlease select the option according to your choice";
+			cout<<"\n[1].Days";
+			cout<<"\n[2].Hour";
+			cout<<"\n";
+			cout<<"\nEnter your choice :";
+			cin>>option;
+			switch(option)
+			{
+				case 1:
+					cout<<"\nEnter for how many days you want to rent the bike :";
+					cin>>day;
+					n1.rentHr=day*24;
+					
+				case 2:
+					cout<<"\nEnter for how many hours you want to rent the bike :";
+					cin>>n1.rentHr;
+				default :
+					cout<<"\n!!!Invalid Choice!!!";
+					goto op;
+			}
 			fflush(stdin);
 			cout<<"\nCollecting personal details...............";
 			sleep(1);
@@ -1233,8 +1256,27 @@ void userlogin()
 			//cout<<"\nEnter how many vehicle you want to take in rent :";
 			//cin>>num;
 			//fflush(stdin);
-			cout<<"\nEnter for how many days you want to rent the vehicle:";
-			cin>>e1.rentDay;
+			op1:
+			cout<<"\n\n**********BIKE RENTAL OPTION**********";
+			cout<<"\nPlease select the option according to your choice";
+			cout<<"\n[1].Days";
+			cout<<"\n[2].Hour";
+			cin>>option;
+			switch(option)
+			{
+				case 1:
+					cout<<"\nEnter for how many days you want to rent the bike :";
+					cin>>day;
+					e1.rentHr=day*24;
+				case 2:
+					cout<<"\nEnter for how many hours you want to rent the bike :";
+					cin>>e1.rentHr;
+				default :
+					cout<<"\n!!!Invalid Choice!!!";
+					goto op1;
+			}
+			cout<<"\nEnter for how many hours you want to rent the vehicle:";
+			cin>>e1.rentHr;
 			fflush(stdin);
 			cout<<"\nCollecting personal details...............";
 			sleep(1);
