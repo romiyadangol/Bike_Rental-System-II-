@@ -1128,6 +1128,9 @@ void userlogin()
 	int count;
 	int num;
     int choice;
+    int option;
+    int day;
+    int d;
     normal n1;
     electric e1;
 	string userID,password,id,pass;
@@ -1184,8 +1187,28 @@ void userlogin()
 			//cout<<"\nEnter how many vehicle you want to take in rent :";
 			//cin>>num;
 			//fflush(stdin);
-			cout<<"\nEnter for how many hours you want to rent the vehicle:";
-			cin>>n1.rentHr;
+			op:
+			cout<<"\n\n**********BIKE RENTAL OPTION**********";
+			cout<<"\nPlease select the option according to your choice";
+			cout<<"\n[1].Days";
+			cout<<"\n[2].Hour";
+			cout<<"\n";
+			cout<<"\nEnter your choice :";
+			cin>>option;
+			switch(option)
+			{
+				case 1:
+					cout<<"\nEnter for how many days you want to rent the bike :";
+					cin>>day;
+					n1.rentHr=day*24;
+					
+				case 2:
+					cout<<"\nEnter for how many hours you want to rent the bike :";
+					cin>>n1.rentHr;
+				default :
+					cout<<"\n!!!Invalid Choice!!!";
+					goto op;
+			}
 			fflush(stdin);
 			cout<<"\nCollecting personal details...............";
 			sleep(1);
@@ -1213,6 +1236,25 @@ void userlogin()
 			//cout<<"\nEnter how many vehicle you want to take in rent :";
 			//cin>>num;
 			//fflush(stdin);
+			op1:
+			cout<<"\n\n**********BIKE RENTAL OPTION**********";
+			cout<<"\nPlease select the option according to your choice";
+			cout<<"\n[1].Days";
+			cout<<"\n[2].Hour";
+			cin>>option;
+			switch(option)
+			{
+				case 1:
+					cout<<"\nEnter for how many days you want to rent the bike :";
+					cin>>day;
+					e1.rentHr=day*24;
+				case 2:
+					cout<<"\nEnter for how many hours you want to rent the bike :";
+					cin>>e1.rentHr;
+				default :
+					cout<<"\n!!!Invalid Choice!!!";
+					goto op1;
+			}
 			cout<<"\nEnter for how many hours you want to rent the vehicle:";
 			cin>>e1.rentHr;
 			fflush(stdin);
