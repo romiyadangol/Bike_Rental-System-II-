@@ -1443,6 +1443,7 @@ void load_EXIT()
 	system("cls");
     int row,col,r,c,q;
     int timer = rand()%5+1;
+    gotoxy(30,30);
     printf("LOGGING OFF...");
     gotoxy(60,36);
     for(r=1;r<=timer;r++)
@@ -1456,7 +1457,7 @@ void load_EXIT()
 void exitArt()
 {
 	system("cls");
-	gotoxy(10, 30);
+	gotoxy(10, 10);
 	ifstream ifs ("exit art.txt");    
 	string Lines = " ";
     
