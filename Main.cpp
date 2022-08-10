@@ -38,7 +38,7 @@ class bike{
     int ch2;
     void welcome()
     {
-    	gotoxy(10,20);
+    	gotoxy(10,10);
     	ifstream ifs ("welcome.txt");
     	string lines ="";
     	if(ifs)
@@ -66,7 +66,7 @@ class rent : public bike{
     {
     	cout<<"\n\n****************************************************************";
     	sleep(3);
-        cout<<"\n\nEnter the advance amount for the rental :";
+        cout<<"\n\n\t\tEnter the advance amount for the rental :";
         cin>>advanceAmt;
         if(ch1==1)
         {
@@ -128,7 +128,7 @@ class rent : public bike{
     {
     	cout<<"\n\n****************************************************************";
     	sleep(3);
-        cout<<"\n\nEnter the advance amount for the rental :";
+        cout<<"\n\n\t\tEnter the advance amount for the rental :";
         cin>>advanceAmt;
         if(ch2==1)
         {
@@ -173,198 +173,211 @@ class normal : public rent{
     void get_bike1()
     {
     	system("cls");
-        cout<<"You have chosen normal bike for the rental.....";
+    	gotoxy(40,10);
+        cout<<"\t\tYou have chosen normal bike for the rental.....";
         label1:
         sleep(1);
-        cout<<"\nThe list of bike we have are :"<<endl;
-        cout<<"1.Yamaha XTZ 150"<<endl;
-        cout<<"2.Honda XR 150L"<<endl;
-        cout<<"3.Hero Xpulse"<<endl;
-        cout<<"4.Tracker 250"<<endl;
-        cout<<"5.Royal Enfield Classic 350"<<endl;
-        cout<<"6.Jawa Classic"<<endl;
-        cout<<"7.Pulsar NS 100"<<endl;
-        cout<<"8.Honda Hornet"<<endl;
-        cout<<"9.Apache RTR 200"<<endl;
-        cout<<"10.Yamaha FZS  v2"<<endl;
-        cout<<"\n...............................................................";
-        cout<<"\n\nEnter your choice from(1-10):";
+        cout<<"\t\t\nThe list of bike we have are :"<<endl;
+        cout<<"\t\t1.Yamaha XTZ 150"<<endl;
+        cout<<"\t\t2.Honda XR 150L"<<endl;
+        cout<<"\t\t3.Hero Xpulse"<<endl;
+        cout<<"\t\t4.Tracker 250"<<endl;
+        cout<<"\t\t5.Royal Enfield Classic 350"<<endl;
+        cout<<"\t\t6.Jawa Classic"<<endl;
+        cout<<"\t\t7.Pulsar NS 100"<<endl;
+        cout<<"\t\t8.Honda Hornet"<<endl;
+        cout<<"\t\t9.Apache RTR 200"<<endl;
+        cout<<"\t\t10.Yamaha FZS  v2"<<endl;
+        cout<<"\t\t\n...............................................................";
+        cout<<"\t\t\n\nEnter your choice from(1-10):";
         cin>>ch1;
         system("cls");
         switch(ch1)
         {
             case 1:   
-            		
-                    cout<<"\nYou have sucessfully chosen a bike :";
-					cout<<"\nBike name : Yamaha XTZ 150";
-					cout<<"\nYear : 2020";
-                    cout<<"\nBike no = 3";
-					cout<<"\nWell conditioned with insurance.";
-					cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 30,000|";
-                    cout<<"\n|**************************|";
-					cout<<"\n\nPer hour rent is :Rs 110";
-					cout<<"\n\nPer day rent is :Rs"<<110*24;
-					cout<<"\n\nTotal rent is :"<<110*rentHr;
+            
+            		gotoxy(40,10);
+                    cout<<"\n\t\tYou have sucessfully chosen a bike :";
+					cout<<"\n\t\tBike name : Yamaha XTZ 150";
+					cout<<"\n\t\tYear : 2020";
+                    cout<<"\n\t\tBike no = 3";
+					cout<<"\n\t\tWell conditioned with insurance.";
+					cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 30,000|";
+                    cout<<"\n\t\t|**************************|";
+					cout<<"\n\n\t\tPer hour rent is :Rs 110";
+					cout<<"\n\n\t\tPer day rent is :Rs"<<110*24;
+					cout<<"\n\n\t\tTotal rent is :"<<110*rentHr;
 					calcuRent1();
                     warning1();
                     
                 break;
             case 2:
-            		
-                    cout<<"\nYou have successfully chosen a bike :";
-                    cout<<"\nBike name :Honda XR150L";
-                    cout<<"\nYear : 2018";
-                    cout<<"\nBike no = 4";
-                    cout<<"\nWell conditioned with insurance.";
-                    cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 30,000|";
-                    cout<<"\n|**************************|";
-                    cout<<"\n\nPer hour rent is :Rs 110";
-                    cout<<"\n\nPer day rent is :Rs"<<110*24;
-                    cout<<"\n\nTotal rent is :"<<110*rentHr;
+            	
+            		gotoxy(40,10);
+                    cout<<"\n\t\tYou have successfully chosen a bike :";
+                    cout<<"\n\t\tBike name :Honda XR150L";
+                    cout<<"\n\t\tYear : 2018";
+                    cout<<"\n\t\tBike no = 4";
+                    cout<<"\n\t\tWell conditioned with insurance.";
+                    cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 30,000|";
+                    cout<<"\n\t\t|**************************|";
+                    cout<<"\n\n\t\tPer hour rent is :Rs 110";
+                    cout<<"\n\n\t\tPer day rent is :Rs"<<110*24;
+                    cout<<"\n\n\t\tTotal rent is :"<<110*rentHr;
                     calcuRent1();
                     warning1();
                     
                 break;
             case 3:
-            		
-                    cout<<"\nYou have successfully chosen a bike :";
-                    cout<<"\nBike name : Hero Xpulse";
-                    cout<<"\nYear : 2020";
-                    cout<<"\nBike no = 5";
-                    cout<<"\nWell conditioned with insurance.";
-                    cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 30,000|";
-                    cout<<"\n|**************************|";
-                    cout<<"\n\nPer hour rent is :Rs 110";
-                    cout<<"\n\nPer day rent is :Rs"<<110*24;
-                    cout<<"\n\nTotal rent is :"<<110*rentHr;
+            	
+            		gotoxy(40,10);
+                    cout<<"\n\t\tYou have successfully chosen a bike :";
+                    cout<<"\n\t\tBike name : Hero Xpulse";
+                    cout<<"\n\t\tYear : 2020";
+                    cout<<"\n\t\tBike no = 5";
+                    cout<<"\n\t\tWell conditioned with insurance.";
+                    cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 30,000|";
+                    cout<<"\n\t\t|**************************|";
+                    cout<<"\n\n\t\tPer hour rent is :Rs 110";
+                    cout<<"\n\n\t\tPer day rent is :Rs"<<110*24;
+                    cout<<"\n\n\t\tTotal rent is :"<<110*rentHr;
                     calcuRent1();
                     warning1();
                     
                 break;
             case 4:
-            		
-                    cout<<"\nYou have successfully chosen a bike :";
-                    cout<<"\nBike name : Tracker 250";
-                    cout<<"\nYear : 2021";
-                    cout<<"\nBike no = 6";
-                    cout<<"\nWell conditioned with insurance.";
-                    cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 30,000|";
-                    cout<<"\n|**************************|";
-                    cout<<"\n\nPer hour rent is :Rs 110";
-                    cout<<"\n\nPer day rent is :Rs"<<110*24;
-                    cout<<"\n\nTotal rent is :"<<110*rentHr;
+            	
+            		gotoxy(40,10);
+                    cout<<"\n\t\tYou have successfully chosen a bike :";
+                    cout<<"\n\t\tBike name : Tracker 250";
+                    cout<<"\n\t\tYear : 2021";
+                    cout<<"\n\t\tBike no = 6";
+                    cout<<"\n\t\tWell conditioned with insurance.";
+                    cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 30,000|";
+                    cout<<"\n\t\t|**************************|";
+                    cout<<"\n\n\t\tPer hour rent is :Rs 110";
+                    cout<<"\n\n\t\tPer day rent is :Rs"<<110*24;
+                    cout<<"\n\n\t\tTotal rent is :"<<110*rentHr;
                     calcuRent1();
                     warning1();
                    
                 break;
              case 5:
-        	        cout<<"\nYou have sucessfully chosen a bike :";
-					cout<<"\nBike name : Royal Enfield Classic 350";
-					cout<<"\nYear : 2018";
-                    cout<<"\nBike no = 5";
-					cout<<"\nWell conditioned with insurance.";
-                    cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 30,000|";
-                    cout<<"\n|**************************|";
-					cout<<"\n\nPer hour rent is :Rs 300";
-					cout<<"\n\nPer day rent is :Rs"<<110*24;
-					cout<<"\n\nTotal rent is :"<<110*rentHr;
+             	
+             		gotoxy(40,10);
+        	        cout<<"\n\t\tYou have sucessfully chosen a bike :";
+					cout<<"\n\t\tBike name : Royal Enfield Classic 350";
+					cout<<"\n\t\tYear : 2018";
+                    cout<<"\n\t\tBike no = 5";
+					cout<<"\n\t\tWell conditioned with insurance.";
+                    cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 30,000|";
+                    cout<<"\n\t\t|**************************|";
+					cout<<"\n\n\t\tPer hour rent is :Rs 300";
+					cout<<"\n\n\t\tPer day rent is :Rs"<<110*24;
+					cout<<"\n\n\t\tTotal rent is :"<<110*rentHr;
 					calcuRent1();
                     warning1();
                     
 				break ; 
             case 6:
-					cout<<"\nYou have sucessfully chosen a bike :";
-					cout<<"\nBike name : Jawa Classic";
-					cout<<"\nYear : 2020";
-                    cout<<"\nBike no = 6";
-					cout<<"\nWell conditioned with insurance.";
-                    cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 30,000|";
-                    cout<<"\n|**************************|";
-					cout<<"\n\nPer hour rent is :Rs 110";
-					cout<<"\n\nPer day rent is :Rs"<<110*24;
-					cout<<"\n\nTotal rent is :"<<110*rentHr;
+            		
+					gotoxy(40,10);
+					cout<<"\n\t\tYou have sucessfully chosen a bike :";
+					cout<<"\n\t\tBike name : Jawa Classic";
+					cout<<"\n\t\tYear : 2020";
+                    cout<<"\n\t\tBike no = 6";
+					cout<<"\n\t\tWell conditioned with insurance.";
+                    cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 30,000|";
+                    cout<<"\n\t\t|**************************|";
+					cout<<"\n\n\t\tPer hour rent is :Rs 110";
+					cout<<"\n\n\t\tPer day rent is :Rs"<<110*24;
+					cout<<"\n\n\t\tTotal rent is :"<<110*rentHr;
 					calcuRent1();
                     warning1();
                     
                 break;
             case 7:  
-					
-                    cout<<"\nYou have sucessfully chosen a bike :";
-					cout<<"\nBike name : Pulsar NS 200";
-					cout<<"\nYear : 2020";
-                    cout<<"\nBike no = 7";
-					cout<<"\nWell conditioned with insurance.";
-					cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 30,000|";
-                    cout<<"\n|**************************|";
-					cout<<"\n\nPer hour rent is :Rs 110";
-					cout<<"\n\nPer day rent is :Rs"<<110*24;
-					cout<<"\n\nTotal rent is :"<<110*rentHr;
+            
+					gotoxy(40,10);
+                    cout<<"\n\t\tYou have sucessfully chosen a bike :";
+					cout<<"\n\t\tBike name : Pulsar NS 200";
+					cout<<"\n\t\tYear : 2020";
+                    cout<<"\n\t\tBike no = 7";
+					cout<<"\n\t\tWell conditioned with insurance.";
+					cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 30,000|";
+                    cout<<"\n\t\t|**************************|";
+					cout<<"\n\n\t\tPer hour rent is :Rs 110";
+					cout<<"\n\n\t\tPer day rent is :Rs"<<110*24;
+					cout<<"\n\n\t\tTotal rent is :"<<110*rentHr;
 					calcuRent1();
                     warning1();
                     
                 break;
             case 8:
-            		
-                    cout<<"\nYou have successfully chosen a bike :";
-                    cout<<"\nBike name :Honda Hornet";
-                    cout<<"\nYear : 2017";
-                    cout<<"\nBike no = 8";
-                    cout<<"\nWell conditioned with insurance.";
-                    cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 30,000|";
-                    cout<<"\n|**************************|";
-                    cout<<"\n\nPer hour rent is :Rs 110";
-                    cout<<"\n\nPer day rent is :Rs"<<110*24;
-                    cout<<"\n\nTotal rent is :"<<110*rentHr;
+            	
+            		gotoxy(40,10);
+                    cout<<"\n\t\tYou have successfully chosen a bike :";
+                    cout<<"\n\t\tBike name :Honda Hornet";
+                    cout<<"\n\t\tYear : 2017";
+                    cout<<"\n\t\tBike no = 8";
+                    cout<<"\n\t\tWell conditioned with insurance.";
+                    cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 30,000|";
+                    cout<<"\n\t\t|**************************|";
+                    cout<<"\n\n\t\tPer hour rent is :Rs 110";
+                    cout<<"\n\n\t\tPer day rent is :Rs"<<110*24;
+                    cout<<"\n\n\t\tTotal rent is :"<<110*rentHr;
                     calcuRent1();
                     warning1();
                     
                 break;
             case 9:
-            		
-                    cout<<"\nYou have successfully chosen a bike :";
-                    cout<<"\nBike name : Apache RTR 200";
-                    cout<<"\nYear : 2022";
-                    cout<<"\nBike no = 9";
-                    cout<<"\nWell conditioned with insurance.";
-                    cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 30,000|";
-                    cout<<"\n|**************************|";
-                    cout<<"\n\nPer hour rent is :Rs 110";
-                    cout<<"\n\nPer day rent is :Rs"<<110*24;
-                    cout<<"\n\nTotal rent is :"<<110*rentHr;
+            	
+            		gotoxy(40,10);
+                    cout<<"\n\t\tYou have successfully chosen a bike :";
+                    cout<<"\n\t\tBike name : Apache RTR 200";
+                    cout<<"\n\t\tYear : 2022";
+                    cout<<"\n\t\tBike no = 9";
+                    cout<<"\n\t\tWell conditioned with insurance.";
+                    cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 30,000|";
+                    cout<<"\n\t\t|**************************|";
+                    cout<<"\n\n\t\tPer hour rent is :Rs 110";
+                    cout<<"\n\n\t\tPer day rent is :Rs"<<110*24;
+                    cout<<"\n\n\t\tTotal rent is :"<<110*rentHr;
                     calcuRent1();
                     warning1();
                     
                 break;
             case 10:
-            		
-                    cout<<"\nYou have successfully chosen a bike :";
-                    cout<<"\nBike name : Yamaha FZS V2";
-                    cout<<"\nYear : 2018";
-                    cout<<"\nBike no = 10";
-                    cout<<"\nWell conditioned with insurance.";
-                    cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 30,000|";
-                    cout<<"\n|**************************|";
-                    cout<<"\n\nPer hour rent is :Rs 110";
-                    cout<<"\n\nPer day rent is :Rs"<<110*24;
-                    cout<<"\n\nTotal rent is :"<<110*rentHr;
+            	
+            		gotoxy(40,10);
+                    cout<<"\n\t\tYou have successfully chosen a bike :";
+                    cout<<"\n\t\tBike name : Yamaha FZS V2";
+                    cout<<"\n\t\tYear : 2018";
+                    cout<<"\n\t\tBike no = 10";
+                    cout<<"\n\t\tWell conditioned with insurance.";
+                    cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 30,000|";
+                    cout<<"\n\t\t|**************************|";
+                    cout<<"\n\n\t\tPer hour rent is :Rs 110";
+                    cout<<"\n\n\t\tPer day rent is :Rs"<<110*24;
+                    cout<<"\n\n\t\tTotal rent is :"<<110*rentHr;
                     calcuRent1();
                     warning1();
                     
                 break;    
             default :
-            	
-                cout<<"You have entered Invalid choice !!!";
-                cout<<"!!!Try again!!!";
+            	gotoxy(40,10);
+                cout<<"\n\t\tYou have entered Invalid choice !!!";
+                cout<<"\n\t\t!!!Try again!!!";
                 goto label1;
             break;
         }        
@@ -372,9 +385,11 @@ class normal : public rent{
     void warning1()
     {
     	system("cls");
+    	gotoxy(50,10);
         cout<<"Providing WARNING............";
         sleep(1);
         system("cls");
+        gotoxy(50,10);
         cout<<"******RULES AND REGULATIONS******";
         sleep(2);
         cout << "\n\n\t\t                    BIKE RENTAL  - Rules and Regulation                  "<<endl;
@@ -402,12 +417,15 @@ class normal : public rent{
     void display1()
     {
 		system("cls");
+		gotoxy(50,10);
 		cout<<"Calculating rent.........................";
         sleep(2);
         system("cls");
+        gotoxy(50,10);
         cout<<"Providing bill...........................";
         sleep(3);
         system("cls");
+		gotoxy(50,10);
         cout<<"******BILL_PROVIDED******";
         cout << "\n\t\t                       BIKE RENTAL  - Customer Invoice                  "<<endl;
         cout << "\t\t	///////////////////////////////////////////////////////////"<<endl;
@@ -435,132 +453,135 @@ class electric : public rent{
     void get_bike2()
     {
     	system("cls");
-        cout<<"You have chosen electric bike for the rental....";
+    	gotoxy(40,10);
+        cout<<"\t\tYou have chosen electric bike for the rental....";
         label2:
         sleep(2);
-        cout<<"\nThe list of bike we have are :"<<endl;
-        cout<<"1.Yatri bike "<<endl;
-        cout<<"2.Super Soco bike "<<endl;
-        cout<<"3.NIU scooter"<<endl;
-        cout<<"4.Bella scooter"<<endl;
-        cout<<"5.Yadea G5 scooter"<<endl;
-        cout<<"6.Doohan scooter"<<endl;
-        cout<<"\n...............................................................";
-        cout<<"\n\nEnter your choice from(1-6):";
+        cout<<"\n\t\tThe list of bike we have are :"<<endl;
+        cout<<"\t\t1.Yatri bike "<<endl;
+        cout<<"\t\t2.Super Soco bike "<<endl;
+        cout<<"\t\t3.NIU scooter"<<endl;
+        cout<<"\t\t4.Bella scooter"<<endl;
+        cout<<"\t\t5.Yadea G5 scooter"<<endl;
+        cout<<"\t\t6.Doohan scooter"<<endl;
+        cout<<"\n\t\t...............................................................";
+        cout<<"\n\n\t\tEnter your choice from(1-6):";
         cin>>ch2;
         system("cls");
         switch(ch2)
         {
         case 1:
-        	        cout<<"\nYou have sucessfully chosen a bike :";
-					cout<<"\nBike name : Yatri p1";
-					cout<<"\nYear : 2021";
-					cout<<"\nMax range = 110km";
-                    cout<<"\nBike no = 1";
-					cout<<"\nWell conditioned with insurance.";
-                    cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 20,000|";
-                    cout<<"\n|**************************|";
-					cout<<"\n\nPer hour rent is :Rs 100";
-					cout<<"\n\nPer day rent is :Rs"<<100*24;
-					cout<<"\n\nTotal rent is :"<<100*rentHr;
+        			gotoxy(40,10);
+        	        cout<<"\n\t\tYou have sucessfully chosen a bike :";
+					cout<<"\n\t\tBike name : Yatri p1";
+					cout<<"\n\t\tYear : 2021";
+					cout<<"\n\t\tMax range = 110km";
+                    cout<<"\n\t\tBike no = 1";
+					cout<<"\n\t\tWell conditioned with insurance.";
+                    cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 20,000|";
+                    cout<<"\n\t\t|**************************|";
+					cout<<"\n\n\t\tPer hour rent is :Rs 100";
+					cout<<"\n\n\t\tPer day rent is :Rs"<<100*24;
+					cout<<"\n\n\t\tTotal rent is :"<<100*rentHr;
 					calcuRent2();
                     warning2();
                     
 				break ; 
             case 2:
-					cout<<"\nYou have sucessfully chosen a bike :";
-					cout<<"\nBike name : Super soco TSX";
-					cout<<"\nYear : 2020";
-					cout<<"\nMax range = 80 km";
-                    cout<<"\nBike no = 2";
-					cout<<"\nWell conditioned with insurance.";
-                    cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 20,000|";
-                    cout<<"\n|**************************|";
-					cout<<"\n\nPer hour rent is :Rs 100";
-					cout<<"\n\nPer day rent is :Rs"<<100*24;
-					cout<<"\n\nTotal rent is :"<<100*rentHr;
+            		gotoxy(40,10);
+					cout<<"\n\t\tYou have sucessfully chosen a bike :";
+					cout<<"\n\t\tBike name : Super soco TSX";
+					cout<<"\n\t\tYear : 2020";
+					cout<<"\n\t\tMax range = 80 km";
+                    cout<<"\n\t\tBike no = 2";
+					cout<<"\n\t\tWell conditioned with insurance.";
+                    cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 20,000|";
+                    cout<<"\n\t\t|**************************|";
+					cout<<"\n\n\t\tPer hour rent is :Rs 100";
+					cout<<"\n\n\t\tPer day rent is :Rs"<<100*24;
+					cout<<"\n\n\t\tTotal rent is :"<<100*rentHr;
 					calcuRent2();
                     warning2();
                     
                 break;
             case 3:  
-					
-                    cout<<"\nYou have sucessfully chosen a bike :";
-					cout<<"\nBike name : NIU scooter";
-					cout<<"\nYear : 2020";
-					cout<<"\nMax range = 90-130km";
-                    cout<<"\nBike no = 3";
-					cout<<"\nWell conditioned with insurance.";
-                    cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 20,000|";
-                    cout<<"\n|**************************|";
-					cout<<"\n\nPer hour rent is :Rs 100";
-					cout<<"\n\nPer day rent is :Rs"<<100*24;
-					cout<<"\n\nTotal rent is :"<<100*rentHr;
+					gotoxy(40,10);
+                    cout<<"\n\t\tYou have sucessfully chosen a bike :";
+					cout<<"\n\t\tBike name : NIU scooter";
+					cout<<"\n\t\tYear : 2020";
+					cout<<"\n\t\tMax range = 90-130km";
+                    cout<<"\n\t\tBike no = 3";
+					cout<<"\n\t\tWell conditioned with insurance.";
+                    cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 20,000|";
+                    cout<<"\n\t\t|**************************|";
+					cout<<"\n\n\t\tPer hour rent is :Rs 100";
+					cout<<"\n\n\t\tPer day rent is :Rs"<<100*24;
+					cout<<"\n\n\t\tTotal rent is :"<<100*rentHr;
 					calcuRent2();
                     warning2();
                     
                 break;
             case 4:
-            		
-                    cout<<"\nYou have successfully chosen a bike :";
-                    cout<<"\nBike name :Bella scooter";
-                    cout<<"\nYear : 2018";
-                    cout<<"\nMax range = 75 km";
-                    cout<<"\nBike no = 4";
-                    cout<<"\nWell conditioned with insurance.";
-                    cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 20,000|";
-                    cout<<"\n|**************************|";
-                    cout<<"\n\nPer hour rent is :Rs 100";
-                    cout<<"\n\nPer day rent is :Rs"<<100*24;
-                    cout<<"\n\nTotal rent is :"<<100*rentHr;
+            		gotoxy(40,10);
+                    cout<<"\n\t\tYou have successfully chosen a bike :";
+                    cout<<"\n\t\tBike name :Bella scooter";
+                    cout<<"\n\t\tYear : 2018";
+                    cout<<"\n\t\tMax range = 75 km";
+                    cout<<"\n\t\tBike no = 4";
+                    cout<<"\n\t\tWell conditioned with insurance.";
+                    cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 20,000|";
+                    cout<<"\n\t\t|**************************|";
+                    cout<<"\n\n\t\tPer hour rent is :Rs 100";
+                    cout<<"\n\n\t\tPer day rent is :Rs"<<100*24;
+                    cout<<"\n\n\t\tTotal rent is :"<<100*rentHr;
                     calcuRent2();
                     warning2();
                     
                 break;
             case 5:
-            		
-                    cout<<"\nYou have successfully chosen a bike :";
-                    cout<<"\nBike name : Yadea G5 Scooter ";
-                    cout<<"\nYear : 2021";
-                    cout<<"\nMax range = 80 km";
-                    cout<<"\nBike no = 5";
-                    cout<<"\nWell conditioned with insurance.";
-                    cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 20,000|";
-                    cout<<"\n|**************************|";
-                    cout<<"\n\nPer hour rent is :Rs 100";
-                    cout<<"\n\nPer day rent is :Rs"<<100*24;
-                    cout<<"\n\nTotal rent is :"<<100*rentHr;
+            		gotoxy(40,10);
+                    cout<<"\n\t\tYou have successfully chosen a bike :";
+                    cout<<"\n\t\tBike name : Yadea G5 Scooter ";
+                    cout<<"\n\t\tYear : 2021";
+                    cout<<"\n\t\tMax range = 80 km";
+                    cout<<"\n\t\tBike no = 5";
+                    cout<<"\n\t\tWell conditioned with insurance.";
+                    cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 20,000|";
+                    cout<<"\n\t\t|**************************|";
+                    cout<<"\n\n\t\tPer hour rent is :Rs 100";
+                    cout<<"\n\n\t\tPer day rent is :Rs"<<100*24;
+                    cout<<"\n\n\t\tTotal rent is :"<<100*rentHr;
                     calcuRent2();
                     warning2();
                     
                 break;
             case 6:
-            		
-                    cout<<"\nYou have successfully chosen a bike :";
-                    cout<<"\nBike name : Doohan Scooter";
-                    cout<<"\nYear : 2022";
-                    cout<<"\nMax range = 50 km";
-                    cout<<"\nBike no = 6";
-                    cout<<"\nWell conditioned with insurance.";
-                    cout<<"\n\n|**************************|";
-                    cout<<"\n|Deposit amount = Rs 20,000|";
-                    cout<<"\n|**************************|";
-                    cout<<"\n\nPer hour rent is :Rs 100";
-                    cout<<"\n\nPer day rent is :Rs"<<100*24;
-                    cout<<"\n\nTotal rent is :"<<100*rentHr;
+            		gotoxy(40,10);
+                    cout<<"\n\t\tYou have successfully chosen a bike :";
+                    cout<<"\n\t\tBike name : Doohan Scooter";
+                    cout<<"\n\t\tYear : 2022";
+                    cout<<"\n\t\tMax range = 50 km";
+                    cout<<"\n\t\tBike no = 6";
+                    cout<<"\n\t\tWell conditioned with insurance.";
+                    cout<<"\n\n\t\t|**************************|";
+                    cout<<"\n\t\t|Deposit amount = Rs 20,000|";
+                    cout<<"\n\t\t|**************************|";
+                    cout<<"\n\n\t\tPer hour rent is :Rs 100";
+                    cout<<"\n\n\t\tPer day rent is :Rs"<<100*24;
+                    cout<<"\n\n\t\tTotal rent is :"<<100*rentHr;
                     calcuRent2();
                     warning2();
                     
                 break;    
             default :
-            	
-                cout<<"You have entered Invalid choice !!!";
-                cout<<"!!!Try again!!!";
+            	gotoxy(40,10);
+                cout<<"\n\t\tYou have entered Invalid choice !!!";
+                cout<<"\n\t\t!!!Try again!!!";
                 goto label2;
             break; 
         }
@@ -568,9 +589,11 @@ class electric : public rent{
     void warning2()
     {	
     	system("cls");
+		gotoxy(50,10);
     	cout<<"Providing WARNING............";
         sleep(1);
         system("cls");
+        gotoxy(50,10);
         cout<<"******RULES AND REGULATIONS******";
         sleep(2);
         cout << "\n\n\t\t                    BIKE RENTAL  - Rules and Regulation                  "<<endl;
@@ -598,12 +621,15 @@ class electric : public rent{
     void display2()
     {
         system("cls");
+        gotoxy(50,10);
         cout<<"Calculating rent.........................";
         sleep(2);
         system("cls");
+        gotoxy(50,10);
         cout<<"Providing bill...........................";
         sleep(3);
         system("cls");
+        gotoxy(50,10);
         cout<<"******BILL_PROVIDED******";
         cout << "\n\t\t                       BIKE RENTAL  - Customer Invoice                  "<<endl;
         cout << "\t\t	///////////////////////////////////////////////////////////"<<endl;
@@ -631,7 +657,7 @@ void bbike::input()
 {
 	system("cls");
 	cout<<"\n\n\t\t\t\tMENU";
-	cout<<"\n\n 1. Add New Bikes";
+	cout<<"\n\n1. Add New Bikes";
 	cout<<"\n 2. Display Bikes";
 	cout<<"\n 3. Check Specific Bikes";
 	cout<<"\n 4. Update Bikes";
@@ -642,28 +668,30 @@ void bbike::add_bikes()
 {
 	label0:
 	system("cls");
+	gotoxy(40,10);
 	cout<<"\n\n******Adding new bike to the system****** "<<endl;
-	cout<<"\nChoose which bike you would like to add below........";
-	cout<<"\n\n1.Petrol Bike"<<endl;
-	cout<<"\n2.Electric Bike"<<endl;
-	cout<<"\nEnter your choice :";
+	cout<<"\n\t\tChoose which bike you would like to add below........";
+	cout<<"\n\n\t\t1.Petrol Bike"<<endl;
+	cout<<"\n\t\t2.Electric Bike"<<endl;
+	cout<<"\n\t\tEnter your choice :";
 	cin>>ch;
 	if(ch==1)
 	{
 		system("cls");
+		gotoxy(40,10);
 		fstream file1;
 		int year1,max_power1,max_torque1;
 		string name1;
-		cout<<"\n******Getting Details for new petrol medium bike******"<<endl;
-		cout<<"\n\n Enter Bike name: ";
+		cout<<"\n\t******Getting Details for new petrol medium bike******"<<endl;
+		cout<<"\n\n\tEnter Bike name: ";
 		cin>>name1;
 		fflush(stdin);
-		cout<<"\n Enter year: ";	
+		cout<<"\n\t\tEnter year: ";	
 		cin>>year1;
 		fflush(stdin);
-		cout<<"\n Enter max_power: ";
+		cout<<"\n\t\tEnter max_power: ";
 		cin>>max_power1;
-		cout<<"\n Enter max-torque: ";
+		cout<<"\n\t\tEnter max-torque: ";
 		cin>>max_torque1;
 		file1.open("D://petrolBike.txt",ios::out|ios::app);
 		file1<<" "<<name1<<" "<<year1<<" "<<max_power1<<" "<<max_torque1<<"\n";
@@ -672,17 +700,18 @@ void bbike::add_bikes()
 	else if (ch==2)
 	{
 		system("cls");
+		gotoxy(40,10);
 		fstream file2;
 		int year2,range2;
 		string name2;
-		cout<<"\n******Getting Details for new electric medium bike******"<<endl;
-		cout<<"\n\n Enter Bike name: ";
+		cout<<"\n\t\t******Getting Details for new electric medium bike******"<<endl;
+		cout<<"\n\n\t\tEnter Bike name: ";
 		cin>>name2;
 		fflush(stdin);
-		cout<<"\n Enter year: ";	
+		cout<<"\n\t\tEnter year: ";	
 		cin>>year2;
 		fflush(stdin);
-		cout<<"\n Enter range: ";
+		cout<<"\n\t\tEnter range: ";
 		cin>>range2;
 		file2.open("D://electricBike.txt",ios::out|ios::app);
 		file2<<" "<<name2<<" "<<year2<<" "<<range2<<" "<<"\n";
@@ -690,8 +719,8 @@ void bbike::add_bikes()
 	}
 	else
 	{
-		cout<<"\n!!!Invalid Input!!!";
-		cout<<"\n!!!Try Again!!!";
+		cout<<"\n\t\t!!!Invalid Input!!!";
+		cout<<"\n\t\t!!!Try Again!!!";
 		sleep(3);
 		goto label0;
 	}
@@ -700,15 +729,17 @@ void bbike::show_bikes()
 {
 	label1:
 	system("cls");
+	gotoxy(40,10);
 	cout<<"\n******Displaying bike******"<<endl;
-	cout<<"\nChoose which bike list would you like to display........";
-	cout<<"\n\n1.Petrol Bike"<<endl;
-	cout<<"\n2.Electric Bike"<<endl;
-	cout<<"\nEnter your choice :";
+	cout<<"\n\t\tChoose which bike list would you like to display........";
+	cout<<"\n\n\t\t1.Petrol Bike"<<endl;
+	cout<<"\n\t\t2.Electric Bike"<<endl;
+	cout<<"\n\t\tEnter your choice :";
 	cin>>ch;
 	if(ch == 1)
 	{	
 		system("cls");
+		gotoxy(40,10);
 		fstream file1;
 		int year1,max_power1,max_torque1;
 		string name1;
@@ -730,6 +761,7 @@ void bbike::show_bikes()
 	else if (ch==2)
 	{		
 		system("cls");
+		gotoxy(40,10);
 		fstream file2;
 		int year2,range2;
 		string name2;
@@ -750,6 +782,7 @@ void bbike::show_bikes()
 	}
 	else
 	{
+	
 		cout<<"\n!!!Invalid Choice!!!";
 		sleep(3);
 		goto label1;
@@ -759,24 +792,26 @@ void bbike::check_bikes()
 {
 	label2:
 	system("cls");
+	gotoxy(40,10);
 	cout<<"\n******Checking Bike******";
-	cout<<"\nChoose which bike would you like to check........";
-	cout<<"\n\n1.Petrol Bike"<<endl;
-	cout<<"\n2.Electric Bike"<<endl;
-	cout<<"\nEnter your choice :";
+	cout<<"\n\t\tChoose which bike would you like to check........";
+	cout<<"\n\n\t\t1.Petrol Bike"<<endl;
+	cout<<"\n\t\t2.Electric Bike"<<endl;
+	cout<<"\n\t\tEnter your choice :";
 	cin>>ch;
 	if(ch == 1 )
 	{
 		system("cls");
+		gotoxy(40,10);
 		fstream file1;
 		int year1,max_power1,max_torque1,count1=0;
 		string name1,namee1;
 		file1.open("D://petrolBike.txt",ios::in);
 		if(!file1)
-		cout<<"\n\n File Openning Error...";
+		cout<<"\n\n\t\tFile Openning Error...";
 		else
 		{
-			cout<<"\n\n Bike Name: : ";
+			cout<<"\n\n\t\tBike Name: : ";
 			cin>>namee1;
 			file1>>name1>>year1>>max_power1>>max_torque1;
 			while(!file1.eof())
@@ -801,6 +836,7 @@ void bbike::check_bikes()
 	else if( ch ==2)
 	{ 
 		system("cls");
+		gotoxy(40,10);
 		fstream file2;
 		int year2,max_power2,range2,count2=0;
 		string name2,namee2;
@@ -841,6 +877,7 @@ void bbike::update_bikes()
 {
 	label3:
 	system("cls");
+	gotoxy(40,10);
 	cout<<"\n******Updating Bike******"<<endl;
 	cout<<"\nChoose which bike would you like to update........";
 	cout<<"\n\n1.Petrol Bike"<<endl;
@@ -850,6 +887,7 @@ void bbike::update_bikes()
 	if(ch==1)
 	{
 		system("cls");
+		gotoxy(40,10);
 		fstream file1,temp1;
 		int year1,yr1,max_power1,mp1,max_torque1,mt1,count1=0;
 		string name1,namee1;
@@ -893,6 +931,7 @@ void bbike::update_bikes()
 	else if ( ch == 2)
 	{
 		system("cls");
+		gotoxy(40,10);
 		fstream file2,temp2;
 		int year2,yr2,range2,r2,count2=0;
 		string name2,namee2;
@@ -943,6 +982,7 @@ void bbike::del_bikes()
 {
 	label4:
 	system("cls");
+	gotoxy(40,10);
 	cout<<"******Delete Bike******"<<endl;
 	cout<<"\nChoose which bike would you like to delete........";
 	cout<<"\n\n1.Petrol Bike"<<endl;
@@ -987,6 +1027,7 @@ void bbike::del_bikes()
 	else if (ch == 2)
 	{
 		system("cls");
+		gotoxy(40,10);
 		fstream file2,temp2;
 		int year2,range2,count2=0;
 		string name2,namee2;
@@ -1081,6 +1122,7 @@ int main()
 		default:
 			system("cls");
 			cout<<"\t\t\t\t\t\t\t\tPlease select from the options given above!!! \n"<<endl;
+			system("cls");
 			main();
 	}
 }
@@ -1089,6 +1131,7 @@ int main()
 void adminlogin()
 {
    system("cls");
+   gotoxy(40,10);
    bbike b;
    int choice;
    char x;
@@ -1151,8 +1194,9 @@ void adminlogin()
 /******************************************************UserRegister**************************************************/
 void userregister()
 {
-	string ruserID,rpassword,rid,rpass;
 	system("cls");
+	gotoxy(40,10);
+	string ruserID,rpassword,rid,rpass;
 	cout<<"\n\t\t\t\t\t\t\t\t\xdb Enter the username : ";
 	cin>>ruserID;
 	cout<<"\n\t\t\t\t\t\t\t\t\xdb Enter the password : ";
@@ -1181,6 +1225,7 @@ void userlogin()
     electric e1;
 	string userID,password,id,pass;
 	system("cls");
+	gotoxy(40,10);
 	cout<<"\n\t\t\t\t\t\t\t\t\xdbPlease enter the username and password\xdb";
 	cout<<"\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tUSERNAME : ";
 	cin>>userID;
@@ -1222,6 +1267,7 @@ void userlogin()
 		cout<<"\n\t\t\t\t\t\t\t**************************************************************";
 		sleep(3);
 		system("cls");
+		gotoxy(40,10);
 		up:
 		cout<<"\n\nWe have two categories in Bike Rental System";
 		cout<<"\n1.Normal Bike";
@@ -1231,8 +1277,8 @@ void userlogin()
 		if(choice==1)
 		{
 			system("cls");
-			fstream normal_file;
-			normal_file.open("D://II-SEM-PROJECT//Normal_Bike.txt", ios::app);
+			gotoxy(40,10);
+			ofstream normal_file("D://II-SEM-PROJECT//Normal_Bike.txt", ios::app);
 			op:
 			system("cls");
 			cout<<"\n\n**********BIKE RENTAL OPTION**********";
@@ -1248,11 +1294,13 @@ void userlogin()
 					cout<<"\nEnter for how many days you want to rent the bike :";
 					cin>>day;
 					n1.rentHr=day*24;
+					normal_file<<"\nDays = "<<n1.rentHr;
 					break;
 					
 				case 2:
 					cout<<"\nEnter for how many hours you want to rent the bike :";
 					cin>>n1.rentHr;
+					normal_file<<"\nHour = "<<n1.rentHr;
 					break;
 				default :
 					cout<<"\n!!!Invalid Choice!!!";
@@ -1261,22 +1309,29 @@ void userlogin()
 			cout<<"\nCollecting personal details...............";
 			sleep(1);
 			system("cls");
+			gotoxy(40,10);
 			cout<<"******PERSONAL DETAILS******";
+			normal_file<<"\n******PERSONAL INFORMATION******";
 			cout<<"\n\nEnter your name :";
 			cin>>n1.customer_name;
-			normal_file<< n1.customer_name;
+			normal_file<<"\n1.Customer Name : "<<n1.customer_name;
 			fflush(stdin);
 			cout<<"\nEnter your age :";
 			cin>>n1.customer_age;
-			normal_file<< n1.customer_age;
+			normal_file<<"\n2.Customer Age : "<<n1.customer_age;
 			fflush(stdin);
+			if(n1.customer_age < 18)
+			{
+				cout<<"\n!!! You are not eligible for renting bike !!!";
+				exit (0);
+			}
 			cout<<"\nEnter the contact no :";
 			cin>>n1.contact_no;
-			normal_file<< n1.contact_no;
+			normal_file<<"\n3.Contact No : "<<n1.contact_no;
 			fflush(stdin);
 			cout<<"\nEnter the citizenship no :";
 			cin>>n1.citizenship_no;
-			normal_file<< n1.citizenship_no;
+			normal_file<<"\n4.Citizenship No : "<<n1.citizenship_no;
 			fflush(stdin);
 		    cout<<"\n\n\nLOADING................";
 			sleep(3);
@@ -1296,11 +1351,15 @@ void userlogin()
 		else if(choice==2)
 		{
 			system("cls");
+			gotoxy(40,10);
+			ofstream electric_file("D://II-SEM-PROJECT//Electric_Bike.txt",ios::app);
 			op1:
 			cout<<"\n\n**********BIKE RENTAL OPTION**********";
 			cout<<"\nPlease select the option according to your choice";
 			cout<<"\n[1].Days";
 			cout<<"\n[2].Hour";
+			cout<<"\n";
+			cout<<"\nEnter your choice :";
 			cin>>option;
 			switch(option)
 			{
@@ -1308,33 +1367,43 @@ void userlogin()
 					cout<<"\nEnter for how many days you want to rent the bike :";
 					cin>>day;
 					e1.rentHr=day*24;
+					electric_file<<"\nDay = "<<e1.rentHr;
 					break;
 				case 2:
 					cout<<"\nEnter for how many hours you want to rent the bike :";
 					cin>>e1.rentHr;
+					electric_file<<"\nHour = "<<e1.rentHr;
 					break;
 				default :
 					cout<<"\n!!!Invalid Choice!!!";
 					goto op1;
 			}
-			cout<<"\nEnter for how many hours you want to rent the vehicle:";
-			cin>>e1.rentHr;
-			fflush(stdin);
 			cout<<"\nCollecting personal details...............";
 			sleep(1);
 			system("cls");
+			gotoxy(40,10);
 			cout<<"******PERSONAL DETAILS******";
+			electric_file<<"******PERSONAL INFORMATION******";
 			cout<<"\n\nEnter your name :";
 			cin>>e1.customer_name;
+			electric_file<<"\n1.Customer Name : "<<e1.customer_name;
 			fflush(stdin);
 			cout<<"\nEnter your age :";
 			cin>>e1.customer_age;
+			if(e1.customer_age < 18)
+			{
+				cout<<"\n!!! You are  not eligible for renting bike !!!";
+				exit (0);
+			}
+			electric_file<<"\n2.Customer Age : "<<e1.customer_age;
 			fflush(stdin);
 			cout<<"\nEnter the contact no :";
 			cin>>e1.contact_no;
+			electric_file<<"\n3.Contact No : "<<e1.contact_no;
 			fflush(stdin);
 			cout<<"\nEnter the citizenship no :";
 		 	cin>>e1.citizenship_no;
+		 	electric_file<<"\n4.Citizenship No : "<<e1.citizenship_no;
 			fflush(stdin);
 		    cout<<"\n\n\nLOADING................";
 			sleep(3);
@@ -1374,7 +1443,6 @@ void load_EXIT()
 	system("cls");
     int row,col,r,c,q;
     int timer = rand()%5+1;
-    gotoxy(65,34);
     printf("LOGGING OFF...");
     gotoxy(60,36);
     for(r=1;r<=timer;r++)
@@ -1387,6 +1455,7 @@ void load_EXIT()
 /******************************************************exitArt************************************************/
 void exitArt()
 {
+	system("cls");
 	gotoxy(10, 30);
 	ifstream ifs ("exit art.txt");    
 	string Lines = " ";
