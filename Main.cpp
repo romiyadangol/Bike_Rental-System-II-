@@ -6,6 +6,7 @@
 #include<string>
 #include<unistd.h>
 #include<windows.h>
+#include<ctime>
 using namespace std;
 /******************************************************FunctionDeclaration************************************************/
 void adminlogin();
@@ -31,11 +32,13 @@ class bbike
 class bike{
     public :
     string customer_name;
+    string customer_gender;
     double contact_no;
     double citizenship_no;
     int customer_age;
     int ch1;
     int ch2;
+    /******************************************************Welcome************************************************/
     void welcome()
     {
     	gotoxy(10,10);
@@ -54,6 +57,9 @@ class bike{
 		}
 		ifs.close();
 	}
+	/******************************************************CurrentTime************************************************/
+
+	
 };
 class rent : public bike{
     public :
@@ -177,7 +183,7 @@ class normal : public rent{
         cout<<"\t\tYou have chosen normal bike for the rental.....";
         label1:
         sleep(1);
-        cout<<"\t\t\nThe list of bike we have are :"<<endl;
+        cout<<"\n\t\tThe list of bike we have are :"<<endl;
         cout<<"\t\t1.Yamaha XTZ 150"<<endl;
         cout<<"\t\t2.Honda XR 150L"<<endl;
         cout<<"\t\t3.Hero Xpulse"<<endl;
@@ -197,6 +203,7 @@ class normal : public rent{
             case 1:   
             
             		gotoxy(40,10);
+
                     cout<<"\n\t\tYou have sucessfully chosen a bike :";
 					cout<<"\n\t\tBike name : Yamaha XTZ 150";
 					cout<<"\n\t\tYear : 2020";
@@ -215,6 +222,7 @@ class normal : public rent{
             case 2:
             	
             		gotoxy(40,10);
+
                     cout<<"\n\t\tYou have successfully chosen a bike :";
                     cout<<"\n\t\tBike name :Honda XR150L";
                     cout<<"\n\t\tYear : 2018";
@@ -233,6 +241,7 @@ class normal : public rent{
             case 3:
             	
             		gotoxy(40,10);
+
                     cout<<"\n\t\tYou have successfully chosen a bike :";
                     cout<<"\n\t\tBike name : Hero Xpulse";
                     cout<<"\n\t\tYear : 2020";
@@ -251,6 +260,7 @@ class normal : public rent{
             case 4:
             	
             		gotoxy(40,10);
+   
                     cout<<"\n\t\tYou have successfully chosen a bike :";
                     cout<<"\n\t\tBike name : Tracker 250";
                     cout<<"\n\t\tYear : 2021";
@@ -269,6 +279,7 @@ class normal : public rent{
              case 5:
              	
              		gotoxy(40,10);
+
         	        cout<<"\n\t\tYou have sucessfully chosen a bike :";
 					cout<<"\n\t\tBike name : Royal Enfield Classic 350";
 					cout<<"\n\t\tYear : 2018";
@@ -287,6 +298,7 @@ class normal : public rent{
             case 6:
             		
 					gotoxy(40,10);
+
 					cout<<"\n\t\tYou have sucessfully chosen a bike :";
 					cout<<"\n\t\tBike name : Jawa Classic";
 					cout<<"\n\t\tYear : 2020";
@@ -305,6 +317,7 @@ class normal : public rent{
             case 7:  
             
 					gotoxy(40,10);
+
                     cout<<"\n\t\tYou have sucessfully chosen a bike :";
 					cout<<"\n\t\tBike name : Pulsar NS 200";
 					cout<<"\n\t\tYear : 2020";
@@ -323,6 +336,7 @@ class normal : public rent{
             case 8:
             	
             		gotoxy(40,10);
+
                     cout<<"\n\t\tYou have successfully chosen a bike :";
                     cout<<"\n\t\tBike name :Honda Hornet";
                     cout<<"\n\t\tYear : 2017";
@@ -341,6 +355,7 @@ class normal : public rent{
             case 9:
             	
             		gotoxy(40,10);
+     
                     cout<<"\n\t\tYou have successfully chosen a bike :";
                     cout<<"\n\t\tBike name : Apache RTR 200";
                     cout<<"\n\t\tYear : 2022";
@@ -359,6 +374,7 @@ class normal : public rent{
             case 10:
             	
             		gotoxy(40,10);
+        
                     cout<<"\n\t\tYou have successfully chosen a bike :";
                     cout<<"\n\t\tBike name : Yamaha FZS V2";
                     cout<<"\n\t\tYear : 2018";
@@ -385,13 +401,14 @@ class normal : public rent{
     void warning1()
     {
     	system("cls");
-    	gotoxy(50,10);
+    	gotoxy(40,10);
         cout<<"Providing WARNING............";
         sleep(1);
         system("cls");
-        gotoxy(50,10);
+        gotoxy(40,10);
         cout<<"******RULES AND REGULATIONS******";
         sleep(2);
+
         cout << "\n\n\t\t                    BIKE RENTAL  - Rules and Regulation                  "<<endl;
         cout << "\t\t	///////////////////////////////////////////////////////////"<<endl;
         cout << "\t\t	| \t\t    !!!RISK BY YOUR OWN!!!                |"<<endl;
@@ -417,15 +434,15 @@ class normal : public rent{
     void display1()
     {
 		system("cls");
-		gotoxy(50,10);
+		gotoxy(40,10);
 		cout<<"Calculating rent.........................";
         sleep(2);
         system("cls");
-        gotoxy(50,10);
+        gotoxy(40,10);
         cout<<"Providing bill...........................";
         sleep(3);
         system("cls");
-		gotoxy(50,10);
+		gotoxy(40,10);
         cout<<"******BILL_PROVIDED******";
         cout << "\n\t\t                       BIKE RENTAL  - Customer Invoice                  "<<endl;
         cout << "\t\t	///////////////////////////////////////////////////////////"<<endl;
@@ -544,6 +561,7 @@ class electric : public rent{
                 break;
             case 5:
             		gotoxy(40,10);
+
                     cout<<"\n\t\tYou have successfully chosen a bike :";
                     cout<<"\n\t\tBike name : Yadea G5 Scooter ";
                     cout<<"\n\t\tYear : 2021";
@@ -562,6 +580,7 @@ class electric : public rent{
                 break;
             case 6:
             		gotoxy(40,10);
+
                     cout<<"\n\t\tYou have successfully chosen a bike :";
                     cout<<"\n\t\tBike name : Doohan Scooter";
                     cout<<"\n\t\tYear : 2022";
@@ -580,6 +599,7 @@ class electric : public rent{
                 break;    
             default :
             	gotoxy(40,10);
+
                 cout<<"\n\t\tYou have entered Invalid choice !!!";
                 cout<<"\n\t\t!!!Try again!!!";
                 goto label2;
@@ -594,6 +614,7 @@ class electric : public rent{
         sleep(1);
         system("cls");
         gotoxy(50,10);
+
         cout<<"******RULES AND REGULATIONS******";
         sleep(2);
         cout << "\n\n\t\t                    BIKE RENTAL  - Rules and Regulation                  "<<endl;
@@ -630,6 +651,7 @@ class electric : public rent{
         sleep(3);
         system("cls");
         gotoxy(50,10);
+
         cout<<"******BILL_PROVIDED******";
         cout << "\n\t\t                       BIKE RENTAL  - Customer Invoice                  "<<endl;
         cout << "\t\t	///////////////////////////////////////////////////////////"<<endl;
@@ -657,7 +679,7 @@ void bbike::input()
 {
 	system("cls");
 	cout<<"\n\n\t\t\t\tMENU";
-	cout<<"\n\n1. Add New Bikes";
+	cout<<"\n 1. Add New Bikes";
 	cout<<"\n 2. Display Bikes";
 	cout<<"\n 3. Check Specific Bikes";
 	cout<<"\n 4. Update Bikes";
@@ -739,6 +761,7 @@ void bbike::show_bikes()
 	if(ch == 1)
 	{	
 		system("cls");
+
 		gotoxy(40,10);
 		fstream file1;
 		int year1,max_power1,max_torque1;
@@ -761,6 +784,7 @@ void bbike::show_bikes()
 	else if (ch==2)
 	{		
 		system("cls");
+
 		gotoxy(40,10);
 		fstream file2;
 		int year2,range2;
@@ -991,6 +1015,8 @@ void bbike::del_bikes()
 	cin>>ch;
 	if( ch==1)
 	{
+		system("cls");
+		gotoxy(40,10);
 		fstream file1,temp1;
 		int year1,max_power1,max_torque1,count1=0;
 		string name1,namee1;
@@ -1076,6 +1102,7 @@ int main()
 	b1.welcome();
 	sleep(3);
 	system("cls");
+
 	cout<<"\n\t\t\t\t\t\t\t**************************************************************";
 	cout<<"\n\t\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    WELCOME TO THE SYSTEM\t\t  \xdb\xdb\xdb\xdb";
 	cout<<"\n\t\t\t\t\t\t\t--------------------------------------------------------------";
@@ -1094,7 +1121,8 @@ int main()
 	cout<<"\n\t\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    PRESS ANY KEY TO CONTINUE\t\t  \xdb\xdb\xdb\xdb";
 	cout<<"\n\t\t\t\t\t\t\t**************************************************************";
 	sleep(6);
-	system("cls");                                                      
+	system("cls"); 
+                                                   
 	cout<<"\n\t\t\t\t\t\t\t\t-------------------------------------";
 	cout<<"\n\t\t\t\t\t\t\t\t\xdb|      Press 1 for ADMIN LOGIN     |\xdb";
 	cout<<"\n\t\t\t\t\t\t\t\t\xdb|      Press 2 for REGISTER        |\xdb";
@@ -1131,12 +1159,14 @@ int main()
 void adminlogin()
 {
    system("cls");
+
    gotoxy(40,10);
    bbike b;
    int choice;
    char x;
    string pass ="";
    char ch;
+   label1:
    cout<<"\n\t\t\t\t\t\t\t\t\xdb|     Admin Login     |\xdb";	
    cout<<"\n\n\t\t\t\t\t\t\tEnter the password:";
    ch = getch();
@@ -1176,7 +1206,7 @@ void adminlogin()
 			b.del_bikes();
 			break;
 		case 6:
-			exit(0);
+			load_EXIT();
 		default:
 			cout<<"\n\n\t\t\t\t\t\t\t\t\xdbInvalid Value...Please Try Again...\xdb";
 	}
@@ -1186,7 +1216,7 @@ void adminlogin()
    else
    {
       cout <<"\n\n\t\t\t\t\t\t\t\xdb Access Aborted...\n\t\t\t\t\t\t\tPlease Try Again\n\n\xdb";
-      exit (0);
+      goto label1;
    }
    
    
@@ -1195,6 +1225,7 @@ void adminlogin()
 void userregister()
 {
 	system("cls");
+
 	gotoxy(40,10);
 	string ruserID,rpassword,rid,rpass;
 	cout<<"\n\t\t\t\t\t\t\t\t\xdb Enter the username : ";
@@ -1221,11 +1252,15 @@ void userlogin()
     int option;
     int day;
     int d;
+    time_t timetoday;
+   	time (&timetoday);
     normal n1;
     electric e1;
 	string userID,password,id,pass;
 	system("cls");
+
 	gotoxy(40,10);
+	asctime(localtime(&timetoday));
 	cout<<"\n\t\t\t\t\t\t\t\t\xdbPlease enter the username and password\xdb";
 	cout<<"\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tUSERNAME : ";
 	cin>>userID;
@@ -1244,6 +1279,7 @@ void userlogin()
 	input.close();
 	if(count==1)
 	{
+		
 		cout<<"\n\t\xdb WELCOME USER = "<<userID<<" \xdb";
 		cout<<"\n\t\t\t\t\t\t\xdbYour LOGIN is succesfull! \xdb\n";
 		sleep(1);
@@ -1267,6 +1303,7 @@ void userlogin()
 		cout<<"\n\t\t\t\t\t\t\t**************************************************************";
 		sleep(3);
 		system("cls");
+		
 		gotoxy(40,10);
 		up:
 		cout<<"\n\nWe have two categories in Bike Rental System";
@@ -1278,7 +1315,8 @@ void userlogin()
 		{
 			system("cls");
 			gotoxy(40,10);
-			ofstream normal_file("D://II-SEM-PROJECT//Normal_Bike.txt", ios::app);
+			fstream normal_file;
+			normal_file.open("D://II-SEM-PROJECT//Normal_Bike.dat",ios::out|ios::app);
 			op:
 			system("cls");
 			cout<<"\n\n**********BIKE RENTAL OPTION**********";
@@ -1309,6 +1347,7 @@ void userlogin()
 			cout<<"\nCollecting personal details...............";
 			sleep(1);
 			system("cls");
+
 			gotoxy(40,10);
 			cout<<"******PERSONAL DETAILS******";
 			normal_file<<"\n******PERSONAL INFORMATION******";
@@ -1316,9 +1355,13 @@ void userlogin()
 			cin>>n1.customer_name;
 			normal_file<<"\n1.Customer Name : "<<n1.customer_name;
 			fflush(stdin);
+			cout<<"\nEnter your gender:";
+			cin>>n1.customer_gender;
+			normal_file<<"\n2.Customer Gender (Male/Female/Others) :"<<n1.customer_gender;
+			fflush(stdin);
 			cout<<"\nEnter your age :";
 			cin>>n1.customer_age;
-			normal_file<<"\n2.Customer Age : "<<n1.customer_age;
+			normal_file<<"\n3.Customer Age : "<<n1.customer_age;
 			fflush(stdin);
 			if(n1.customer_age < 18)
 			{
@@ -1327,11 +1370,11 @@ void userlogin()
 			}
 			cout<<"\nEnter the contact no :";
 			cin>>n1.contact_no;
-			normal_file<<"\n3.Contact No : "<<n1.contact_no;
+			normal_file<<"\n4.Contact No : "<<n1.contact_no;
 			fflush(stdin);
 			cout<<"\nEnter the citizenship no :";
 			cin>>n1.citizenship_no;
-			normal_file<<"\n4.Citizenship No : "<<n1.citizenship_no;
+			normal_file<<"\n5.Citizenship No : "<<n1.citizenship_no;
 			fflush(stdin);
 		    cout<<"\n\n\nLOADING................";
 			sleep(3);
@@ -1351,8 +1394,10 @@ void userlogin()
 		else if(choice==2)
 		{
 			system("cls");
+	
 			gotoxy(40,10);
-			ofstream electric_file("D://II-SEM-PROJECT//Electric_Bike.txt",ios::app);
+			fstream electric_file;
+			electric_file.open("D://II-SEM-PROJECT//Electric_Bike.txt",ios::out|ios::app);
 			op1:
 			cout<<"\n\n**********BIKE RENTAL OPTION**********";
 			cout<<"\nPlease select the option according to your choice";
@@ -1381,12 +1426,17 @@ void userlogin()
 			cout<<"\nCollecting personal details...............";
 			sleep(1);
 			system("cls");
+
 			gotoxy(40,10);
 			cout<<"******PERSONAL DETAILS******";
 			electric_file<<"******PERSONAL INFORMATION******";
 			cout<<"\n\nEnter your name :";
 			cin>>e1.customer_name;
 			electric_file<<"\n1.Customer Name : "<<e1.customer_name;
+			fflush(stdin);
+			cout<<"\nEnter your gender (Male/Female/others) :";
+			cin>>e1.customer_gender;
+			electric_file<<"\n2.Customer Gender :"<<e1.customer_gender;
 			fflush(stdin);
 			cout<<"\nEnter your age :";
 			cin>>e1.customer_age;
@@ -1395,15 +1445,15 @@ void userlogin()
 				cout<<"\n!!! You are  not eligible for renting bike !!!";
 				exit (0);
 			}
-			electric_file<<"\n2.Customer Age : "<<e1.customer_age;
+			electric_file<<"\n3.Customer Age : "<<e1.customer_age;
 			fflush(stdin);
 			cout<<"\nEnter the contact no :";
 			cin>>e1.contact_no;
-			electric_file<<"\n3.Contact No : "<<e1.contact_no;
+			electric_file<<"\n4.Contact No : "<<e1.contact_no;
 			fflush(stdin);
 			cout<<"\nEnter the citizenship no :";
 		 	cin>>e1.citizenship_no;
-		 	electric_file<<"\n4.Citizenship No : "<<e1.citizenship_no;
+		 	electric_file<<"\n5.Citizenship No : "<<e1.citizenship_no;
 			fflush(stdin);
 		    cout<<"\n\n\nLOADING................";
 			sleep(3);
@@ -1443,21 +1493,21 @@ void load_EXIT()
 	system("cls");
     int row,col,r,c,q;
     int timer = rand()%5+1;
-    gotoxy(30,30);
+    gotoxy(60,14);
     printf("LOGGING OFF...");
-    gotoxy(60,36);
+    gotoxy(60,16);
     for(r=1;r<=timer;r++)
 	{
     for(q=0;q<=100000000;q++);//to display the character slowly
     printf("%c",177);
 	}
-    Sleep(100);
+    exit(0);
 }
 /******************************************************exitArt************************************************/
 void exitArt()
 {
 	system("cls");
-	gotoxy(10, 10);
+	gotoxy(0, 10);
 	ifstream ifs ("exit art.txt");    
 	string Lines = " ";
     
@@ -1481,3 +1531,5 @@ void exitArt()
     load_EXIT();
     exit(0);
 }
+
+/******************************************************End_Of_Code************************************************/
