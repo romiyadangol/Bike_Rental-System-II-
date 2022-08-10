@@ -27,15 +27,15 @@ class bbike
 class bike{
     public :
     string customer_name;
-    int contact_no;
-    int citizenship_no;
+    double contact_no;
+    double citizenship_no;
     int customer_age;
     int ch1;
     int ch2;
     void welcome()
     {
-    	gotoxy(0,30);
-    	ifstream ifs ("welceome.txt");
+    	//gotoxy(0,30);
+    	ifstream ifs ("welcome.txt");
     	string lines ="";
     	if(ifs)
     	{
@@ -46,6 +46,7 @@ class bike{
     			tempLine += "\n";
     			lines +=tempLine;
 			}
+			cout<<"\n\n\n\n\n\n\n\n\n\n\n";
 			cout<< lines ;
 		}
 		ifs.close();
@@ -200,6 +201,7 @@ class normal : public rent{
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
 					cout<<"\n\nPer hour rent is :Rs 300";
+					cout<<"\n\nPer day rent is :Rs"<<300*24;
 					cout<<"\n\nTotal rent is :"<<300*rentHr;
 					calcuRent1();
                     warning1();
@@ -216,6 +218,7 @@ class normal : public rent{
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
                     cout<<"\n\nPer hour rent is :Rs 300";
+                    cout<<"\n\nPer day rent is :Rs"<<300*24;
                     cout<<"\n\nTotal rent is :"<<300*rentHr;
                     calcuRent1();
                     warning1();
@@ -232,6 +235,7 @@ class normal : public rent{
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
                     cout<<"\n\nPer hour rent is :Rs 300";
+                    cout<<"\n\nPer day rent is :Rs"<<300*24;
                     cout<<"\n\nTotal rent is :"<<300*rentHr;
                     calcuRent1();
                     warning1();
@@ -248,6 +252,7 @@ class normal : public rent{
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
                     cout<<"\n\nPer hour rent is :Rs 300";
+                    cout<<"\n\nPer day rent is :Rs"<<300*24;
                     cout<<"\n\nTotal rent is :"<<300*rentHr;
                     calcuRent1();
                     warning1();
@@ -263,6 +268,7 @@ class normal : public rent{
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
 					cout<<"\n\nPer hour rent is :Rs 300";
+					cout<<"\n\nPer day rent is :Rs"<<300*24;
 					cout<<"\n\nTotal rent is :"<<300*rentHr;
 					calcuRent1();
                     warning1();
@@ -278,6 +284,7 @@ class normal : public rent{
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
 					cout<<"\n\nPer hour rent is :Rs 300";
+					cout<<"\n\nPer day rent is :Rs"<<300*24;
 					cout<<"\n\nTotal rent is :"<<300*rentHr;
 					calcuRent1();
                     warning1();
@@ -294,6 +301,7 @@ class normal : public rent{
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
 					cout<<"\n\nPer hour rent is :Rs 300";
+					cout<<"\n\nPer day rent is :Rs"<<300*24;
 					cout<<"\n\nTotal rent is :"<<300*rentHr;
 					calcuRent1();
                     warning1();
@@ -310,6 +318,7 @@ class normal : public rent{
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
                     cout<<"\n\nPer hour rent is :Rs 300";
+                    cout<<"\n\nPer day rent is :Rs"<<300*24;
                     cout<<"\n\nTotal rent is :"<<300*rentHr;
                     calcuRent1();
                     warning1();
@@ -326,6 +335,7 @@ class normal : public rent{
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
                     cout<<"\n\nPer hour rent is :Rs 300";
+                    cout<<"\n\nPer day rent is :Rs"<<300*24;
                     cout<<"\n\nTotal rent is :"<<300*rentHr;
                     calcuRent1();
                     warning1();
@@ -342,6 +352,7 @@ class normal : public rent{
                     cout<<"\n|Deposit amount = Rs 30,000|";
                     cout<<"\n|**************************|";
                     cout<<"\n\nPer hour rent is :Rs 300";
+                    cout<<"\n\nPer day rent is :Rs"<<300*24;
                     cout<<"\n\nTotal rent is :"<<300*rentHr;
                     calcuRent1();
                     warning1();
@@ -448,6 +459,7 @@ class electric : public rent{
                     cout<<"\n|Deposit amount = Rs 20,000|";
                     cout<<"\n|**************************|";
 					cout<<"\n\nPer hour rent is :Rs 200";
+					cout<<"\n\nPer day rent is :Rs"<<200*24;
 					cout<<"\n\nTotal rent is :"<<200*rentHr;
 					calcuRent2();
                     warning2();
@@ -464,6 +476,7 @@ class electric : public rent{
                     cout<<"\n|Deposit amount = Rs 20,000|";
                     cout<<"\n|**************************|";
 					cout<<"\n\nPer hour rent is :Rs 200";
+					cout<<"\n\nPer day rent is :Rs"<<200*24;
 					cout<<"\n\nTotal rent is :"<<200*rentHr;
 					calcuRent2();
                     warning2();
@@ -481,6 +494,7 @@ class electric : public rent{
                     cout<<"\n|Deposit amount = Rs 20,000|";
                     cout<<"\n|**************************|";
 					cout<<"\n\nPer hour rent is :Rs 200";
+					cout<<"\n\nPer day rent is :Rs"<<200*24;
 					cout<<"\n\nTotal rent is :"<<1700*rentHr;
 					calcuRent2();
                     warning2();
@@ -498,6 +512,7 @@ class electric : public rent{
                     cout<<"\n|Deposit amount = Rs 20,000|";
                     cout<<"\n|**************************|";
                     cout<<"\n\nPer hour rent is :Rs 200";
+                    cout<<"\n\nPer day rent is :Rs"<<200*24;
                     cout<<"\n\nTotal rent is :"<<200*rentHr;
                     calcuRent2();
                     warning2();
@@ -515,6 +530,7 @@ class electric : public rent{
                     cout<<"\n|Deposit amount = Rs 20,000|";
                     cout<<"\n|**************************|";
                     cout<<"\n\nPer hour rent is :Rs 200";
+                    cout<<"\n\nPer day rent is :Rs"<<200*24;
                     cout<<"\n\nTotal rent is :"<<200*rentHr;
                     calcuRent2();
                     warning2();
@@ -532,6 +548,7 @@ class electric : public rent{
                     cout<<"\n|Deposit amount = Rs 20,000|";
                     cout<<"\n|**************************|";
                     cout<<"\n\nPer hour rent is :Rs 200";
+                    cout<<"\n\nPer day rent is :Rs"<<200*24;
                     cout<<"\n\nTotal rent is :"<<200*rentHr;
                     calcuRent2();
                     warning2();
@@ -1012,6 +1029,8 @@ int main()
 	int c;
 	bike b1;
 	b1.welcome();
+	sleep(3);
+	system("cls");
 	cout<<"\n\t\t\t\t\t\t\t**************************************************************";
 	cout<<"\n\t\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    WELCOME TO THE SYSTEM\t\t  \xdb\xdb\xdb\xdb";
 	cout<<"\n\t\t\t\t\t\t\t--------------------------------------------------------------";
@@ -1146,6 +1165,7 @@ void userregister()
 void userlogin()
 {
 	int count;
+	char ch;
 	int num;
     int choice;
     int option;
@@ -1204,10 +1224,10 @@ void userlogin()
 		if(choice==1)
 		{
 			system("cls");
-			//cout<<"\nEnter how many vehicle you want to take in rent :";
-			//cin>>num;
-			//fflush(stdin);
+			fstream normal_file;
+			normal_file.open("D://II-SEM-PROJECT//Normal_Bike.txt", ios::app);
 			op:
+			system("cls");
 			cout<<"\n\n**********BIKE RENTAL OPTION**********";
 			cout<<"\nPlease select the option according to your choice";
 			cout<<"\n[1].Days";
@@ -1221,36 +1241,48 @@ void userlogin()
 					cout<<"\nEnter for how many days you want to rent the bike :";
 					cin>>day;
 					n1.rentHr=day*24;
+					break;
 					
 				case 2:
 					cout<<"\nEnter for how many hours you want to rent the bike :";
 					cin>>n1.rentHr;
+					break;
 				default :
 					cout<<"\n!!!Invalid Choice!!!";
 					goto op;
 			}
-			fflush(stdin);
 			cout<<"\nCollecting personal details...............";
 			sleep(1);
 			system("cls");
 			cout<<"******PERSONAL DETAILS******";
 			cout<<"\n\nEnter your name :";
 			cin>>n1.customer_name;
+			normal_file<< n1.customer_name;
 			fflush(stdin);
 			cout<<"\nEnter your age :";
 			cin>>n1.customer_age;
+			normal_file<< n1.customer_age;
 			fflush(stdin);
 			cout<<"\nEnter the contact no :";
 			cin>>n1.contact_no;
+			normal_file<< n1.contact_no;
 			fflush(stdin);
 			cout<<"\nEnter the citizenship no :";
 			cin>>n1.citizenship_no;
+			normal_file<< n1.citizenship_no;
 			fflush(stdin);
 		    cout<<"\n\n\nLOADING................";
 			sleep(3);
+			fflush(stdin);
 		    n1.get_bike1();
+		    cout<<"\n Do you want to rent another Bike?(Y/N): ";
+		  	cin>>ch;
+		  	if(ch=='y' || ch=='Y'){
+		  		goto op;
+			  }
 		}
-		 else if(choice==2)
+	}	
+else if(choice==2)
 		{
 			system("cls");
 			//cout<<"\nEnter how many vehicle you want to take in rent :";
@@ -1268,9 +1300,11 @@ void userlogin()
 					cout<<"\nEnter for how many days you want to rent the bike :";
 					cin>>day;
 					e1.rentHr=day*24;
+					break;
 				case 2:
 					cout<<"\nEnter for how many hours you want to rent the bike :";
 					cin>>e1.rentHr;
+					break;
 				default :
 					cout<<"\n!!!Invalid Choice!!!";
 					goto op1;
@@ -1298,16 +1332,9 @@ void userlogin()
 			sleep(3);
 		    e1.get_bike2();
 		}
-		else
+	else
 		{
 			cout<<"!!!Invalid Choice!!!";
 			goto up;
 		}
-		
 	}
-	else
-	{
-		cout<<"\n LOGIN ERROR!! \n Please check your username and password\n";
-		main();
-	}
-}
