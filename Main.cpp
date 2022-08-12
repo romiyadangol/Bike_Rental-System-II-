@@ -1302,7 +1302,7 @@ void userlogin()
 		cout<<"\n\t\t\t\t\t\t\t**************************************************************";
 		cout<<"\n\t\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    WELCOME TO THE SYSTEM\t\t  \xdb\xdb\xdb\xdb";
 		cout<<"\n\t\t\t\t\t\t\t--------------------------------------------------------------";
-		cout<<"\n\t\t\t\t\t\t\t\xdb|      _________       ___________          ________        |\xdb";
+		cout<<"\n\t\t\t\t\t\t\t\xdb|      _________       ___________          ________       |\xdb";
 		cout<<"\n\t\t\t\t\t\t\t\xdb|     |         |     |    ___    |        /         \\     |\xdb";
 		cout<<"\n\t\t\t\t\t\t\t\xdb|     |   ___   |     |   |   |   |       |    __    |     |\xdb";
 		cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |   |  |     |   |   |   |       |   |  |___|     |\xdb";
@@ -1334,6 +1334,7 @@ void userlogin()
 			normal_file.open("D://II-SEM-PROJECT/normalBike.txt",ios::out|ios::app);
 			op:
 			system("cls");
+			normal_file.open("D://II-SEM-PROJECT/normalBike.txt",ios::app);
 			cout<<asctime(localtime(&timetoday));
 			cout<<"\n\n**********BIKE RENTAL OPTION**********";
 			cout<<"\nPlease select the option according to your choice";
