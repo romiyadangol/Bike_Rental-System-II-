@@ -830,9 +830,9 @@ void bbike::check_bikes()
 	gotoxy(40,10);
 	cout<<"\n******Checking Bike******";
 	cout<<"\n\t\tChoose which bike would you like to check........";
-	cout<<"\n\n\t\t1.Petrol Bike"<<endl;
+	cout<<"\n\n\t\t1.Petrol/Normal Bike"<<endl;
 	cout<<"\n\t\t2.Electric Bike"<<endl;
-	cout<<"\n\t\tEnter your choice :";
+	cout<<"\n\t\tEnter your choice : ";
 	cin>>ch;
 	if(ch == 1 )
 	{
@@ -841,12 +841,24 @@ void bbike::check_bikes()
 		fstream file1;
 		int year1,max_power1,max_torque1,count1=0;
 		string name1,namee1;
-		file1.open("D://petrolBike.txt",ios::in);
+		file1.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.txt",ios::in);
 		if(!file1)
 		cout<<"\n\n\t\tFile Openning Error...";
 		else
 		{
-			cout<<"\n\n\t\tBike Name: : ";
+			system("cls");
+			cout<<"\n\t\tThe list of bike we have are :"<<endl;
+      		cout<<"\t\t1.YamahaXTZ150"<<endl;
+       	 	cout<<"\t\t2.HondaXR150L"<<endl;
+       	 	cout<<"\t\t3.HeroXpulse"<<endl;
+        	cout<<"\t\t4.Tracker250"<<endl;
+        	cout<<"\t\t5.RoyalEnfieldClassic350"<<endl;
+        	cout<<"\t\t6.JawaClassic"<<endl;
+        	cout<<"\t\t7.PulsarNS100"<<endl;
+        	cout<<"\t\t8.HondaHornet"<<endl;
+        	cout<<"\t\t9.ApacheRTR200"<<endl;
+        	cout<<"\t\t10.YamahaFZSv2"<<endl;
+			cout<<"\n\n Bike Name You Want To Search From The Available Ones Above: ";
 			cin>>namee1;
 			file1>>name1>>year1>>max_power1>>max_torque1;
 			while(!file1.eof())
@@ -868,7 +880,7 @@ void bbike::check_bikes()
 			cout<<"\n\n Bike name Not Found...";
 		}
 	}
-	else if( ch ==2)
+	else if(ch ==2)
 	{ 
 		system("cls");
 		gotoxy(40,10);
@@ -1275,10 +1287,10 @@ void userlogin()
 	system("cls");
 	cout<<asctime(localtime(&timetoday));
 	gotoxy(40,10);
-	cout<<"\n\t\t\t\t\t\t\t\t\xdbPlease enter the username and password\xdb";
-	cout<<"\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\tUSERNAME : ";
+	cout<<"\n\t\t\t\t\t\t\t\t\xdbPlease enter the username and password \xdb";
+	cout<<"\n\n\n\t\t\t\t\t\t\t\t\t USERNAME : ";
 	cin>>userID;
-	cout<<"\n\t\t\t\t\t\t\t\t\t\t\t\t\tPASSWORD : ";
+	cout<<"\n\t\t\t\t\t\t\t\t\t PASSWORD : ";
 	cin>>password;
 	
 	ifstream input("record1.txt");//to check whether username and pass already exist in our records
@@ -1330,18 +1342,17 @@ void userlogin()
 		{
 			system("cls");
 			gotoxy(40,10);
-			fstream normal_file;
-			normal_file.open("D://II-SEM-PROJECT/normalBike.txt",ios::out|ios::app);
+			fstream normal;
+			normal.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike.txt",ios::binary|ios::out|ios::app);
 			op:
 			system("cls");
-			normal_file.open("D://II-SEM-PROJECT/normalBike.txt",ios::app);
 			cout<<asctime(localtime(&timetoday));
 			cout<<"\n\n**********BIKE RENTAL OPTION**********";
 			cout<<"\nPlease select the option according to your choice";
 			cout<<"\n[1].Days";
 			cout<<"\n[2].Hour";
 			cout<<"\n";
-			cout<<"\nEnter your choice :";
+			cout<<"\nEnter your choice : ";
 			cin>>option;
 			switch(option)
 			{
@@ -1349,13 +1360,11 @@ void userlogin()
 					cout<<"\nEnter for how many days you want to rent the bike :";
 					cin>>day;
 					n1.rentHr=day*24;
-					normal_file<<"\nDays = "<<n1.rentHr;
 					break;
 					
 				case 2:
 					cout<<"\nEnter for how many hours you want to rent the bike :";
 					cin>>n1.rentHr;
-					normal_file<<"\nHour = "<<n1.rentHr;
 					break;
 				default :
 					cout<<"\n!!!Invalid Choice!!!";
@@ -1367,18 +1376,14 @@ void userlogin()
 			cout<<asctime(localtime(&timetoday));
 			gotoxy(40,10);
 			cout<<"******PERSONAL DETAILS******";
-			normal_file<<"\n******PERSONAL INFORMATION******";
 			cout<<"\n\nEnter your name :";
 			cin>>n1.customer_name;
-			normal_file<<"\n1.Customer Name : "<<n1.customer_name;
 			fflush(stdin);
 			cout<<"\nEnter your gender (Male/Female/Others):";
 			cin>>n1.customer_gender;
-			normal_file<<"\n2.Customer Gender :"<<n1.customer_gender;
 			fflush(stdin);
 			cout<<"\nEnter your age :";
 			cin>>n1.customer_age;
-			normal_file<<"\n3.Customer Age : "<<n1.customer_age;
 			fflush(stdin);
 			if(n1.customer_age < 18)
 			{
@@ -1387,12 +1392,12 @@ void userlogin()
 			}
 			cout<<"\nEnter the contact no :";
 			cin>>n1.contact_no;
-			normal_file<<"\n4.Contact No : "<<n1.contact_no;
 			fflush(stdin);
 			cout<<"\nEnter the citizenship no :";
 			cin>>n1.citizenship_no;
-			normal_file<<"\n5.Citizenship No : "<<n1.citizenship_no;
 			fflush(stdin);
+			normal.write((char*)&n1,sizeof(n1));
+ 			normal.close();
 		    cout<<"\n\n\nLOADING................";
 			sleep(3);
 			fflush(stdin);
@@ -1413,8 +1418,8 @@ void userlogin()
 			system("cls");
 			cout<<asctime(localtime(&timetoday));
 			gotoxy(40,10);
-			fstream electric_file;
-			electric_file.open("D://II-SEM-PROJECT//electricBike.txt",ios::out|ios::app);
+			fstream electric;
+			electric.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/ElectricBike.txt",ios::binary|ios::out|ios::app);
 			op1:
 			system("cls");
 			cout<<asctime(localtime(&timetoday));
@@ -1431,12 +1436,10 @@ void userlogin()
 					cout<<"\nEnter for how many days you want to rent the bike :";
 					cin>>day;
 					e1.rentHr=day*24;
-					electric_file<<"\nDay = "<<e1.rentHr;
 					break;
 				case 2:
 					cout<<"\nEnter for how many hours you want to rent the bike :";
 					cin>>e1.rentHr;
-					electric_file<<"\nHour = "<<e1.rentHr;
 					break;
 				default :
 					cout<<"\n!!!Invalid Choice!!!";
@@ -1448,14 +1451,11 @@ void userlogin()
 			cout<<asctime(localtime(&timetoday));
 			gotoxy(40,10);
 			cout<<"******PERSONAL DETAILS******";
-			electric_file<<"******PERSONAL INFORMATION******";
 			cout<<"\n\nEnter your name :";
 			cin>>e1.customer_name;
-			electric_file<<"\n1.Customer Name : "<<e1.customer_name;
 			fflush(stdin);
 			cout<<"\nEnter your gender (Male/Female/others) :";
 			cin>>e1.customer_gender;
-			electric_file<<"\n2.Customer Gender :"<<e1.customer_gender;
 			fflush(stdin);
 			cout<<"\nEnter your age :";
 			cin>>e1.customer_age;
@@ -1464,16 +1464,15 @@ void userlogin()
 				cout<<"\n!!! You are  not eligible for renting bike !!!";
 				exit (0);
 			}
-			electric_file<<"\n3.Customer Age : "<<e1.customer_age;
 			fflush(stdin);
 			cout<<"\nEnter the contact no :";
 			cin>>e1.contact_no;
-			electric_file<<"\n4.Contact No : "<<e1.contact_no;
 			fflush(stdin);
 			cout<<"\nEnter the citizenship no :";
 		 	cin>>e1.citizenship_no;
-		 	electric_file<<"\n5.Citizenship No : "<<e1.citizenship_no;
 			fflush(stdin);
+			electric.write((char*)&e1,sizeof(e1));
+ 			electric.close();
 		    cout<<"\n\n\nLOADING................";
 			sleep(3);
 		    e1.get_bike2();
