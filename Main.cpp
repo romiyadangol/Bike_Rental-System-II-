@@ -841,17 +841,13 @@ void bbike::check_bikes()
 		fstream file1;
 		int year1,max_power1,max_torque1,count1=0;
 		string name1,namee1;
-<<<<<<< HEAD
 		file1.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.txt",ios::in);
-=======
-		file1.open("D://petrolBike1.txt",ios::in);
->>>>>>> 8b438163e89956bce441b9552ca64493d5fe67a4
 		if(!file1)
 		cout<<"\n\n\t\tFile Openning Error...";
 		else
 		{
 			system("cls");
-			cout<<"\n\t\tThe list of bike we have are :"<<endl;
+			cout<<"\n\t\tThe list of petrol/normal bike we have are :"<<endl;
       		cout<<"\t\t1.YamahaXTZ150"<<endl;
        	 	cout<<"\t\t2.HondaXR150L"<<endl;
        	 	cout<<"\t\t3.HeroXpulse"<<endl;
@@ -891,12 +887,19 @@ void bbike::check_bikes()
 		fstream file2;
 		int year2,max_power2,range2,count2=0;
 		string name2,namee2;
-		file2.open("D://electricBike1.txt",ios::in);
+		file2.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.txt",ios::in);
 		if(!file2)
 		cout<<"\n\n File Openning Error...";
 		else
 		{
-			cout<<"\n\n Bike Name: : ";
+			cout<<"\n\t\tThe list of electric bikes we have are :"<<endl;
+        	cout<<"\t\t1.Yatri "<<endl;
+        	cout<<"\t\t2.SuperSoco "<<endl;
+        	cout<<"\t\t3.NIU "<<endl;
+        	cout<<"\t\t4.Bella "<<endl;
+        	cout<<"\t\t5.YadeaG5 "<<endl;
+        	cout<<"\t\t6.Doohan "<<endl;
+			cout<<"\n\n Bike Name You Want To Search From The Available Ones Above: ";
 			cin>>namee2;
 			file2>>name2>>year2>>range2;
 			while(!file2.eof())
@@ -906,7 +909,7 @@ void bbike::check_bikes()
 					system("cls");
 					cout<<"\n\n\t\t\tBike Name : "<<name2;
 					cout<<"\n\n\t\t\tYear : "<<year2;
-					cout<<"\n\n\t\t\tRange : "<<range2;
+					cout<<"\n\n\t\t\tRange Per Charge(Km) : "<<range2;
 					count2++;
 					break;	
 				}

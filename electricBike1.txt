@@ -1,6 +1,6 @@
- Yatri 2020 18 19
- SuperSoco 2022 15 13
- NIU 2021 20 22 
- Bella 2021 17 15
- YadeaG5 2022 16 20
- Doohan 2020 23 20
+ Yatri 2020 300
+ SuperSoco 2022 150
+ NIU 2021 200
+ Bella 2021 250
+ YadeaG5 2022 280
+ Doohan 2020 180
