@@ -726,7 +726,7 @@ void bbike::add_bikes()
 		cin>>max_power1;
 		cout<<"\n\t\tEnter max-torque: ";
 		cin>>max_torque1;
-		file1.open("D://petrolBike.txt",ios::out|ios::app);
+		file1.open("D://petrolBike1.txt",ios::out|ios::app);
 		file1<<" "<<name1<<" "<<year1<<" "<<max_power1<<" "<<max_torque1<<"\n";
 		file1.close();
 	}
@@ -746,7 +746,7 @@ void bbike::add_bikes()
 		fflush(stdin);
 		cout<<"\n\t\tEnter range: ";
 		cin>>range2;
-		file2.open("D://electricBike.txt",ios::out|ios::app);
+		file2.open("D://electricBike1.txt",ios::out|ios::app);
 		file2<<" "<<name2<<" "<<year2<<" "<<range2<<" "<<"\n";
 		file2.close();	
 	}
@@ -777,7 +777,7 @@ void bbike::show_bikes()
 		fstream file1;
 		int year1,max_power1,max_torque1;
 		string name1;
-		file1.open("D://petrolBike.txt",ios::in);
+		file1.open("D://petrolBike1.txt",ios::in);
 		if(!file1)
 		cout<<"\n\n File Openning Error...";
 		else
@@ -800,7 +800,7 @@ void bbike::show_bikes()
 		fstream file2;
 		int year2,range2;
 		string name2;
-		file2.open("D://electricBike.txt",ios::in);
+		file2.open("D://electricBike1.txt",ios::in);
 		if(!file2)
 		cout<<"\n\n File Openning Error...";
 		else
@@ -841,7 +841,11 @@ void bbike::check_bikes()
 		fstream file1;
 		int year1,max_power1,max_torque1,count1=0;
 		string name1,namee1;
+<<<<<<< HEAD
 		file1.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.txt",ios::in);
+=======
+		file1.open("D://petrolBike1.txt",ios::in);
+>>>>>>> 8b438163e89956bce441b9552ca64493d5fe67a4
 		if(!file1)
 		cout<<"\n\n\t\tFile Openning Error...";
 		else
@@ -887,7 +891,7 @@ void bbike::check_bikes()
 		fstream file2;
 		int year2,max_power2,range2,count2=0;
 		string name2,namee2;
-		file2.open("D://electricBike.txt",ios::in);
+		file2.open("D://electricBike1.txt",ios::in);
 		if(!file2)
 		cout<<"\n\n File Openning Error...";
 		else
