@@ -1126,6 +1126,7 @@ void bbike::del_bikes()
 }
 int main()
 {
+	system("cls");
 	fullscreen();
 	int c;
 	bike b1;
@@ -1196,7 +1197,7 @@ void adminlogin()
    cout<<asctime(localtime(&timetoday));
    gotoxy(40,10);
    bbike b;
-   int choice;
+   int choice,in;
    char x;
    string pass ="";
    char ch;
@@ -1240,7 +1241,24 @@ void adminlogin()
 			b.del_bikes();
 			break;
 		case 6:
-			load_EXIT();
+			back:
+			cout<<"\n[1].Press for going back";
+			cout<<"\n[2].Exit";
+			cout<<"\nEnter your choice :";
+			cin>>in;
+			if(in == 1)
+			{
+				main();
+			}
+			else if (in==2)
+			{
+				load_EXIT();
+			}
+			else
+			{
+				cout<<"\nInvalid Input given";
+				goto back;
+			}
 		default:
 			cout<<"\n\n\t\t\t\t\t\t\t\t\xdbInvalid Value...Please Try Again...\xdb";
 	}
@@ -1277,6 +1295,7 @@ void userregister()
 /******************************************************UserLogin**************************************************/
 void userlogin()
 {
+	system("cls");
 	int count;
 	char ch;
 	int num;
@@ -1289,7 +1308,6 @@ void userlogin()
     normal n1;
     electric e1;
 	string userID,password,id,pass;
-	system("cls");
 	cout<<asctime(localtime(&timetoday));
 	gotoxy(40,10);
 	cout<<"\n\t\t\t\t\t\t\t\t\xdbPlease enter the username and password \xdb";
@@ -1298,13 +1316,12 @@ void userlogin()
 	cout<<"\n\t\t\t\t\t\t\t\t\t PASSWORD : ";
 	cin>>password;
 	
-	ifstream input("record1.txt");//to check whether username and pass already exist in our records
+	fstream input("record1.txt",ios::in);//to check whether username and pass already exist in our records
 	while(input>>id>>pass)
 	{
 		if(id==userID && pass==password)
 		{
 			count=1;
-			system("cls");
 		}
 	}
 	input.close();
