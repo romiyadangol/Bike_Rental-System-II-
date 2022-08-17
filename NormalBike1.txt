@@ -2,7 +2,7 @@
  HondaXR150L 2016 16 17 
  HeroXpulse 2012 18 17 
  Tracker250 2022 24 23 
- RoyalEnfieldClassic350 2017 18 19 
+ REClassic350 2017 18 19 
  JawaClassic 2016 15 13 
  PulsarNS100 2013 20 22 
  HondaHornet 2021 17 15 

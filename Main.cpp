@@ -719,14 +719,14 @@ void bbike::add_bikes()
 		cout<<"\n\n\tEnter Bike name: ";
 		cin>>name1;
 		fflush(stdin);
-		cout<<"\n\t\tEnter year: ";	
+		cout<<"\n\tEnter year: ";	
 		cin>>year1;
 		fflush(stdin);
-		cout<<"\n\t\tEnter max_power: ";
+		cout<<"\n\tEnter max_power: ";
 		cin>>max_power1;
-		cout<<"\n\t\tEnter max-torque: ";
+		cout<<"\n\tEnter max-torque: ";
 		cin>>max_torque1;
-		file1.open("D://petrolBike1.txt",ios::out|ios::app);
+		file1.open("petrolBike1.txt",ios::out|ios::app);
 		file1<<" "<<name1<<" "<<year1<<" "<<max_power1<<" "<<max_torque1<<"\n";
 		file1.close();
 	}
@@ -746,7 +746,7 @@ void bbike::add_bikes()
 		fflush(stdin);
 		cout<<"\n\t\tEnter range: ";
 		cin>>range2;
-		file2.open("D://electricBike1.txt",ios::out|ios::app);
+		file2.open("electricBike1.txt",ios::out|ios::app);
 		file2<<" "<<name2<<" "<<year2<<" "<<range2<<" "<<"\n";
 		file2.close();	
 	}
@@ -777,7 +777,7 @@ void bbike::show_bikes()
 		fstream file1;
 		int year1,max_power1,max_torque1;
 		string name1;
-		file1.open("D://petrolBike1.txt",ios::in);
+		file1.open("NormalBike1.txt",ios::in);
 		if(!file1)
 		cout<<"\n\n File Openning Error...";
 		else
@@ -800,7 +800,7 @@ void bbike::show_bikes()
 		fstream file2;
 		int year2,range2;
 		string name2;
-		file2.open("D://electricBike1.txt",ios::in);
+		file2.open("electricBike1.txt",ios::in);
 		if(!file2)
 		cout<<"\n\n File Openning Error...";
 		else
@@ -841,7 +841,7 @@ void bbike::check_bikes()
 		fstream file1;
 		int year1,max_power1,max_torque1,count1=0;
 		string name1,namee1;
-		file1.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.txt",ios::in);
+		file1.open("NormalBike1.txt",ios::in);
 		if(!file1)
 		cout<<"\n\n\t\tFile Openning Error...";
 		else
@@ -887,7 +887,7 @@ void bbike::check_bikes()
 		fstream file2;
 		int year2,max_power2,range2,count2=0;
 		string name2,namee2;
-		file2.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.txt",ios::in);
+		file2.open("D:electricBike1.txt",ios::in);
 		if(!file2)
 		cout<<"\n\n File Openning Error...";
 		else
@@ -946,8 +946,8 @@ void bbike::update_bikes()
 		int year1,yr1,max_power1,mp1,max_torque1,mt1,count1=0;
 		string name1,namee1;
 		cout<<"\n\n\t\t\t\tUpdate Bike Record";
-		temp1.open("D://petrolBike1.txt",ios::app|ios::out);
-		file1.open("D://petrolBike.txt",ios::in);
+		temp1.open("petrolBike1.txt",ios::app|ios::out);
+		file1.open("petrolBike.txt",ios::in);
 		if(!file1)
 		cout<<"\n\n File Openning Error...";
 		else
@@ -979,8 +979,8 @@ void bbike::update_bikes()
 		}
 		file1.close();
 		temp1.close();
-		remove("D://petrolBike.txt");
-		rename("D://petrolBike1.txt","D://book.txt");
+		remove("petrolBike.txt");
+		rename("petrolBike1.txt","book.txt");
 	}
 	else if ( ch == 2)
 	{
@@ -990,8 +990,8 @@ void bbike::update_bikes()
 		int year2,yr2,range2,r2,count2=0;
 		string name2,namee2;
 		cout<<"\n\n\t\t\t\tUpdate Bike Record";
-		temp2.open("D://electricBike1.txt",ios::app|ios::out);
-		file2.open("D://electricBike.txt",ios::in);
+		temp2.open("electricBike1.txt",ios::app|ios::out);
+		file2.open("electricBike.txt",ios::in);
 		if(!file2)
 		cout<<"\n\n File Openning Error...";
 		else
@@ -1021,8 +1021,8 @@ void bbike::update_bikes()
 		}
 		file2.close();
 		temp2.close();
-		remove("D://electricBike.txt");
-		rename("D://electricBike1.txt","D://book.txt");
+		remove("electricBike.txt");
+		rename("electricBike1.txt","book.txt");
 	}
 	else 
 	{
@@ -1050,8 +1050,8 @@ void bbike::del_bikes()
 		fstream file1,temp1;
 		int year1,max_power1,max_torque1,count1=0;
 		string name1,namee1;
-		temp1.open("D://petrolBike1.txt",ios::app|ios::out);
-		file1.open("D://petrolBike2.txt",ios::in);
+		temp1.open("petrolBike1.txt",ios::app|ios::out);
+		file1.open("petrolBike2.txt",ios::in);
 		if(!file1)
 		cout<<"\n\n File Openning Error...";
 		else
@@ -1077,8 +1077,8 @@ void bbike::del_bikes()
 		}
 		file1.close();
 		temp1.close();
-		remove("D://petrolBike.txt");
-		rename("D://petrolBike1.txt","D://book.txt");
+		remove("petrolBike.txt");
+		rename("petrolBike1.txt","book.txt");
 	}
 	else if (ch == 2)
 	{
@@ -1087,8 +1087,8 @@ void bbike::del_bikes()
 		fstream file2,temp2;
 		int year2,range2,count2=0;
 		string name2,namee2;
-		temp2.open("D://electricBike1.txt",ios::app|ios::out);
-		file2.open("D://electricBike2.txt",ios::in);
+		temp2.open("electricBike1.txt",ios::app|ios::out);
+		file2.open("electricBike2.txt",ios::in);
 		if(!file2)
 		cout<<"\n\n File Openning Error...";
 		else
@@ -1114,8 +1114,8 @@ void bbike::del_bikes()
 	}
 	file2.close();
 	temp2.close();
-	remove("D://petrolBike.txt");
-	rename("D://petrolBike1.txt","D://book.txt");
+	remove("petrolBike.txt");
+	rename("petrolBike1.txt","book.txt");
 	}
 	else
 	{
@@ -1269,8 +1269,6 @@ void userregister()
 	
 	
 	ofstream f1("record1.txt",ios::app);
-	f1<<"\nRegistered userName and userPassword";
-	f1<<"\n***************************************\n";
 	f1<<ruserID<<' '<<rpassword<<endl;
 	cout<<"\n\t\t\t\t\t\t\t\t\xdbRegistration is succesfull!\xdb";
 	userlogin();
@@ -1350,7 +1348,7 @@ void userlogin()
 			system("cls");
 			gotoxy(40,10);
 			fstream normal;
-			normal.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike.txt",ios::binary|ios::out|ios::app);
+			normal.open("normalBike.txt",ios::binary|ios::out|ios::app);
 			op:
 			system("cls");
 			cout<<asctime(localtime(&timetoday));
@@ -1426,7 +1424,7 @@ void userlogin()
 			cout<<asctime(localtime(&timetoday));
 			gotoxy(40,10);
 			fstream electric;
-			electric.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/ElectricBike.txt",ios::binary|ios::out|ios::app);
+			electric.open("ElectricBike.txt",ios::binary|ios::out|ios::app);
 			op1:
 			system("cls");
 			cout<<asctime(localtime(&timetoday));
