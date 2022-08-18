@@ -8,3 +8,4 @@
  HondaHornet 2021 17 15 
  ApacheRTR200 2020 16 20 
  YamahaFZSv2 2018 23 20
+ ABCD 2022 20 30

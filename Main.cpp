@@ -710,9 +710,13 @@ void bbike::add_bikes()
 	cin>>ch;
 	if(ch==1)
 	{
+		ofstream file1;
+		file1.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.txt",ios::binary|ios::out|ios::app);
+		if(!file1){
+		cout<<"\n\n\t\tFile Openning Error...";
+		}
 		system("cls");
 		gotoxy(40,10);
-		fstream file1;
 		int year1,max_power1,max_torque1;
 		string name1;
 		cout<<"\n\t******Getting Details for new petrol medium bike******"<<endl;
@@ -726,15 +730,18 @@ void bbike::add_bikes()
 		cin>>max_power1;
 		cout<<"\n\t\tEnter max-torque: ";
 		cin>>max_torque1;
-		file1.open("D://petrolBike1.txt",ios::out|ios::app);
-		file1<<" "<<name1<<" "<<year1<<" "<<max_power1<<" "<<max_torque1<<"\n";
+		file1<<" "<<name1<<" "<<year1<<" "<<max_power1<<" "<<max_torque1;
 		file1.close();
 	}
 	else if (ch==2)
 	{
+		ofstream file2;
+		file2.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.txt",ios::binary|ios::out|ios::app);
+		if(!file2){
+		cout<<"\n\n\t\tFile Openning Error...";
+		}
 		system("cls");
 		gotoxy(40,10);
-		fstream file2;
 		int year2,range2;
 		string name2;
 		cout<<"\n\t\t******Getting Details for new electric medium bike******"<<endl;
@@ -746,8 +753,7 @@ void bbike::add_bikes()
 		fflush(stdin);
 		cout<<"\n\t\tEnter range: ";
 		cin>>range2;
-		file2.open("D://electricBike1.txt",ios::out|ios::app);
-		file2<<" "<<name2<<" "<<year2<<" "<<range2<<" "<<"\n";
+		file2<<" "<<name2<<" "<<year2<<" "<<range2;
 		file2.close();	
 	}
 	else
@@ -837,7 +843,6 @@ void bbike::check_bikes()
 	if(ch == 1 )
 	{
 		system("cls");
-		gotoxy(40,10);
 		fstream file1;
 		int year1,max_power1,max_torque1,count1=0;
 		string name1,namee1;
@@ -846,44 +851,38 @@ void bbike::check_bikes()
 		cout<<"\n\n\t\tFile Openning Error...";
 		else
 		{
-			system("cls");
-			cout<<"\n\t\tThe list of petrol/normal bike we have are :"<<endl;
-      		cout<<"\t\t1.YamahaXTZ150"<<endl;
-       	 	cout<<"\t\t2.HondaXR150L"<<endl;
-       	 	cout<<"\t\t3.HeroXpulse"<<endl;
-        	cout<<"\t\t4.Tracker250"<<endl;
-        	cout<<"\t\t5.RoyalEnfieldClassic350"<<endl;
-        	cout<<"\t\t6.JawaClassic"<<endl;
-        	cout<<"\t\t7.PulsarNS100"<<endl;
-        	cout<<"\t\t8.HondaHornet"<<endl;
-        	cout<<"\t\t9.ApacheRTR200"<<endl;
-        	cout<<"\t\t10.YamahaFZSv2"<<endl;
+		while(!file1.eof())
+		{
+			cout<<"\n \t";
+			file1>>name1>>year1>>max_power1>>max_torque1;
+			cout<<name1<<" "<<year1<<" "<<max_power1<<" "<<max_torque1;	
+		}
+			top:
 			cout<<"\n\n Bike Name You Want To Search From The Available Ones Above: ";
 			cin>>namee1;
-			file1>>name1>>year1>>max_power1>>max_torque1;
+			file1.seekg(0,ios::beg);
 			while(!file1.eof())
 			{
 				if(namee1 == name1)
 				{
-					system("cls");
 					cout<<"\n\n\t\t\tBike Name : "<<name1;
 					cout<<"\n\n\t\t\tYear : "<<year1;
 					cout<<"\n\n\t\t\tMax_power : "<<max_power1;
 					cout<<"\n\n\t\t\tMax_torque : "<<max_torque1;
-					count1++;
-					break;	
+					break;
 				}
-				file1>>name1>>year1>>max_power1>>max_torque1;
+				else
+				{
+					cout<<"\n\n\t\t\t Bike name Not Found...!!! Please Enter The Correct Name Again";
+					goto top;
+				}
 			}
 			file1.close();
-			if(count1 == 0)
-			cout<<"\n\n Bike name Not Found...";
 		}
 	}
 	else if(ch ==2)
 	{ 
 		system("cls");
-		gotoxy(40,10);
 		fstream file2;
 		int year2,max_power2,range2,count2=0;
 		string name2,namee2;

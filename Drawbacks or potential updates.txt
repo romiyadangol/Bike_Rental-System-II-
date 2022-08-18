@@ -12,7 +12,6 @@ delete
 priting bill from file
 
 
-Kunai pani bike if we add, delete or update in admin then tyo update uta user ko ma automatically
-hunu paryo which can be done by using the same file for both the admin and user and user lai bike haru
-ko list dekhauda tyo file lai edit garna namilne mode ma kholne meaning just file bata scan garera display
-gardine ani edit haru garne permission admin sanga matrai hunchha obviously
+bike ko unique id dine ani tei anusar search garne ra file ma add garne
+
+bill ma naya added bike haru ko invoice print garne
