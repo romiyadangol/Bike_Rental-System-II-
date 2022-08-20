@@ -1505,26 +1505,26 @@ void userlogin()
 			gotoxy(40,10);
 			cout<<"******PERSONAL DETAILS******";
 			cout<<"\n\nEnter your name :";
-			cin>>customer_name;
+			cin>>n1.customer_name;
 			fflush(stdin);
 			cout<<"\nEnter your gender (Male/Female/Others):";
-			cin>>customer_gender;
+			cin>>n1.customer_gender;
 			fflush(stdin);
 			cout<<"\nEnter your age :";
-			cin>>customer_age;
+			cin>>n1.customer_age;
 			fflush(stdin);
-			if(customer_age < 18)
+			if(n1.customer_age < 18)
 			{
 				cout<<"\n!!! You are not eligible for renting bike !!!";
 				exit (0);
 			}
 			cout<<"\nEnter the contact no :";
-			cin>>contact_no;
+			cin>>n1.contact_no;
 			fflush(stdin);
 			cout<<"\nEnter the citizenship no :";
-			cin>>citizenship_no;
+			cin>>n1.citizenship_no;
 			fflush(stdin);
-			myfile<<customer_name<<" "<<customer_gender<<" "<<customer_age<<" "<<contact_no<<" "<<citizenship_no<<"\n";
+			myfile<<n1.customer_name<<" "<<n1.customer_gender<<" "<<n1.customer_age<<" "<<n1.contact_no<<" "<<n1.citizenship_no<<"\n";
  			myfile.close();
 		    cout<<"\n\n\nLOADING................";
 			sleep(3);
@@ -1580,26 +1580,26 @@ void userlogin()
 			gotoxy(40,10);
 			cout<<"******PERSONAL DETAILS******";
 			cout<<"\n\nEnter your name :";
-			cin>>customer_name;
+			cin>>e1.customer_name;
 			fflush(stdin);
 			cout<<"\nEnter your gender (Male/Female/others) :";
-			cin>>customer_gender;
+			cin>>e1.customer_gender;
 			fflush(stdin);
 			cout<<"\nEnter your age :";
-			cin>>customer_age;
-			if(customer_age < 18)
+			cin>>e1.customer_age;
+			if(e1.customer_age < 18)
 			{
 				cout<<"\n!!! You are  not eligible for renting bike !!!";
 				exit (0);
 			}
 			fflush(stdin);
 			cout<<"\nEnter the contact no :";
-			cin>>contact_no;
+			cin>>e1.contact_no;
 			fflush(stdin);
 			cout<<"\nEnter the citizenship no :";
-		 	cin>>citizenship_no;
+		 	cin>>e1.citizenship_no;
 			fflush(stdin);
-			myfile1<<customer_name<<" "<<customer_gender<<" "<<customer_age<<" "<<contact_no<<" "<<citizenship_no<<"\n";
+			myfile1<<e1.customer_name<<" "<<e1.customer_gender<<" "<<e1.customer_age<<" "<<e1.contact_no<<" "<<e1.citizenship_no<<"\n";
  			myfile1.close();
 		    cout<<"\n\n\nLOADING................";
 			sleep(3);
