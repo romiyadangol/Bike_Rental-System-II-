@@ -758,7 +758,7 @@ void bbike::add_bikes()
 		cout<<"\n\tEnter Bike Id: ";
 		cin>>id1;
 		fflush(stdin);
-		checkfile.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::in);
+		checkfile.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::in);
 		checkfile.seekg(0,ios::beg);
 		while(!checkfile.eof())
 			{
@@ -803,7 +803,7 @@ void bbike::add_bikes()
 		cout<<"\n\tEnter Bike Id: ";
 		cin>>id2;
 		fflush(stdin);
-		checkfile2.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::in);
+		checkfile2.open("D://II-SEM-PROJECT/electricBike1.dat",ios::in);
 		//checkfile2.seekg(0,ios::beg);
 		while(!checkfile2.eof())
 			{
@@ -1259,7 +1259,7 @@ void bbike::del_bikes()
 int main()
 {
 	system("cls");
-	fullscreen();
+	//fullscreen();
 	int c;
 	bike b1;
 	b1.welcome();
@@ -1322,6 +1322,7 @@ int main()
 /******************************************************AdminLogin**************************************************/
 void adminlogin()
 {
+	sleep(2);
    system("cls");
    time_t timetoday;
    time (&timetoday);
