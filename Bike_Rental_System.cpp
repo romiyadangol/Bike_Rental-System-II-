@@ -1,9 +1,11 @@
+
 #include<iostream>
 #include<iomanip>
 #include<conio.h>
 #include<stdlib.h>
 #include<fstream>
 #include<string>
+#include<istream>
 #include<unistd.h>
 #include<windows.h>
 #include<ctime>
@@ -36,8 +38,7 @@ class bike{
     double contact_no;
     double citizenship_no;
     int customer_age;
-    int ch1;
-    int ch2;
+    int ch1,ch2;
     /******************************************************Welcome************************************************/
     void welcome()
     {
@@ -179,6 +180,10 @@ class rent : public bike{
 };
 class normal : public rent{
     public:
+    int id1;
+    string name1;
+    int year1;
+    int max_torque1,max_power1;
     void get_bike1()
     {
     	system("cls");
@@ -467,7 +472,11 @@ class normal : public rent{
     }
 };
 class electric : public rent{
-    public :    
+    public :  
+	int id2;
+    string name2;
+    int year2;
+    int range2;  
     void get_bike2()
     {
     	system("cls");
@@ -710,17 +719,34 @@ void bbike::add_bikes()
 	cin>>ch;
 	if(ch==1)
 	{
-		ofstream file1;
-		file1.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.txt",ios::binary|ios::out|ios::app);
+		fstream file1,checkfile;
+		normal a1,test1;
+		file1.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::out|ios::app);
 		if(!file1){
 		cout<<"\n\n\t\tFile Openning Error...";
 		}
 		system("cls");
 		gotoxy(40,10);
-		int year1,max_power1,max_torque1;
+		int id1,year1,max_power1,max_torque1;
 		string name1;
+		ok:
 		cout<<"\n\t******Getting Details for new petrol medium bike******"<<endl;
-		cout<<"\n\n\tEnter Bike name: ";
+		cout<<"\n\tEnter Bike Id: ";
+		cin>>id1;
+		fflush(stdin);
+		checkfile.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::in);
+		checkfile.seekg(0,ios::beg);
+		while(!checkfile.eof())
+			{
+				//file6.seekg(0,ios::beg);
+				checkfile>>test1.id1>>test1.name1>>test1.year1>>test1.max_power1>>test1.max_torque1;
+				if( id1 == test1.id1)
+				{
+					cout<<"\n\n\t\t The Bike ID already exist in our system. Please Enter Another ID";
+					goto ok;
+				}
+			}
+		cout<<"\n\tEnter Bike name: ";
 		cin>>name1;
 		fflush(stdin);
 		cout<<"\n\tEnter year: ";	
@@ -728,42 +754,54 @@ void bbike::add_bikes()
 		fflush(stdin);
 		cout<<"\n\tEnter max_power: ";
 		cin>>max_power1;
+		fflush(stdin);
 		cout<<"\n\tEnter max-torque: ";
 		cin>>max_torque1;
-<<<<<<< HEAD
-		file1<<" "<<name1<<" "<<year1<<" "<<max_power1<<" "<<max_torque1;
-=======
-		file1.open("petrolBike1.txt",ios::out|ios::app);
-		file1<<" "<<name1<<" "<<year1<<" "<<max_power1<<" "<<max_torque1<<"\n";
->>>>>>> ed685833219b0e073db1a84174438afb66f95233
+		fflush(stdin);
+		file1<<endl;
+		file1<<id1<<" "<<name1<<" "<<year1<<" "<<max_power1<<" "<<max_torque1;
 		file1.close();
 	}
 	else if (ch==2)
 	{
-		ofstream file2;
-		file2.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.txt",ios::binary|ios::out|ios::app);
+		fstream file2,checkfile2;
+		electric a2,test2;
+		int id2,year2,range2;
+		string name2;
+		file2.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::out|ios::app);
 		if(!file2){
 		cout<<"\n\n\t\tFile Openning Error...";
 		}
 		system("cls");
 		gotoxy(40,10);
-		int year2,range2;
-		string name2;
+		ok1:
 		cout<<"\n\t\t******Getting Details for new electric medium bike******"<<endl;
-		cout<<"\n\n\t\tEnter Bike name: ";
+		cout<<"\n\tEnter Bike Id: ";
+		cin>>id2;
+		fflush(stdin);
+		checkfile2.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::in);
+		//checkfile2.seekg(0,ios::beg);
+		while(!checkfile2.eof())
+			{
+				//file6.seekg(0,ios::beg);
+				checkfile2>>test2.id2>>test2.name2>>test2.year2>>test2.range2;
+				if( id2 == test2.id2)
+				{
+					cout<<"\n\n\t\t The Bike ID already exist in our system. Please Enter Another ID";
+					goto ok1;
+				}
+			}
+		cout<<"\n\tEnter Bike name: ";
 		cin>>name2;
 		fflush(stdin);
-		cout<<"\n\t\tEnter year: ";	
+		cout<<"\n\tEnter year: ";	
 		cin>>year2;
 		fflush(stdin);
-		cout<<"\n\t\tEnter range: ";
+		cout<<"\n\tEnter range: ";
 		cin>>range2;
-<<<<<<< HEAD
-		file2<<" "<<name2<<" "<<year2<<" "<<range2;
-=======
-		file2.open("electricBike1.txt",ios::out|ios::app);
-		file2<<" "<<name2<<" "<<year2<<" "<<range2<<" "<<"\n";
->>>>>>> ed685833219b0e073db1a84174438afb66f95233
+		fflush(stdin);
+		file2<<endl;
+		file2<<id2<<" "<<name2<<" "<<year2<<" "<<range2;
 		file2.close();	
 	}
 	else
@@ -778,7 +816,6 @@ void bbike::show_bikes()
 {
 	label1:
 	system("cls");
-	gotoxy(40,10);
 	cout<<"\n******Displaying bike******"<<endl;
 	cout<<"\n\t\tChoose which bike list would you like to display........";
 	cout<<"\n\n\t\t1.Petrol Bike"<<endl;
@@ -788,48 +825,42 @@ void bbike::show_bikes()
 	if(ch == 1)
 	{	
 		system("cls");
-
+		normal b1;
 		gotoxy(40,10);
-		fstream file1;
-		int year1,max_power1,max_torque1;
+		fstream file3;
+		int id1,year1,max_power1,max_torque1;
 		string name1;
-		file1.open("NormalBike1.txt",ios::in);
-		if(!file1)
+		file3.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::in);
+		if(!file3)
 		cout<<"\n\n File Openning Error...";
-		else
-		{
-			cout<<"\n\n Bike Name    Year    Max_power    Max_torque\n\n";
-			file1>>name1>>year1>>max_power1>>max_torque1;
-			while(!file1.eof())
+			//file3.seekg(0,ios::beg);
+			cout<<"\n\nID\t\tBike Name\t\tYear\t\tMax_power\tMax_torque\n\n";
+			while(!file3.eof())
 			{
-				cout<<"   "<<name1<<"     "<<year1<<"     "<<max_power1<<"\t\t"<<max_torque1<<"\n\n";
-				file1>>name1>>year1>>max_power1>>max_torque1;
+				file3>>id1>>name1>>year1>>max_power1>>max_torque1;
+				cout<<id1<<"\t\t"<<name1<<"\t\t"<<year1<<"\t\t"<<max_power1<<"\t\t"<<max_torque1<<"\n\n";
 			}
-				file1.close();
-		}
+				file3.close();
 	}
 	else if (ch==2)
 	{		
 		system("cls");
-
+		electric b2;
 		gotoxy(40,10);
-		fstream file2;
-		int year2,range2;
+		fstream file4;
+		int id2,year2,range2;
 		string name2;
-		file2.open("electricBike1.txt",ios::in);
-		if(!file2)
+		file4.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::in);
+		if(!file4)
 		cout<<"\n\n File Openning Error...";
-		else
-		{
-			cout<<"\n\n Bike Name    Year    Range\n\n";
-			file2>>name2>>year2>>range2;
-			while(!file2.eof())
+			//file4.seekg(0,ios::beg);
+			cout<<"\n\n\t\tID\t\tBike Name\tYear\t\tRange\n\n";
+			while(!file4.eof())
 			{
-				cout<<"   "<<name2<<"     "<<year2<<"     "<<range2<<"\t\t"<<"\n\n";
-				file2>>name2>>year2>>range2;
+				file4>>id2>>name2>>year2>>range2;
+				cout<<"\t\t"<<id2<<"\t\t"<<name2<<"\t\t"<<year2<<"\t\t"<<range2<<"\n\n";
 			}
-			file2.close();
-		}
+			file4.close();
 	}
 	else
 	{
@@ -853,81 +884,72 @@ void bbike::check_bikes()
 	if(ch == 1 )
 	{
 		system("cls");
-		fstream file1;
-		int year1,max_power1,max_torque1,count1=0;
-		string name1,namee1;
-		file1.open("NormalBike1.txt",ios::in);
-		if(!file1)
+		fstream file5;
+		normal c1;
+		int id1,check_id,year1,max_power1,max_torque1,y=0;
+		string name1;
+		top:
+		file5.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::in);
+		if(!file5)
 		cout<<"\n\n\t\tFile Openning Error...";
-		else
-		{
-		while(!file1.eof())
-		{
-			cout<<"\n \t";
-			file1>>name1>>year1>>max_power1>>max_torque1;
-			cout<<name1<<" "<<year1<<" "<<max_power1<<" "<<max_torque1;	
-		}
-			top:
-			cout<<"\n\n Bike Name You Want To Search From The Available Ones Above: ";
-			cin>>namee1;
-			file1.seekg(0,ios::beg);
-			while(!file1.eof())
+			cout<<"\n\n Enter The Bike ID You Want To Search : ";
+			cin>>check_id;
+			file5.seekg(0,ios::beg);
+			while(!file5.eof())
 			{
-				if(namee1 == name1)
+				//file6.seekg(0,ios::beg);
+				file5>>c1.id1>>c1.name1>>c1.year1>>c1.max_power1>>c1.max_torque1;
+				if(check_id == c1.id1)
 				{
-					cout<<"\n\n\t\t\tBike Name : "<<name1;
-					cout<<"\n\n\t\t\tYear : "<<year1;
-					cout<<"\n\n\t\t\tMax_power : "<<max_power1;
-					cout<<"\n\n\t\t\tMax_torque : "<<max_torque1;
-					break;
-				}
-				else
-				{
-					cout<<"\n\n\t\t\t Bike name Not Found...!!! Please Enter The Correct Name Again";
-					goto top;
+					y=1;
+					cout<<"\n\n\t\t\tBike ID : "<<c1.id1;
+					cout<<"\n\n\t\t\tBike Name : "<<c1.name1;
+					cout<<"\n\n\t\t\tYear : "<<c1.year1;
+					cout<<"\n\n\t\t\tMax_power : "<<c1.max_power1;
+					cout<<"\n\n\t\t\tMax_torque : "<<c1.max_torque1;
 				}
 			}
-			file1.close();
-		}
+			if(y!=1)
+				{
+					file5.close();
+					cout<<"\n\n\t\t\t Bike ID Not Found...!!! Please Enter The Correct Name Again";
+					goto top;
+				}
+			file5.close();
 	}
 	else if(ch ==2)
 	{ 
 		system("cls");
-		fstream file2;
-		int year2,max_power2,range2,count2=0;
-		string name2,namee2;
-		file2.open("D:electricBike1.txt",ios::in);
-		if(!file2)
-		cout<<"\n\n File Openning Error...";
-		else
-		{
-			cout<<"\n\t\tThe list of electric bikes we have are :"<<endl;
-        	cout<<"\t\t1.Yatri "<<endl;
-        	cout<<"\t\t2.SuperSoco "<<endl;
-        	cout<<"\t\t3.NIU "<<endl;
-        	cout<<"\t\t4.Bella "<<endl;
-        	cout<<"\t\t5.YadeaG5 "<<endl;
-        	cout<<"\t\t6.Doohan "<<endl;
-			cout<<"\n\n Bike Name You Want To Search From The Available Ones Above: ";
-			cin>>namee2;
-			file2>>name2>>year2>>range2;
-			while(!file2.eof())
+		fstream file6;
+		electric c2;
+		int id2,year2,max_power2,range2,check_id1=0,x=0;
+		string name2;
+		top1:
+		file6.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::in);
+		if(!file6)
+		cout<<"\n\n\t\tFile Openning Error...";
+		cout<<"\n\n Enter The Bike ID You Want To Search : ";
+		cin>>check_id1;
+			while(!file6.eof())
 			{
-				if(namee2 == name2)
+				//file6.seekg(0,ios::beg);
+				file6>>c2.id2>>c2.name2>>c2.year2>>c2.range2;
+				if(check_id1 == c2.id2)
 				{
-					system("cls");
-					cout<<"\n\n\t\t\tBike Name : "<<name2;
-					cout<<"\n\n\t\t\tYear : "<<year2;
-					cout<<"\n\n\t\t\tRange Per Charge(Km) : "<<range2;
-					count2++;
-					break;	
+					x=1;
+					cout<<"\n\n\t\t\tBike ID : "<<c2.id2;
+					cout<<"\n\n\t\t\tBike Name : "<<c2.name2;
+					cout<<"\n\n\t\t\tYear : "<<c2.year2;
+					cout<<"\n\n\t\t\tRange Per Charge(Km) : "<<c2.range2;
 				}
-				file2>>name2>>year2>>range2;
 			}
-			file2.close();
-			if(count2 == 0)
-			cout<<"\n\n Bike name Not Found...";
-		}
+			if(x!=1)	
+				{
+					file6.close();
+					cout<<"\n\n\t\t\t Bike name Not Found...!!! Please Enter The Correct Name Again";
+					goto top1;
+				}
+			file6.close();
 	}
 	else 
 	{
@@ -951,96 +973,149 @@ void bbike::update_bikes()
 	{
 		system("cls");
 		gotoxy(40,10);
-		fstream file1,temp1;
-		int year1,yr1,max_power1,mp1,max_torque1,mt1,count1=0;
-		string name1,namee1;
+		normal d1,d11;
+		fstream file7,file8,myfile1;
+		int id1,year1,mp,mt,x=0,i,y;
+		int max_power,max_torque;
+		int modify_id1;
+		string name1,n;
+		char k;
 		cout<<"\n\n\t\t\t\tUpdate Bike Record";
-		temp1.open("petrolBike1.txt",ios::app|ios::out);
-		file1.open("petrolBike.txt",ios::in);
-		if(!file1)
+		file7.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::in);
+		if(!file7)
 		cout<<"\n\n File Openning Error...";
-		else
-		{
-			cout<<"\n\n Bike Name : ";
-			cin>>name1;
-			file1>>namee1>>year1>>max_power1>>max_torque1;
-			while(!file1.eof())
+			//file9.seekg(0,ios::beg);
+			cout<<"\n\n\t\t\t ******** The Available Bikes We Have On Our DataBase Are ********\n\n";
+			cout<<"\n\n\t\tID\t\tBike Name\tYear\t\tRange\n\n";
+			while(!file7.eof())
 			{
-				if(name1 == namee1)
-				{
-					system("cls");
-					cout<<"\n\n\t\t\t\tUpdate Bikes Record";
-					cout<<"\n\n\t\t\tYear : ";
-					cin>>yr1;
-					cout<<"\n\n\t\t\tMax_power: ";
-					cin>>mp1;
-					cout<<"\n\n\t\t\tMax_torque: ";
-					cin>>mt1;
-					temp1<<" "<<name1<<" "<<yr1<<" "<<mp1<<" "<<mt1<<"\n";
-					count1++;
-				}
-				else
-				temp1<<" "<<namee1<<" "<<year1<<" "<<max_power1<<" "<<max_torque1<<"\n";
-				file1>>namee1>>year1>>max_power1>>max_torque1;
-			}
-			if(count1 == 0)
-			cout<<"\n\n Bike ID Not Found...";
+				file7>>d11.id1>>d11.name1>>d11.year1>>d11.max_power1>>d11.max_torque1;
+				cout<<"\t\t"<<d11.id1<<"\t\t"<<d11.name1<<"\t\t"<<d11.year1<<"\t\t"<<d11.max_power1<<"\t\t"<<d11.max_torque1<<"\n\n";
 		}
-		file1.close();
-		temp1.close();
-		remove("petrolBike.txt");
-		rename("petrolBike1.txt","book.txt");
-	}
+		file7.close(); 
+		flag:
+		cout<<"\n\n\t\t Enter the ID of the Bike You Want To Modify/Update : ";
+		cin>>modify_id1;
+		myfile1.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp1.dat",ios::out); //write
+		file8.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::in|ios::binary|ios::app|ios::out); //read
+		while(!file8.eof())
+		{
+			file8>>d1.id1>>d1.name1>>d1.year1>>d1.max_power1>>d1.max_torque1;
+			if(d1.id1 == modify_id1)
+			{
+					x++;
+					if (x>0){
+					cout<<"\n\n\t\tIs that record you want to update ? \n\n"<<endl;
+    				cout<<"\t\t"<<d1.id1<<"\t\t"<<d1.name1<<"\t\t"<<d1.year1<<"\t\t"<<d1.max_power1<<"\t\t"<<d1.max_torque1<<"\n\n";
+					cout<<"\n\n\t\t Please enter (y/n) : ";
+    				cin>>k;
+    			}
+					if(k == 'y' || k == 'Y'){
+					cout<<"\n\n\t\t ***** Enter the new Bike Details To be Updated *****";
+					cout<<"\n\n\t\t\tNew Bike ID : ";
+					fflush(stdin);
+					cin>>i;
+					cout<<"\n\n\t\t\tNew Bike Name : ";
+					fflush(stdin);
+					cin>>n;
+					cout<<"\n\n\t\t\tNew Manufacture Year : ";
+					fflush(stdin);
+					cin>>y;
+					cout<<"\n\n\t\t\tNew Max Power : ";
+					fflush(stdin);
+					cin>>mp;
+					cout<<"\n\n\t\t\tNew Max Torque : ";
+					fflush(stdin);
+					cin>>mt;
+					myfile1<<" "<<i<<" "<<n<<" "<<y<<" "<<mp<<" "<<mt<<" ";
+				}
+			}
+			else if(d1.id1 != modify_id1){
+				myfile1<<d1.id1<<" "<<d1.name1<<" "<<d1.year1<<" "<<d1.max_power1<<" "<<d1.max_torque1<<"\n";
+			} 
+		}
+					file8.close();
+	  				myfile1.close();
+	  				remove("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat");
+        			rename("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp1.dat","D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat");
+        			cout<<"\n\n\t\t Press Any Key To Go To Main Menu";
+}
+
 	else if ( ch == 2)
-	{
+{
 		system("cls");
+		electric d2,d22;
 		gotoxy(40,10);
-		fstream file2,temp2;
-		int year2,yr2,range2,r2,count2=0;
-		string name2,namee2;
-		cout<<"\n\n\t\t\t\tUpdate Bike Record";
-		temp2.open("electricBike1.txt",ios::app|ios::out);
-		file2.open("electricBike.txt",ios::in);
-		if(!file2)
+		fstream file9,file10,myfile2;
+		int x=0;
+		int id2,year2,range2,modify_id2=0;
+		int i,y,r;
+		string n,name;
+		char another,k;
+		int choice=0,count=0;
+		file10.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::in);
+		if(!file10)
 		cout<<"\n\n File Openning Error...";
-		else
-		{
-			cout<<"\n\n Bike Name : ";
-			cin>>name2;
-			file2>>namee2>>year2>>range2;
-			while(!file2.eof())
+			//file9.seekg(0,ios::beg);
+			cout<<"\n\n\t\t\t ******** The Available Bikes We Have On Our DataBase Are ********\n\n";
+			cout<<"\n\n\t\tID\t\tBike Name\tYear\t\tRange\n\n";
+			while(!file10.eof())
 			{
-				if(name2 == namee2)
-				{
-					system("cls");
-					cout<<"\n\n\t\t\t\tUpdate Bikes Record";
-					cout<<"\n\n\t\t\tYear : ";
-					cin>>yr2;
-					cout<<"\n\n\t\t\tRange: ";
-					cin>>r2;
-					temp2<<" "<<name2<<" "<<yr2<<" "<<r2<<"\n";
-					count2++;
-				}
-				else
-				temp2<<" "<<namee2<<" "<<year2<<" "<<range2<<"\n";
-				file2>>namee2>>year2>>range2;
+				file9>>d22.id2>>d22.name2>>d22.year2>>d22.range2;
+				cout<<"\t\t"<<d22.id2<<"\t\t"<<d22.name2<<"\t\t"<<d22.year2<<"\t\t"<<d22.range2<<"\n\n";
 			}
-			if(count2 == 0)
-			cout<<"\n\n Bike ID Not Found...";
+		file10.close(); 
+		flag1:
+		cout<<"\n\n\t\t Enter the ID of the Bike You Want To Modify/Update : ";
+		cin>>modify_id2;
+		myfile2.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp2.dat",ios::out); //write
+		file9.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::in|ios::binary|ios::app|ios::out); //read
+		while(!file9.eof())
+		{
+			file9>>d2.id2>>d2.name2>>d2.year2>>d2.range2;
+			if(d2.id2 == modify_id2)
+			{
+					x++;
+					if (x>0){
+					cout<<"\n\n\t\tIs that record you want to update ? \n\n"<<endl;
+    				cout<<"\t\t"<<d2.id2<<"\t\t"<<d2.name2<<"\t\t"<<d2.year2<<"\t\t"<<d2.range2<<"\n\n";
+					cout<<"\n\n\t\t Please enter (y/n) : ";
+    				cin>>k;
+    			}
+					if(k == 'y' || k == 'Y'){
+					cout<<"\n\n\t\t ***** Enter the new Bike Details To be Updated *****";
+					cout<<"\n\n\t\t\tNew Bike ID : ";
+					fflush(stdin);
+					cin>>i;
+					cout<<"\n\n\t\t\tNew Bike Name : ";
+					fflush(stdin);
+					cin>>n;
+					cout<<"\n\n\t\t\tNew Manufacture Year : ";
+					fflush(stdin);
+					cin>>y;
+					cout<<"\n\n\t\t\tNew Range Per Charge(Km) : ";
+					fflush(stdin);
+					cin>>r;
+					myfile2<<" "<<i<<" "<<n<<" "<<y<<" "<<r<<" ";
+				}
+			}
+			else if(d2.id2 != modify_id2){
+				myfile2<<d2.id2<<" "<<d2.name2<<" "<<d2.year2<<" "<<d2.range2<<"\n";
+			} 
 		}
-		file2.close();
-		temp2.close();
-		remove("electricBike.txt");
-		rename("electricBike1.txt","book.txt");
-	}
+					file9.close();
+	  				myfile2.close();
+	  				remove("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat");
+        			rename("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp2.dat","D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat");
+        			cout<<"\n\n\t\t Press Any Key To Go To Main Menu";
+}
 	else 
 	{
 		cout<<"\n!!!Invalid Choice!!!";
 		sleep(2);
 		goto label3;
-	}
+	} 
 }
-	
 void bbike::del_bikes()
 {
 	label4:
@@ -1056,76 +1131,100 @@ void bbike::del_bikes()
 	{
 		system("cls");
 		gotoxy(40,10);
-		fstream file1,temp1;
-		int year1,max_power1,max_torque1,count1=0;
-		string name1,namee1;
-		temp1.open("petrolBike1.txt",ios::app|ios::out);
-		file1.open("petrolBike2.txt",ios::in);
-		if(!file1)
+		normal e1,e11;
+		fstream file11,file12,myfile3;
+		int id1,year1,max_power1,max_torque1,count1=0;
+		int del_id1;
+		string name1;
+		char k;
+		int count=0;
+		file11.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::in);
+		if(!file11)
 		cout<<"\n\n File Openning Error...";
-		else
-		{
-			cout<<"\n\n Bike Name : ";
-			cin>>namee1;
-			file1>>namee1>>year1>>max_power1>>max_torque1;
-			while(!file1.eof())
+			//file9.seekg(0,ios::beg);
+			cout<<"\n\n\t\t\t ******** The Available Bikes We Have On Our DataBase Are ********\n\n";
+			cout<<"\n\n\t\tID\t\tBike Name\tYear\t\tRange\n\n";
+			while(!file11.eof())
 			{
-				if(name1 == namee1)
-				{
-					system("cls");
-					cout<<"\n\n\t\t\t\tDelete Bike Record";
-					cout<<"\n\n One Bike is Deleted Successfully...";
-					count1++;
-				}
-				else
-				temp1<<" "<<namee1<<" "<<year1<<" "<<max_power1<<" "<<max_torque1<<"\n";
-				file1>>namee1>>year1>>max_power1>>max_torque1;
-			}
-			if(count1 == 0)
-			cout<<"\n\n Bike Name Not Found...";
+				file11>>e11.id1>>e11.name1>>e11.year1>>e11.max_power1>>e11.max_torque1;
+				cout<<"\t\t"<<e11.id1<<"\t\t"<<e11.name1<<"\t\t"<<e11.year1<<"\t\t"<<e11.max_power1<<"\t\t"<<e11.max_torque1<<"\n\n";
 		}
-		file1.close();
-		temp1.close();
-		remove("petrolBike.txt");
-		rename("petrolBike1.txt","book.txt");
+		file11.close(); 
+		cout<<"\n\n\t\t Enter the ID of the Bike You Want To Delete : ";
+		cin>>del_id1;
+		file12.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp1.dat",ios::out); //write
+		myfile3.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::in); //read
+		while(!myfile3.eof())
+		{
+			myfile3>>e1.id1>>e1.name1>>e1.year1>>e1.max_power1>>e1.max_torque1;
+			if(e1.id1 != del_id1){
+			file12<<e1.id1<<" "<<e1.name1<<" "<<e1.year1<<" "<<e1.max_power1<<" "<<e1.max_torque1<<"\n";
+			}
+			if(e1.id1 == del_id1)
+			{
+					count=1;
+					cout<<"\n\n\t\tThe Selected Record Is Deleted Successfully";
+			}
+		}
+					file12.close();
+	  				myfile3.close();
+	  				remove("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat");
+        			rename("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp1.dat","D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat");
+        			if(count == 0)
+        			{
+        				cout<<"\n\n\t\t Bike ID Not Found !!! ";
+					}
+        			cout<<"\n\n\t\t Press Any Key To Go To Main Menu";
 	}
 	else if (ch == 2)
 	{
 		system("cls");
 		gotoxy(40,10);
-		fstream file2,temp2;
-		int year2,range2,count2=0;
-		string name2,namee2;
-		temp2.open("electricBike1.txt",ios::app|ios::out);
-		file2.open("electricBike2.txt",ios::in);
-		if(!file2)
+		electric e2,e22;
+		fstream file13,file14,myfile4;
+		int id2,year2,range2;
+		int del_id2;
+		string name2;
+		char k;
+		int count1=0;
+		file13.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::in);
+		if(!file13)
 		cout<<"\n\n File Openning Error...";
-		else
-		{
-		cout<<"\n\n Bike Name : ";
-		cin>>namee2;
-		file2>>namee2>>year2>>range2;
-		while(!file2.eof())
-		{
-			if(name2 == namee2)
+			//file9.seekg(0,ios::beg);
+			cout<<"\n\n\t\t\t ******** The Available Bikes We Have On Our DataBase Are ********\n\n";
+			cout<<"\n\n\t\tID\t\tBike Name\tYear\t\tRange\n\n";
+			while(!file13.eof())
 			{
-				system("cls");
-				cout<<"\n\n\t\t\t\tDelete Bike Record";
-				cout<<"\n\n One Bike is Deleted Successfully...";
-				count2++;
-			}
-			else
-			temp2<<" "<<namee2<<" "<<year2<<" "<<range2<<"\n";
-			file2>>namee2>>year2>>range2;
+				file13>>e22.id2>>e22.name2>>e22.year2>>e22.range2;
+				cout<<"\t\t"<<e22.id2<<"\t\t"<<e22.name2<<"\t\t"<<e22.year2<<"\t\t"<<e22.range2<<"\n\n";
 		}
-		if(count2 == 0)
-		cout<<"\n\n Bike Name Not Found...";
-	}
-	file2.close();
-	temp2.close();
-	remove("petrolBike.txt");
-	rename("petrolBike1.txt","book.txt");
-	}
+		file13.close(); 
+		cout<<"\n\n\t\t Enter the ID of the Bike You Want To Delete : ";
+		cin>>del_id2;
+		file14.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp2.dat",ios::out); //write
+		myfile4.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::in); //read
+		while(!myfile4.eof())
+		{
+			myfile4>>e2.id2>>e2.name2>>e2.year2>>e2.range2;
+			if(e2.id2 != del_id2){
+			file14<<e2.id2<<" "<<e2.name2<<" "<<e2.year2<<" "<<e2.range2<<"\n";
+			}
+			if(e2.id2 == del_id2)
+			{
+					count1=1;
+					cout<<"\n\n\t\tThe Selected Record Is Deleted Successfully";
+			}
+		}
+					file14.close();
+	  				myfile4.close();
+	  				remove("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat");
+        			rename("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp2.dat","D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat");
+        			if(count1 == 0)
+        			{
+        				cout<<"\n\n\t\t Bike ID Not Found !!! ";
+					}
+        			cout<<"\n\n\t\t Press Any Key To Go To Main Menu";
+    }
 	else
 	{
 		cout<<"\n!!!Invalid Input!!!";
@@ -1208,11 +1307,11 @@ void adminlogin()
    bbike b;
    int choice,in;
    char x;
-   string pass ="";
-   char ch;
    label1:
+	char ch;
+	string pass;
    cout<<"\n\t\t\t\t\t\t\t\t\xdb|     Admin Login     |\xdb";	
-   cout<<"\n\n\t\t\t\t\t\t\tEnter the password:";
+   cout<<"\n\n\t\t\t\t\t\t\tEnter the password : ";
    ch = getch();
    while(ch != 13)
    {
@@ -1220,7 +1319,7 @@ void adminlogin()
       cout << '*';
       ch = getch();
    }
-   if(pass == "pass")
+   if(pass == "password")
    {
       cout << "\n\n\n\t\t\t\t\t\t\t\t\xdb|     Access Granted!     |\xdb\n";
       label:
@@ -1232,9 +1331,9 @@ void adminlogin()
 		case 1:
 			do
 			{
-			b.add_bikes();
-			cout<<"\n\n\t\t\t\t\t\t\t\tDo You Want to Add another Bike (y,n) : ";
-			cin>>x;
+				b.add_bikes();
+				cout<<"\n\n\t\t\t\t\t\t\t\tDo You Want to Add another Bike (y,n) : ";
+				cin>>x;
 		    }while(x == 'y');
 			break;
 		case 2:
@@ -1276,11 +1375,9 @@ void adminlogin()
    }
    else
    {
-      cout <<"\n\n\t\t\t\t\t\t\t\xdb Access Aborted...\n\t\t\t\t\t\t\tPlease Try Again\n\n\xdb";
+      cout <<"\n\n\n\t\t\t\t\t\t\t \xdb Access Aborted...\n\n\n\t\t\t\t\t\t\t Please Try Again \n\n \xdb";
       goto label1;
    }
-   
-   
 }
 /******************************************************UserRegister**************************************************/
 void userregister()
@@ -1319,12 +1416,12 @@ void userlogin()
 	string userID,password,id,pass;
 	cout<<asctime(localtime(&timetoday));
 	gotoxy(40,10);
-	cout<<"\n\t\t\t\t\t\t\t\t\xdbPlease enter the username and password \xdb";
+	flag:
+	cout<<"\n\t\t\t\t\t\t\t\t\xdb Please enter the username and password \xdb";
 	cout<<"\n\n\n\t\t\t\t\t\t\t\t\t USERNAME : ";
 	cin>>userID;
 	cout<<"\n\t\t\t\t\t\t\t\t\t PASSWORD : ";
 	cin>>password;
-	
 	fstream input("record1.txt",ios::in);//to check whether username and pass already exist in our records
 	while(input>>id>>pass)
 	{
@@ -1373,8 +1470,8 @@ void userlogin()
 		{
 			system("cls");
 			gotoxy(40,10);
-			fstream normal;
-			normal.open("normalBike.txt",ios::binary|ios::out|ios::app);
+			fstream myfile;
+			myfile.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike.dat",ios::out|ios::app);
 			op:
 			system("cls");
 			cout<<asctime(localtime(&timetoday));
@@ -1408,27 +1505,27 @@ void userlogin()
 			gotoxy(40,10);
 			cout<<"******PERSONAL DETAILS******";
 			cout<<"\n\nEnter your name :";
-			cin>>n1.customer_name;
+			cin>>customer_name;
 			fflush(stdin);
 			cout<<"\nEnter your gender (Male/Female/Others):";
-			cin>>n1.customer_gender;
+			cin>>customer_gender;
 			fflush(stdin);
 			cout<<"\nEnter your age :";
-			cin>>n1.customer_age;
+			cin>>customer_age;
 			fflush(stdin);
-			if(n1.customer_age < 18)
+			if(customer_age < 18)
 			{
 				cout<<"\n!!! You are not eligible for renting bike !!!";
 				exit (0);
 			}
 			cout<<"\nEnter the contact no :";
-			cin>>n1.contact_no;
+			cin>>contact_no;
 			fflush(stdin);
 			cout<<"\nEnter the citizenship no :";
-			cin>>n1.citizenship_no;
+			cin>>citizenship_no;
 			fflush(stdin);
-			normal.write((char*)&n1,sizeof(n1));
- 			normal.close();
+			myfile<<customer_name<<" "<<customer_gender<<" "<<customer_age<<" "<<contact_no<<" "<<citizenship_no<<"\n";
+ 			myfile.close();
 		    cout<<"\n\n\nLOADING................";
 			sleep(3);
 			fflush(stdin);
@@ -1449,8 +1546,8 @@ void userlogin()
 			system("cls");
 			cout<<asctime(localtime(&timetoday));
 			gotoxy(40,10);
-			fstream electric;
-			electric.open("ElectricBike.txt",ios::binary|ios::out|ios::app);
+			fstream myfile1;
+			myfile1.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike.dat",ios::out|ios::app);
 			op1:
 			system("cls");
 			cout<<asctime(localtime(&timetoday));
@@ -1483,27 +1580,27 @@ void userlogin()
 			gotoxy(40,10);
 			cout<<"******PERSONAL DETAILS******";
 			cout<<"\n\nEnter your name :";
-			cin>>e1.customer_name;
+			cin>>customer_name;
 			fflush(stdin);
 			cout<<"\nEnter your gender (Male/Female/others) :";
-			cin>>e1.customer_gender;
+			cin>>customer_gender;
 			fflush(stdin);
 			cout<<"\nEnter your age :";
-			cin>>e1.customer_age;
-			if(e1.customer_age < 18)
+			cin>>customer_age;
+			if(customer_age < 18)
 			{
 				cout<<"\n!!! You are  not eligible for renting bike !!!";
 				exit (0);
 			}
 			fflush(stdin);
 			cout<<"\nEnter the contact no :";
-			cin>>e1.contact_no;
+			cin>>contact_no;
 			fflush(stdin);
 			cout<<"\nEnter the citizenship no :";
-		 	cin>>e1.citizenship_no;
+		 	cin>>citizenship_no;
 			fflush(stdin);
-			electric.write((char*)&e1,sizeof(e1));
- 			electric.close();
+			myfile1<<customer_name<<" "<<customer_gender<<" "<<customer_age<<" "<<contact_no<<" "<<citizenship_no<<"\n";
+ 			myfile1.close();
 		    cout<<"\n\n\nLOADING................";
 			sleep(3);
 		    e1.get_bike2();
