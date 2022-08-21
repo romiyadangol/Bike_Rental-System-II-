@@ -1061,7 +1061,7 @@ void bbike::update_bikes()
 			cout<<"\n\n\t\tID\t\tBike Name\tYear\t\tRange\n\n";
 			while(!file10.eof())
 			{
-				file9>>d22.id2>>d22.name2>>d22.year2>>d22.range2;
+				file10>>d22.id2>>d22.name2>>d22.year2>>d22.range2;
 				cout<<"\t\t"<<d22.id2<<"\t\t"<<d22.name2<<"\t\t"<<d22.year2<<"\t\t"<<d22.range2<<"\n\n";
 			}
 		file10.close(); 
