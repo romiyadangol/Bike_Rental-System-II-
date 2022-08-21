@@ -1259,7 +1259,7 @@ void bbike::del_bikes()
 int main()
 {
 	system("cls");
-	//fullscreen();
+	fullscreen();
 	int c;
 	bike b1;
 	b1.welcome();
