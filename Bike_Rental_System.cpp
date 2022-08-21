@@ -189,7 +189,7 @@ class normal : public rent{
     	system("cls");
     	time1();
     	gotoxy(40,10);
-        cout<<"\t\tYou have chosen normal bike for the rental.....";
+        cout<<"\t\tYou have chosen normal/petrol bike for the rental.....";
         label1:
         sleep(1);
         cout<<"\n\t\tThe list of bike we have are :"<<endl;
@@ -406,6 +406,7 @@ class normal : public rent{
     void warning1()
     {
     	system("cls");
+    	int ch1;
     	gotoxy(40,10);
         cout<<"Providing WARNING............";
         sleep(1);
@@ -419,7 +420,6 @@ class normal : public rent{
         cout << "\t\t	| \t\t    !!!RISK BY YOUR OWN!!!                |"<<endl;
         cout << "\t\t	 _________________________________________________________"<<endl;
         cout << "\n";
-        cout << "\t\t	| MINIMUM RENT TIME IS 3 HRS                              |"<<endl;
         cout << "\t\t	| INCASE ACCIDENT , ALL COSTING IS PAID BY DRIVER         |"<<endl;
         cout << "\t\t	| PREPARE HARDCOPY DOCUMENT OF THE ITEM AS BELOW          |"<<endl;
         cout << "\t\t	| DOCUMENT IS NECESSARY WHILE TAKING CHARGE OF BIKE       |"<<endl;
@@ -434,7 +434,19 @@ class normal : public rent{
         cout <<" "<<endl;
         cout << "\t\t	///////////////////////////////////////////////////////////"<<endl;
         sleep(12);
-        display1();
+    	cout<<"\n\nEnter the choice if your want to cancel the renting process:";
+    	cout<<"\n[1].Cancel";
+    	cout<<"\n[2].Continue";
+    	cout<<"\nEnter your choice :";
+    	cin>>ch1;
+    	if(ch1==1)
+    	{
+    		load_EXIT();
+		}
+		else
+		{
+			display1();
+		}
     }
     void display1()
     {
@@ -629,12 +641,13 @@ class electric : public rent{
     void warning2()
     {	
     	system("cls");
-		gotoxy(50,10);
+    	int ch2;
+		gotoxy(40,10);
     	cout<<"Providing WARNING............";
         sleep(1);
         system("cls");
         time1();
-        gotoxy(50,10);
+        gotoxy(40,10);
         cout<<"******RULES AND REGULATIONS******";
         sleep(2);
         cout << "\n\n\t\t                    BIKE RENTAL  - Rules and Regulation                  "<<endl;
@@ -642,7 +655,6 @@ class electric : public rent{
         cout << "\t\t	| \t\t    !!!RISK BY YOUR OWN!!!                |"<<endl;
         cout << "\t\t	 _________________________________________________________"<<endl;
         cout << "\n";
-        cout << "\t\t	| MINIMUM RENT TIME IS 3 HRS                              |"<<endl;
         cout << "\t\t	| INCASE ACCIDENT , ALL COSTING IS PAID BY DRIVER         |"<<endl;
         cout << "\t\t	| PREPARE HARDCOPY DOCUMENT OF THE ITEM AS BELOW          |"<<endl;
         cout << "\t\t	| DOCUMENT IS NECESSARY WHILE TAKING CHARGE OF BIKE       |"<<endl;
@@ -657,7 +669,19 @@ class electric : public rent{
         cout <<" "<<endl;
         cout << "\t\t	///////////////////////////////////////////////////////////"<<endl;
         sleep(12);
-        display2();
+    	cout<<"\n\nEnter the choice if your want to cancel the renting process:";
+    	cout<<"\n[1].Cancel";
+    	cout<<"\n[2].Continue";
+    	cout<<"\nEnter your choice :";
+    	cin>>ch2;
+    	if(ch2==1)
+    	{
+    		load_EXIT();
+		}
+		else
+		{
+			display2();
+		}
     }
     void display2()
     {
@@ -721,7 +745,7 @@ void bbike::add_bikes()
 	{
 		fstream file1,checkfile;
 		normal a1,test1;
-		file1.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::out|ios::app);
+		file1.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::out|ios::app);
 		if(!file1){
 		cout<<"\n\n\t\tFile Openning Error...";
 		}
@@ -734,7 +758,7 @@ void bbike::add_bikes()
 		cout<<"\n\tEnter Bike Id: ";
 		cin>>id1;
 		fflush(stdin);
-		checkfile.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::in);
+		checkfile.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::in);
 		checkfile.seekg(0,ios::beg);
 		while(!checkfile.eof())
 			{
@@ -768,7 +792,7 @@ void bbike::add_bikes()
 		electric a2,test2;
 		int id2,year2,range2;
 		string name2;
-		file2.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::out|ios::app);
+		file2.open("D://II-SEM-PROJECT/electricBike1.dat",ios::out|ios::app);
 		if(!file2){
 		cout<<"\n\n\t\tFile Openning Error...";
 		}
@@ -779,7 +803,7 @@ void bbike::add_bikes()
 		cout<<"\n\tEnter Bike Id: ";
 		cin>>id2;
 		fflush(stdin);
-		checkfile2.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::in);
+		checkfile2.open("D://II-SEM-PROJECT/electricBike1.dat",ios::in);
 		//checkfile2.seekg(0,ios::beg);
 		while(!checkfile2.eof())
 			{
@@ -830,7 +854,7 @@ void bbike::show_bikes()
 		fstream file3;
 		int id1,year1,max_power1,max_torque1;
 		string name1;
-		file3.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::in);
+		file3.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::in);
 		if(!file3)
 		cout<<"\n\n File Openning Error...";
 			//file3.seekg(0,ios::beg);
@@ -850,7 +874,7 @@ void bbike::show_bikes()
 		fstream file4;
 		int id2,year2,range2;
 		string name2;
-		file4.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::in);
+		file4.open("D://II-SEM-PROJECT/electricBike1.dat",ios::in);
 		if(!file4)
 		cout<<"\n\n File Openning Error...";
 			//file4.seekg(0,ios::beg);
@@ -889,7 +913,7 @@ void bbike::check_bikes()
 		int id1,check_id,year1,max_power1,max_torque1,y=0;
 		string name1;
 		top:
-		file5.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::in);
+		file5.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::in);
 		if(!file5)
 		cout<<"\n\n\t\tFile Openning Error...";
 			cout<<"\n\n Enter The Bike ID You Want To Search : ";
@@ -925,7 +949,7 @@ void bbike::check_bikes()
 		int id2,year2,max_power2,range2,check_id1=0,x=0;
 		string name2;
 		top1:
-		file6.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::in);
+		file6.open("D://II-SEM-PROJECT/electricBike1.dat",ios::in);
 		if(!file6)
 		cout<<"\n\n\t\tFile Openning Error...";
 		cout<<"\n\n Enter The Bike ID You Want To Search : ";
@@ -981,7 +1005,7 @@ void bbike::update_bikes()
 		string name1,n;
 		char k;
 		cout<<"\n\n\t\t\t\tUpdate Bike Record";
-		file7.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::in);
+		file7.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::in);
 		if(!file7)
 		cout<<"\n\n File Openning Error...";
 			//file9.seekg(0,ios::beg);
@@ -996,8 +1020,8 @@ void bbike::update_bikes()
 		flag:
 		cout<<"\n\n\t\t Enter the ID of the Bike You Want To Modify/Update : ";
 		cin>>modify_id1;
-		myfile1.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp1.dat",ios::out); //write
-		file8.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::in|ios::binary|ios::app|ios::out); //read
+		myfile1.open("D://II-SEM-PROJECT/temp1.dat",ios::out); //write
+		file8.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::in|ios::binary|ios::app|ios::out); //read
 		while(!file8.eof())
 		{
 			file8>>d1.id1>>d1.name1>>d1.year1>>d1.max_power1>>d1.max_torque1;
@@ -1036,8 +1060,8 @@ void bbike::update_bikes()
 		}
 					file8.close();
 	  				myfile1.close();
-	  				remove("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat");
-        			rename("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp1.dat","D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat");
+	  				remove("D://II-SEM-PROJECT/NormalBike1.dat");
+        			rename("D://II-SEM-PROJECT/temp1.dat","D://II-SEM-PROJECT/NormalBike1.dat");
         			cout<<"\n\n\t\t Press Any Key To Go To Main Menu";
 }
 
@@ -1053,7 +1077,7 @@ void bbike::update_bikes()
 		string n,name;
 		char another,k;
 		int choice=0,count=0;
-		file10.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::in);
+		file10.open("D://II-SEM-PROJECT/electricBike1.dat",ios::in);
 		if(!file10)
 		cout<<"\n\n File Openning Error...";
 			//file9.seekg(0,ios::beg);
@@ -1068,8 +1092,8 @@ void bbike::update_bikes()
 		flag1:
 		cout<<"\n\n\t\t Enter the ID of the Bike You Want To Modify/Update : ";
 		cin>>modify_id2;
-		myfile2.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp2.dat",ios::out); //write
-		file9.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::in|ios::binary|ios::app|ios::out); //read
+		myfile2.open("D://II-SEM-PROJECT/temp2.dat",ios::out); //write
+		file9.open("D://II-SEM-PROJECT/electricBike1.dat",ios::in|ios::binary|ios::app|ios::out); //read
 		while(!file9.eof())
 		{
 			file9>>d2.id2>>d2.name2>>d2.year2>>d2.range2;
@@ -1105,8 +1129,8 @@ void bbike::update_bikes()
 		}
 					file9.close();
 	  				myfile2.close();
-	  				remove("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat");
-        			rename("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp2.dat","D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat");
+	  				remove("D://II-SEM-PROJECT/electricBike1.dat");
+        			rename("D://II-SEM-PROJECT/temp2.dat","D://II-SEM-PROJECT/electricBike1.dat");
         			cout<<"\n\n\t\t Press Any Key To Go To Main Menu";
 }
 	else 
@@ -1138,7 +1162,7 @@ void bbike::del_bikes()
 		string name1;
 		char k;
 		int count=0;
-		file11.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::in);
+		file11.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::in);
 		if(!file11)
 		cout<<"\n\n File Openning Error...";
 			//file9.seekg(0,ios::beg);
@@ -1152,8 +1176,8 @@ void bbike::del_bikes()
 		file11.close(); 
 		cout<<"\n\n\t\t Enter the ID of the Bike You Want To Delete : ";
 		cin>>del_id1;
-		file12.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp1.dat",ios::out); //write
-		myfile3.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat",ios::in); //read
+		file12.open("D://II-SEM-PROJECT/temp1.dat",ios::out); //write
+		myfile3.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::in); //read
 		while(!myfile3.eof())
 		{
 			myfile3>>e1.id1>>e1.name1>>e1.year1>>e1.max_power1>>e1.max_torque1;
@@ -1168,8 +1192,8 @@ void bbike::del_bikes()
 		}
 					file12.close();
 	  				myfile3.close();
-	  				remove("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat");
-        			rename("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp1.dat","D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike1.dat");
+	  				remove("D://II-SEM-PROJECT/NormalBike1.dat");
+        			rename("D://II-SEM-PROJECT/temp1.dat","D://II-SEM-PROJECT/NormalBike1.dat");
         			if(count == 0)
         			{
         				cout<<"\n\n\t\t Bike ID Not Found !!! ";
@@ -1187,7 +1211,7 @@ void bbike::del_bikes()
 		string name2;
 		char k;
 		int count1=0;
-		file13.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::in);
+		file13.open("D://II-SEM-PROJECT/electricBike1.dat",ios::in);
 		if(!file13)
 		cout<<"\n\n File Openning Error...";
 			//file9.seekg(0,ios::beg);
@@ -1201,8 +1225,8 @@ void bbike::del_bikes()
 		file13.close(); 
 		cout<<"\n\n\t\t Enter the ID of the Bike You Want To Delete : ";
 		cin>>del_id2;
-		file14.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp2.dat",ios::out); //write
-		myfile4.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat",ios::in); //read
+		file14.open("D://II-SEM-PROJECT/temp2.dat",ios::out); //write
+		myfile4.open("D://II-SEM-PROJECT/electricBike1.dat",ios::in); //read
 		while(!myfile4.eof())
 		{
 			myfile4>>e2.id2>>e2.name2>>e2.year2>>e2.range2;
@@ -1217,8 +1241,8 @@ void bbike::del_bikes()
 		}
 					file14.close();
 	  				myfile4.close();
-	  				remove("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat");
-        			rename("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/temp2.dat","D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike1.dat");
+	  				remove("D://II-SEM-PROJECT/electricBike1.dat");
+        			rename("D://II-SEM-PROJECT/temp2.dat","D://II-SEM-PROJECT/electricBike1.dat");
         			if(count1 == 0)
         			{
         				cout<<"\n\n\t\t Bike ID Not Found !!! ";
@@ -1244,23 +1268,23 @@ int main()
 	time (&timetoday);
 	system("cls");
 	cout<<asctime(localtime(&timetoday));
-	cout<<"\n\t\t\t\t\t\t\t**************************************************************";
-	cout<<"\n\t\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    WELCOME TO THE SYSTEM\t\t  \xdb\xdb\xdb\xdb";
-	cout<<"\n\t\t\t\t\t\t\t--------------------------------------------------------------";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|      _________       ___________          ________       |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|     |         |     |    ___    |        /         \\     |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|     |   ___   |     |   |   |   |       |    __    |     |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |   |  |     |   |   |   |       |   |  |___|     |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |   |  |     |   |___|   |       |   |_____       |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |  /  /      |    _______|       |         \\      |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |  \\  \\      |   | \\   \\          \\______   |     |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |   |  |     |   |  \\   \\               |   |     |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |___|  |     |   |   \\   \\        ______/   |     |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|     |         |     |   |    \\   \\      |          |     |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t\xdb|     |_________|     |___|     \\___\\     |_________/      |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t--------------------------------------------------------------";
-	cout<<"\n\t\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    PRESS ANY KEY TO CONTINUE\t\t  \xdb\xdb\xdb\xdb";
-	cout<<"\n\t\t\t\t\t\t\t**************************************************************";
+	cout<<"\n\t\t\t\t\t\t**************************************************************";
+	cout<<"\n\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    WELCOME TO THE SYSTEM\t\t  \xdb\xdb\xdb\xdb";
+	cout<<"\n\t\t\t\t\t\t--------------------------------------------------------------";
+	cout<<"\n\t\t\t\t\t\t\xdb|      _________       ___________          ________       |\xdb";
+	cout<<"\n\t\t\t\t\t\t\xdb|     |         |     |    ___    |        /         \\     |\xdb";
+	cout<<"\n\t\t\t\t\t\t\xdb|     |   ___   |     |   |   |   |       |    __    |     |\xdb";
+	cout<<"\n\t\t\t\t\t\t\xdb|     |  |   |  |     |   |   |   |       |   |  |___|     |\xdb";
+	cout<<"\n\t\t\t\t\t\t\xdb|     |  |   |  |     |   |___|   |       |   |_____       |\xdb";
+	cout<<"\n\t\t\t\t\t\t\xdb|     |  |  /  /      |    _______|       |         \\      |\xdb";
+	cout<<"\n\t\t\t\t\t\t\xdb|     |  |  \\  \\      |   | \\   \\          \\______   |     |\xdb";
+	cout<<"\n\t\t\t\t\t\t\xdb|     |  |   |  |     |   |  \\   \\               |   |     |\xdb";
+	cout<<"\n\t\t\t\t\t\t\xdb|     |  |___|  |     |   |   \\   \\        ______/   |     |\xdb";
+	cout<<"\n\t\t\t\t\t\t\xdb|     |         |     |   |    \\   \\      |          |     |\xdb";
+	cout<<"\n\t\t\t\t\t\t\xdb|     |_________|     |___|     \\___\\     |_________/      |\xdb";
+	cout<<"\n\t\t\t\t\t\t--------------------------------------------------------------";
+	cout<<"\n\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    PRESS ANY KEY TO CONTINUE\t\t  \xdb\xdb\xdb\xdb";
+	cout<<"\n\t\t\t\t\t\t**************************************************************";
 	sleep(6);
 	system("cls"); 
     cout<<asctime(localtime(&timetoday));                                   
@@ -1269,8 +1293,7 @@ int main()
 	cout<<"\n\t\t\t\t\t\t\t\t\xdb|      Press 2 for REGISTER        |\xdb";
 	cout<<"\n\t\t\t\t\t\t\t\t\xdb|      Press 3 for USER LOGIN      |\xdb";
 	cout<<"\n\t\t\t\t\t\t\t\t-------------------------------------";
-	cout<<"\n\t\t\t\t\t\t\t\t\xdb|      Enter your choice :         |\xdb";
-	cout<<"\n\t\t\t\t\t\t\t\t-------------------------------------"<<endl;
+	cout<<"\n\t\t\t\t\t\t\t\t\xdb|      Enter your choice :         ";
 	cin>>c;
 	cout<<endl;
 	
@@ -1299,17 +1322,18 @@ int main()
 /******************************************************AdminLogin**************************************************/
 void adminlogin()
 {
+	sleep(2);
    system("cls");
    time_t timetoday;
    time (&timetoday);
    cout<<asctime(localtime(&timetoday));
    gotoxy(40,10);
    bbike b;
+   label1:
    int choice,in;
    char x;
-   label1:
-	char ch;
-	string pass;
+   char ch;
+   string pass;
    cout<<"\n\t\t\t\t\t\t\t\t\xdb|     Admin Login     |\xdb";	
    cout<<"\n\n\t\t\t\t\t\t\tEnter the password : ";
    ch = getch();
@@ -1415,8 +1439,8 @@ void userlogin()
     electric e1;
 	string userID,password,id,pass;
 	cout<<asctime(localtime(&timetoday));
-	gotoxy(40,10);
 	flag:
+	gotoxy(40,10);
 	cout<<"\n\t\t\t\t\t\t\t\t\xdb Please enter the username and password \xdb";
 	cout<<"\n\n\n\t\t\t\t\t\t\t\t\t USERNAME : ";
 	cin>>userID;
@@ -1433,29 +1457,29 @@ void userlogin()
 	input.close();
 	if(count==1)
 	{
-		
+		system("cls");
 		cout<<"\n\t\xdb WELCOME USER = "<<userID<<" \xdb";
 		cout<<"\n\t\t\t\t\t\t\xdbYour LOGIN is succesfull! \xdb\n";
 		sleep(1);
 		system("cls");
 		cout<<asctime(localtime(&timetoday));
-		cout<<"\n\t\t\t\t\t\t\t**************************************************************";
-		cout<<"\n\t\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    WELCOME TO THE SYSTEM\t\t  \xdb\xdb\xdb\xdb";
-		cout<<"\n\t\t\t\t\t\t\t--------------------------------------------------------------";
-		cout<<"\n\t\t\t\t\t\t\t\xdb|      _________       ___________          ________       |\xdb";
-		cout<<"\n\t\t\t\t\t\t\t\xdb|     |         |     |    ___    |        /         \\     |\xdb";
-		cout<<"\n\t\t\t\t\t\t\t\xdb|     |   ___   |     |   |   |   |       |    __    |     |\xdb";
-		cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |   |  |     |   |   |   |       |   |  |___|     |\xdb";
-		cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |   |  |     |   |___|   |       |   |_____       |\xdb";
-		cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |  /  /      |    _______|       |         \\      |\xdb";
-		cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |  \\  \\      |   | \\   \\          \\______   |     |\xdb";
-		cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |   |  |     |   |  \\   \\               |   |     |\xdb";
-		cout<<"\n\t\t\t\t\t\t\t\xdb|     |  |___|  |     |   |   \\   \\        ______/   |     |\xdb";
-		cout<<"\n\t\t\t\t\t\t\t\xdb|     |         |     |   |    \\   \\      |          |     |\xdb";
-		cout<<"\n\t\t\t\t\t\t\t\xdb|     |_________|     |___|     \\___\\     |_________/      |\xdb";
-		cout<<"\n\t\t\t\t\t\t\t--------------------------------------------------------------";
-		cout<<"\n\t\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    PRESS ANY KEY TO CONTINUE\t\t  \xdb\xdb\xdb\xdb";
-		cout<<"\n\t\t\t\t\t\t\t**************************************************************";
+		cout<<"\n\t\t\t\t\t\t**************************************************************";
+		cout<<"\n\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    WELCOME TO THE SYSTEM\t\t  \xdb\xdb\xdb\xdb";
+		cout<<"\n\t\t\t\t\t\t--------------------------------------------------------------";
+		cout<<"\n\t\t\t\t\t\t\xdb|      _________       ___________          ________       |\xdb";
+		cout<<"\n\t\t\t\t\t\t\xdb|     |         |     |    ___    |        /         \\     |\xdb";
+		cout<<"\n\t\t\t\t\t\t\xdb|     |   ___   |     |   |   |   |       |    __    |     |\xdb";
+		cout<<"\n\t\t\t\t\t\t\xdb|     |  |   |  |     |   |   |   |       |   |  |___|     |\xdb";
+		cout<<"\n\t\t\t\t\t\t\xdb|     |  |   |  |     |   |___|   |       |   |_____       |\xdb";
+		cout<<"\n\t\t\t\t\t\t\xdb|     |  |  /  /      |    _______|       |         \\      |\xdb";
+		cout<<"\n\t\t\t\t\t\t\xdb|     |  |  \\  \\      |   | \\   \\          \\______   |     |\xdb";
+		cout<<"\n\t\t\t\t\t\t\xdb|     |  |   |  |     |   |  \\   \\               |   |     |\xdb";
+		cout<<"\n\t\t\t\t\t\t\xdb|     |  |___|  |     |   |   \\   \\        ______/   |     |\xdb";
+		cout<<"\n\t\t\t\t\t\t\xdb|     |         |     |   |    \\   \\      |          |     |\xdb";
+		cout<<"\n\t\t\t\t\t\t\xdb|     |_________|     |___|     \\___\\     |_________/      |\xdb";
+		cout<<"\n\t\t\t\t\t\t--------------------------------------------------------------";
+		cout<<"\n\t\t\t\t\t\t\xdb\xdb\xdb\xdb\t\t    PRESS ANY KEY TO CONTINUE\t\t  \xdb\xdb\xdb\xdb";
+		cout<<"\n\t\t\t\t\t\t**************************************************************";
 		sleep(3);
 		system("cls");
 		cout<<asctime(localtime(&timetoday));
@@ -1471,7 +1495,7 @@ void userlogin()
 			system("cls");
 			gotoxy(40,10);
 			fstream myfile;
-			myfile.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/NormalBike.dat",ios::out|ios::app);
+			myfile.open("D://II-SEM-PROJECT/NormalBike.dat",ios::out|ios::app);
 			op:
 			system("cls");
 			cout<<asctime(localtime(&timetoday));
@@ -1547,7 +1571,7 @@ void userlogin()
 			cout<<asctime(localtime(&timetoday));
 			gotoxy(40,10);
 			fstream myfile1;
-			myfile1.open("D://devCPrograms//2nd sem//Project//II-SEM-PROJECT/electricBike.dat",ios::out|ios::app);
+			myfile1.open("D://II-SEM-PROJECT/electricBike.dat",ios::out|ios::app);
 			op1:
 			system("cls");
 			cout<<asctime(localtime(&timetoday));
