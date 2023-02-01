@@ -1,4 +1,3 @@
-
 #include<iostream>
 #include<iomanip>
 #include<conio.h>
@@ -745,7 +744,7 @@ void bbike::add_bikes()
 	{
 		fstream file1,checkfile;
 		normal a1,test1;
-		file1.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::out|ios::app);
+		file1.open("NormalBike1.dat",ios::out|ios::app);
 		if(!file1){
 		cout<<"\n\n\t\tFile Openning Error...";
 		}
@@ -758,8 +757,8 @@ void bbike::add_bikes()
 		cout<<"\n\tEnter Bike Id: ";
 		cin>>id1;
 		fflush(stdin);
-		checkfile.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::in);
-		checkfile.seekg(0,ios::beg);
+		checkfile.open("NormalBike1.dat",ios::in);
+		//checkfile.seekg(0,ios::beg);
 		while(!checkfile.eof())
 			{
 				//file6.seekg(0,ios::beg);
@@ -792,7 +791,7 @@ void bbike::add_bikes()
 		electric a2,test2;
 		int id2,year2,range2;
 		string name2;
-		file2.open("D://II-SEM-PROJECT/electricBike1.dat",ios::out|ios::app);
+		file2.open("electricBike1.dat",ios::out|ios::app);
 		if(!file2){
 		cout<<"\n\n\t\tFile Openning Error...";
 		}
@@ -803,7 +802,7 @@ void bbike::add_bikes()
 		cout<<"\n\tEnter Bike Id: ";
 		cin>>id2;
 		fflush(stdin);
-		checkfile2.open("D://II-SEM-PROJECT/electricBike1.dat",ios::in);
+		checkfile2.open("electricBike1.dat",ios::in);
 		//checkfile2.seekg(0,ios::beg);
 		while(!checkfile2.eof())
 			{
@@ -854,16 +853,16 @@ void bbike::show_bikes()
 		fstream file3;
 		int id1,year1,max_power1,max_torque1;
 		string name1;
-		file3.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::in);
+		file3.open("NormalBike1.dat",ios::in);
 		if(!file3)
 		cout<<"\n\n File Openning Error...";
 			//file3.seekg(0,ios::beg);
 			cout<<"\n\nID\t\tBike Name\t\tYear\t\tMax_power\tMax_torque\n\n";
-			while(!file3.eof())
+			do
 			{
 				file3>>id1>>name1>>year1>>max_power1>>max_torque1;
 				cout<<id1<<"\t\t"<<name1<<"\t\t"<<year1<<"\t\t"<<max_power1<<"\t\t"<<max_torque1<<"\n\n";
-			}
+			}while(!file3.eof());
 				file3.close();
 	}
 	else if (ch==2)
@@ -874,16 +873,16 @@ void bbike::show_bikes()
 		fstream file4;
 		int id2,year2,range2;
 		string name2;
-		file4.open("D://II-SEM-PROJECT/electricBike1.dat",ios::in);
+		file4.open("electricBike1.dat",ios::in);
 		if(!file4)
 		cout<<"\n\n File Openning Error...";
 			//file4.seekg(0,ios::beg);
 			cout<<"\n\n\t\tID\t\tBike Name\tYear\t\tRange\n\n";
-			while(!file4.eof())
+			do
 			{
 				file4>>id2>>name2>>year2>>range2;
 				cout<<"\t\t"<<id2<<"\t\t"<<name2<<"\t\t"<<year2<<"\t\t"<<range2<<"\n\n";
-			}
+			}while(!file4.eof());
 			file4.close();
 	}
 	else
@@ -913,13 +912,13 @@ void bbike::check_bikes()
 		int id1,check_id,year1,max_power1,max_torque1,y=0;
 		string name1;
 		top:
-		file5.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::in);
+		file5.open("NormalBike1.dat",ios::in);
 		if(!file5)
 		cout<<"\n\n\t\tFile Openning Error...";
 			cout<<"\n\n Enter The Bike ID You Want To Search : ";
 			cin>>check_id;
 			file5.seekg(0,ios::beg);
-			while(!file5.eof())
+			do
 			{
 				//file6.seekg(0,ios::beg);
 				file5>>c1.id1>>c1.name1>>c1.year1>>c1.max_power1>>c1.max_torque1;
@@ -932,7 +931,7 @@ void bbike::check_bikes()
 					cout<<"\n\n\t\t\tMax_power : "<<c1.max_power1;
 					cout<<"\n\n\t\t\tMax_torque : "<<c1.max_torque1;
 				}
-			}
+			}while(!file5.eof());
 			if(y!=1)
 				{
 					file5.close();
@@ -949,12 +948,12 @@ void bbike::check_bikes()
 		int id2,year2,max_power2,range2,check_id1=0,x=0;
 		string name2;
 		top1:
-		file6.open("D://II-SEM-PROJECT/electricBike1.dat",ios::in);
+		file6.open("electricBike1.dat",ios::in);
 		if(!file6)
 		cout<<"\n\n\t\tFile Openning Error...";
 		cout<<"\n\n Enter The Bike ID You Want To Search : ";
 		cin>>check_id1;
-			while(!file6.eof())
+			do
 			{
 				//file6.seekg(0,ios::beg);
 				file6>>c2.id2>>c2.name2>>c2.year2>>c2.range2;
@@ -966,7 +965,7 @@ void bbike::check_bikes()
 					cout<<"\n\n\t\t\tYear : "<<c2.year2;
 					cout<<"\n\n\t\t\tRange Per Charge(Km) : "<<c2.range2;
 				}
-			}
+			}while(!file6.eof());
 			if(x!=1)	
 				{
 					file6.close();
@@ -1005,7 +1004,7 @@ void bbike::update_bikes()
 		string name1,n;
 		char k;
 		cout<<"\n\n\t\t\t\tUpdate Bike Record";
-		file7.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::in);
+		file7.open("NormalBike1.dat",ios::in);
 		if(!file7)
 		cout<<"\n\n File Openning Error...";
 			//file9.seekg(0,ios::beg);
@@ -1015,13 +1014,13 @@ void bbike::update_bikes()
 			{
 				file7>>d11.id1>>d11.name1>>d11.year1>>d11.max_power1>>d11.max_torque1;
 				cout<<"\t\t"<<d11.id1<<"\t\t"<<d11.name1<<"\t\t"<<d11.year1<<"\t\t"<<d11.max_power1<<"\t\t"<<d11.max_torque1<<"\n\n";
-		}
+			}
 		file7.close(); 
 		flag:
 		cout<<"\n\n\t\t Enter the ID of the Bike You Want To Modify/Update : ";
 		cin>>modify_id1;
-		myfile1.open("D://II-SEM-PROJECT/temp1.dat",ios::out); //write
-		file8.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::in|ios::binary|ios::app|ios::out); //read
+		myfile1.open("temp1.dat",ios::out| ios::trunc | ios::binary); //write
+		file8.open("NormalBike1.dat",ios::in); //read
 		while(!file8.eof())
 		{
 			file8>>d1.id1>>d1.name1>>d1.year1>>d1.max_power1>>d1.max_torque1;
@@ -1029,30 +1028,28 @@ void bbike::update_bikes()
 			{
 					x++;
 					if (x>0){
-					cout<<"\n\n\t\tIs that record you want to update ? \n\n"<<endl;
-    				cout<<"\t\t"<<d1.id1<<"\t\t"<<d1.name1<<"\t\t"<<d1.year1<<"\t\t"<<d1.max_power1<<"\t\t"<<d1.max_torque1<<"\n\n";
-					cout<<"\n\n\t\t Please enter (y/n) : ";
-    				cin>>k;
-    			}
-					if(k == 'y' || k == 'Y'){
 					cout<<"\n\n\t\t ***** Enter the new Bike Details To be Updated *****";
 					cout<<"\n\n\t\t\tNew Bike ID : ";
-					fflush(stdin);
 					cin>>i;
 					cout<<"\n\n\t\t\tNew Bike Name : ";
-					fflush(stdin);
 					cin>>n;
 					cout<<"\n\n\t\t\tNew Manufacture Year : ";
-					fflush(stdin);
 					cin>>y;
 					cout<<"\n\n\t\t\tNew Max Power : ";
-					fflush(stdin);
 					cin>>mp;
 					cout<<"\n\n\t\t\tNew Max Torque : ";
-					fflush(stdin);
 					cin>>mt;
-					myfile1<<" "<<i<<" "<<n<<" "<<y<<" "<<mp<<" "<<mt<<" ";
+					if(!file8.eof()){
+						myfile1<<i<<" "<<n<<" "<<y<<" "<<mp<<" "<<mt<<" ";
+					}
+					else{
+						myfile1<<i<<" "<<n<<" "<<y<<" "<<mp<<" "<<mt;
+					}
 				}
+				cout<<"\n\n\t\t Record Successfully Updated !!! ";
+			}
+			else if(d1.id1 != modify_id1 && file8.eof()){
+				myfile1<<d1.id1<<" "<<d1.name1<<" "<<d1.year1<<" "<<d1.max_power1<<" "<<d1.max_torque1;
 			}
 			else if(d1.id1 != modify_id1){
 				myfile1<<d1.id1<<" "<<d1.name1<<" "<<d1.year1<<" "<<d1.max_power1<<" "<<d1.max_torque1<<"\n";
@@ -1060,8 +1057,12 @@ void bbike::update_bikes()
 		}
 					file8.close();
 	  				myfile1.close();
-	  				remove("D://II-SEM-PROJECT/NormalBike1.dat");
-        			rename("D://II-SEM-PROJECT/temp1.dat","D://II-SEM-PROJECT/NormalBike1.dat");
+	  				remove("NormalBike1.dat");
+        			rename("temp1.dat","NormalBike1.dat");
+        			if(x == 0)
+        			{
+        				cout<<"\n\n\t\t Bike ID Not Found !!! ";
+					}
         			cout<<"\n\n\t\t Press Any Key To Go To Main Menu";
 }
 
@@ -1077,7 +1078,7 @@ void bbike::update_bikes()
 		string n,name;
 		char another,k;
 		int choice=0,count=0;
-		file10.open("D://II-SEM-PROJECT/electricBike1.dat",ios::in);
+		file10.open("electricBike1.dat",ios::in);
 		if(!file10)
 		cout<<"\n\n File Openning Error...";
 			//file9.seekg(0,ios::beg);
@@ -1091,46 +1092,49 @@ void bbike::update_bikes()
 		file10.close(); 
 		flag1:
 		cout<<"\n\n\t\t Enter the ID of the Bike You Want To Modify/Update : ";
+		fflush(stdin);
 		cin>>modify_id2;
-		myfile2.open("D://II-SEM-PROJECT/temp2.dat",ios::out); //write
-		file9.open("D://II-SEM-PROJECT/electricBike1.dat",ios::in|ios::binary|ios::app|ios::out); //read
-		while(!file9.eof())
-		{
-			file9>>d2.id2>>d2.name2>>d2.year2>>d2.range2;
+		myfile2.open("temp2.dat",ios::out| ios::trunc | ios::binary); //write
+		file9.open("electricBike1.dat",ios::in); //read
+		while(!file9.eof()) {
+        	file9 >> d2.id2 >> d2.name2 >> d2.year2 >> d2.range2;
 			if(d2.id2 == modify_id2)
 			{
 					x++;
 					if (x>0){
-					cout<<"\n\n\t\tIs that record you want to update ? \n\n"<<endl;
-    				cout<<"\t\t"<<d2.id2<<"\t\t"<<d2.name2<<"\t\t"<<d2.year2<<"\t\t"<<d2.range2<<"\n\n";
-					cout<<"\n\n\t\t Please enter (y/n) : ";
-    				cin>>k;
-    			}
-					if(k == 'y' || k == 'Y'){
 					cout<<"\n\n\t\t ***** Enter the new Bike Details To be Updated *****";
 					cout<<"\n\n\t\t\tNew Bike ID : ";
-					fflush(stdin);
 					cin>>i;
 					cout<<"\n\n\t\t\tNew Bike Name : ";
-					fflush(stdin);
 					cin>>n;
 					cout<<"\n\n\t\t\tNew Manufacture Year : ";
-					fflush(stdin);
 					cin>>y;
 					cout<<"\n\n\t\t\tNew Range Per Charge(Km) : ";
-					fflush(stdin);
 					cin>>r;
-					myfile2<<" "<<i<<" "<<n<<" "<<y<<" "<<r<<" ";
-				}
+					if(!file9.eof()){
+						myfile2<<i<<" "<<n<<" "<<y<<" "<<r<<" ";
+					}
+					else{
+						myfile2<<i<<" "<<n<<" "<<y<<" "<<r;
+					}
+				} 
+				cout<<"\n\n\t\t Record Successfully Updated !!! ";
 			}
-			else if(d2.id2 != modify_id2){
+				if(d2.id2 != modify_id2 && file9.eof()){
+				myfile2<<d2.id2<<" "<<d2.name2<<" "<<d2.year2<<" "<<d2.range2;
+			}
+				else if(d2.id2 != modify_id2){
 				myfile2<<d2.id2<<" "<<d2.name2<<" "<<d2.year2<<" "<<d2.range2<<"\n";
-			} 
+			}
 		}
 					file9.close();
 	  				myfile2.close();
-	  				remove("D://II-SEM-PROJECT/electricBike1.dat");
-        			rename("D://II-SEM-PROJECT/temp2.dat","D://II-SEM-PROJECT/electricBike1.dat");
+	  				remove("electricBike1.dat");
+        			rename("temp2.dat","electricBike1.dat");
+        			if(x == 0)
+        			{
+        				cout<<"\n\n\t\t Bike ID Not Found !!! ";
+					}
         			cout<<"\n\n\t\t Press Any Key To Go To Main Menu";
 }
 	else 
@@ -1162,7 +1166,7 @@ void bbike::del_bikes()
 		string name1;
 		char k;
 		int count=0;
-		file11.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::in);
+		file11.open("NormalBike1.dat",ios::in);
 		if(!file11)
 		cout<<"\n\n File Openning Error...";
 			//file9.seekg(0,ios::beg);
@@ -1176,24 +1180,27 @@ void bbike::del_bikes()
 		file11.close(); 
 		cout<<"\n\n\t\t Enter the ID of the Bike You Want To Delete : ";
 		cin>>del_id1;
-		file12.open("D://II-SEM-PROJECT/temp1.dat",ios::out); //write
-		myfile3.open("D://II-SEM-PROJECT/NormalBike1.dat",ios::in); //read
+		file12.open("temp1.dat",ios::out); //write
+		myfile3.open("NormalBike1.dat",ios::in); //read
 		while(!myfile3.eof())
 		{
 			myfile3>>e1.id1>>e1.name1>>e1.year1>>e1.max_power1>>e1.max_torque1;
-			if(e1.id1 != del_id1){
-			file12<<e1.id1<<" "<<e1.name1<<" "<<e1.year1<<" "<<e1.max_power1<<" "<<e1.max_torque1<<"\n";
-			}
 			if(e1.id1 == del_id1)
 			{
 					count=1;
 					cout<<"\n\n\t\tThe Selected Record Is Deleted Successfully";
 			}
+			else if(e1.id1 != del_id1 && myfile3.eof()){
+			file12<<e1.id1<<" "<<e1.name1<<" "<<e1.year1<<" "<<e1.max_power1<<" "<<e1.max_torque1;
+			}
+			else if(e1.id1 != del_id1){
+			file12<<e1.id1<<" "<<e1.name1<<" "<<e1.year1<<" "<<e1.max_power1<<" "<<e1.max_torque1<<"\n";
+			}
 		}
 					file12.close();
 	  				myfile3.close();
-	  				remove("D://II-SEM-PROJECT/NormalBike1.dat");
-        			rename("D://II-SEM-PROJECT/temp1.dat","D://II-SEM-PROJECT/NormalBike1.dat");
+	  				remove("NormalBike1.dat");
+        			rename("temp1.dat","NormalBike1.dat");
         			if(count == 0)
         			{
         				cout<<"\n\n\t\t Bike ID Not Found !!! ";
@@ -1211,7 +1218,7 @@ void bbike::del_bikes()
 		string name2;
 		char k;
 		int count1=0;
-		file13.open("D://II-SEM-PROJECT/electricBike1.dat",ios::in);
+		file13.open("electricBike1.dat",ios::in);
 		if(!file13)
 		cout<<"\n\n File Openning Error...";
 			//file9.seekg(0,ios::beg);
@@ -1225,24 +1232,27 @@ void bbike::del_bikes()
 		file13.close(); 
 		cout<<"\n\n\t\t Enter the ID of the Bike You Want To Delete : ";
 		cin>>del_id2;
-		file14.open("D://II-SEM-PROJECT/temp2.dat",ios::out); //write
-		myfile4.open("D://II-SEM-PROJECT/electricBike1.dat",ios::in); //read
+		file14.open("temp2.dat",ios::out | ios::binary); //write
+		myfile4.open("electricBike1.dat",ios::in); //read
 		while(!myfile4.eof())
 		{
-			myfile4>>e2.id2>>e2.name2>>e2.year2>>e2.range2;
-			if(e2.id2 != del_id2){
-			file14<<e2.id2<<" "<<e2.name2<<" "<<e2.year2<<" "<<e2.range2<<"\n";
-			}
+			myfile4>>e2.id2>>e2.name2>>e2.year2>>e2.range2;		
 			if(e2.id2 == del_id2)
 			{
-					count1=1;
-					cout<<"\n\n\t\tThe Selected Record Is Deleted Successfully";
+				count1=1;
+				cout<<"\n\n\t\tThe Selected Record Is Deleted Successfully";
+		    }
+			else if(e2.id2 != del_id2 && myfile4.eof()){
+			file14<<e2.id2<<" "<<e2.name2<<" "<<e2.year2<<" "<<e2.range2;
+			}
+			else if(e2.id2 != del_id2){
+			file14<<e2.id2<<" "<<e2.name2<<" "<<e2.year2<<" "<<e2.range2<<"\n";
 			}
 		}
 					file14.close();
 	  				myfile4.close();
-	  				remove("D://II-SEM-PROJECT/electricBike1.dat");
-        			rename("D://II-SEM-PROJECT/temp2.dat","D://II-SEM-PROJECT/electricBike1.dat");
+	  				remove("electricBike1.dat");
+        			rename("temp2.dat","electricBike1.dat");
         			if(count1 == 0)
         			{
         				cout<<"\n\n\t\t Bike ID Not Found !!! ";
@@ -1495,7 +1505,7 @@ void userlogin()
 			system("cls");
 			gotoxy(40,10);
 			fstream myfile;
-			myfile.open("D://II-SEM-PROJECT/NormalBike.dat",ios::out|ios::app);
+			myfile.open("NormalBike.dat",ios::out|ios::app);
 			op:
 			system("cls");
 			cout<<asctime(localtime(&timetoday));
@@ -1571,7 +1581,7 @@ void userlogin()
 			cout<<asctime(localtime(&timetoday));
 			gotoxy(40,10);
 			fstream myfile1;
-			myfile1.open("D://II-SEM-PROJECT/electricBike.dat",ios::out|ios::app);
+			myfile1.open("electricBike.dat",ios::out|ios::app);
 			op1:
 			system("cls");
 			cout<<asctime(localtime(&timetoday));
